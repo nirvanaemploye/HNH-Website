@@ -125,7 +125,7 @@
 }
 
 .honeycomb-cell::before {
-  background: url("../../HNH-website-2-jaydeep/public/Polygon3.png");
+  background: url("../../HNH-Website//public/Polygon3.png");
   background: #6b6a6a88;
   transform: scale(1.055);
   z-index: -100;
@@ -147,7 +147,7 @@
 .honeycomb-cell:hover::before {
   /* background: #fc5130; */
   z-index: -1;
-  background: url("../../HNH-website-2-jaydeep/public/Polygon.png");
+  background: url("../../HNH-Website//public/Polygon.png");
   background: #927dfa4b;
   object-fit: cover;
 }
