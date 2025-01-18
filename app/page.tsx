@@ -963,7 +963,7 @@ export default function Home() {
         </section>
       </div>
       <div className="flex flex-col items-center">
-        <h3 className="text-primary text-[40px] font-bold text-center border-b-2 border-dashed w-fit mx-auto uppercase font-serif">
+        <h3 className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 border-dashed w-fit mx-auto uppercase font-serif">
           get in touch
         </h3>
         <p className="mt-11 text-center text-[#B7B0B0] max-w-4xl mx-auto">
