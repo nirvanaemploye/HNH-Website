@@ -19,7 +19,7 @@
   }
   .whyUsTitle p,
 .testimonialContainer .testimonialTitle p {
-  font-family: poppins;
+  
   font-size: 25px;
   font-weight: 500;
   line-height: 37.5px;
@@ -29,13 +29,13 @@
 .whyUsTitle h1,
 .testimonialContainer .testimonialTitle h1,
 .getInTouchCointainer h1 {
-  font-family: koho;
+  
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
   letter-spacing: 0.05em;
-  color: #6c42f8;
-  border-bottom: 2px dashed #6c42f8;
+  /* color: #6c42f8;
+  border-bottom: 2px dashed #6c42f8; */
   margin-bottom: 2em;
 }
 

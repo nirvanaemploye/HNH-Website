@@ -936,8 +936,10 @@ export default function Home() {
         <section id="testimonialSection">
           <div className="testimonialContainer">
             <div className="testimonialTitle">
-              <p>CLIENTS TESTIMONIAL</p>
-              <h1>WHAT OUR CLIENTS ARE SAYING</h1>
+              <p className="font-serif text-[#6c42f8] border-b-2 border-dashed">CLIENTS TESTIMONIAL</p>
+              <h1 className="uppercase font-serif text-white font-bold sm:text-4xl text-3xl text-center mt-4">
+                WHAT OUR CLIENTS ARE SAYING
+              </h1>
             </div>
           </div>
           <div className="clientImgsContainer">
