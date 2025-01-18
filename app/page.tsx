@@ -6,7 +6,7 @@ import HeroSection from "./components/sections/hero";
 import { PiDesktopFill, PiDeviceMobileCameraFill } from "react-icons/pi";
 import { HiCloudArrowDown } from "react-icons/hi2";
 import polygonstats from "@/public/polygon-stats.svg";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 const members = [
   {
@@ -67,50 +67,50 @@ const members = [
   },
 ];
 
-const services = [
-  {
-    id: 1,
-    icon: PiDeviceMobileCameraFill,
-    title: "App Development",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-  {
-    id: 2,
-    icon: PiDesktopFill,
-    title: "WEB Development",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-  {
-    id: 3,
-    icon: PiDesktopFill,
-    title: "UI/UX DESIGN",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-  {
-    id: 4,
-    icon: HiCloudArrowDown,
-    title: "CLOUD SERVICES",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-  {
-    id: 5,
-    icon: HiCloudArrowDown,
-    title: "BUSINESS SOLUTION",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-  {
-    id: 6,
-    icon: HiCloudArrowDown,
-    title: "CLOUD E-MAIL MIGRATION",
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-  },
-];
+// const services = [
+//   {
+//     id: 1,
+//     icon: PiDeviceMobileCameraFill,
+//     title: "App Development",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+//   {
+//     id: 2,
+//     icon: PiDesktopFill,
+//     title: "WEB Development",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+//   {
+//     id: 3,
+//     icon: PiDesktopFill,
+//     title: "UI/UX DESIGN",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+//   {
+//     id: 4,
+//     icon: HiCloudArrowDown,
+//     title: "CLOUD SERVICES",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+//   {
+//     id: 5,
+//     icon: HiCloudArrowDown,
+//     title: "BUSINESS SOLUTION",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+//   {
+//     id: 6,
+//     icon: HiCloudArrowDown,
+//     title: "CLOUD E-MAIL MIGRATION",
+//     description:
+//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+//   },
+// ];
 
 const developers = [
   {
