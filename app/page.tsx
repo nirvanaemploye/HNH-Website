@@ -3,8 +3,6 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
-import { PiDesktopFill, PiDeviceMobileCameraFill } from "react-icons/pi";
-import { HiCloudArrowDown } from "react-icons/hi2";
 import polygonstats from "@/public/polygon-stats.svg";
 import React, { useState } from "react";
 
