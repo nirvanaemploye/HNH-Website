@@ -948,7 +948,7 @@ export default function Home() {
                   className={`honeycomb-cell honeycomb-cell-client ${
                     hoveredMember === member.id ? "transform" : ""
                   }`}
-                  onMouseEnter={() => handleMouseEnter(member.id)}
+                  // onMouseEnter={() => handleMouseEnter(member.id)}
                   onMouseLeave={handleMouseLeave}
                 >
                   <img
