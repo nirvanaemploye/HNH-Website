@@ -395,9 +395,9 @@ const methodologies = [
 export default function Home() {
   const [hoveredMember, setHoveredMember] = useState(null);
 
-  const handleMouseEnter = (id) => {
-    setHoveredMember(id);
-  };
+  // const handleMouseEnter = (id) => {
+  //   setHoveredMember(id);
+  // };
 
   const handleMouseLeave = () => {
     setHoveredMember(hoveredMember);
