@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
+import DarkMode from "./DarkMode";
 
 const navitems = [
   {
@@ -41,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full top-0 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100 z-20">
+      <nav className="fixed w-full top-0 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100 z-20 dark:text-white dark:bg-[#170C3F]">
         <Topbar />
         <div className="flex items-center justify-between sm:px-9 px-4 py-5">
           <Link href="/">
@@ -61,7 +62,7 @@ const Navbar = () => {
                   key={idx}
                   className={twMerge(
                     "uppercase font-medium",
-                    isactive && "text-primary"
+                    isactive && "text-primary border-b-2"
                   )}
                 >
                   <Link href={item.href}>{item.name}</Link>
@@ -90,6 +91,7 @@ const Navbar = () => {
             >
               Hire us
             </button>
+            <DarkMode />
             <button
               onClick={() => setMenuVisible(true)}
               className="text-sm md:hidden block"
@@ -102,7 +104,7 @@ const Navbar = () => {
 
       <div
         className={twMerge(
-          "fixed h-full w-full left-0 top-0 bg-black/50 backdrop-blur-md flex items-start justify-start py-5 px-4 duration-300 transition-transform z-20",
+          "fixed h-full w-full left-0 top-0 bg-black/50 backdrop-blur-md flex items-start justify-start py-5 px-4 duration-300 transition-transform z-20 dark:text-white",
           menuVisible ? "translate-x-0" : "translate-x-full"
         )}
       >

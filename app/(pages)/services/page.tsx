@@ -94,34 +94,36 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className="pt-[150px] container max-w-[1320px] space-y-32">
-      <div className="flex md:flex-row flex-col gap-16 items-center">
-        <Image
-          src="/services-hero.png"
-          width={650}
-          height={294}
-          className="md:w-[650px] w-full"
-          alt="about us"
-        />
-        <div>
-          <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center">Services</h3>
-          <p className="sm:text-xl text-lg text-[#E1E0E0] mt-5 md:text-left text-center">
-            Our company offers a comprehensive range of services tailored to
-            meet the diverse needs of our clients. From innovative digital
-            solutions to traditional marketing strategies, we provide a
-          </p>
+    <div className="dark:text-white dark:bg-[#170C3F]">
+      <div className="pt-[150px] container max-w-[1320px] space-y-32">
+        <div className="flex md:flex-row flex-col gap-16 items-center">
+          <Image
+            src="/services-hero.png"
+            width={650}
+            height={294}
+            className="md:w-[650px] w-full"
+            alt="about us"
+          />
+          <div>
+            <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center">
+              Services
+            </h3>
+            <p className="sm:text-xl text-lg text-[#E1E0E0] mt-5 md:text-left text-center">
+              Our company offers a comprehensive range of services tailored to
+              meet the diverse needs of our clients. From innovative digital
+              solutions to traditional marketing strategies, we provide a
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed border-white uppercase w-fit mx-auto mb-16">
-          WE TRY TO SERV BEST SERVICES
-        </h3>
-        <div className="mt-20 space-y-12">
-          {services.map((service, idx) => {
-            return (
-              <ServiceCard service={service} key={idx} />
-            );
-          })}
+        <div>
+          <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed border-white uppercase w-fit mx-auto mb-16">
+            WE TRY TO SERV BEST SERVICES
+          </h3>
+          <div className="mt-20 space-y-12">
+            {services.map((service, idx) => {
+              return <ServiceCard service={service} key={idx} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

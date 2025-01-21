@@ -208,7 +208,7 @@
   line-height: 60px;
   letter-spacing: 0.05em;
   color: #ffffff;
-  width: max-content;
+  /* width: max-content; */
   padding-bottom: 5px;
 }
 

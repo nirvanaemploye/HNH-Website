@@ -8,12 +8,12 @@
   --primary: #8B68FF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #170C3F;
     --foreground: #ffffff;
   }
-}
+} */
 
 body {
   color: var(--foreground);
