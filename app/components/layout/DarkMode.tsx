@@ -1,14 +1,25 @@
-import React from 'react'
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import React, { useState, useEffect } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const DarkMode = () => {
-  const [theme, setTheme] = React.useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-  );
+  // Use a default theme value, and set it using localStorage if available after the component mounts
+  const [theme, setTheme] = useState("light");
 
-  const element = document.documentElement; // html element
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Only run on the client side (after the page has loaded)
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        localStorage.setItem("theme", "light"); // Default theme
+      }
+    }
+  }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const element = document.documentElement; // html element
+
     if (theme === "dark") {
       element.classList.add("dark");
       localStorage.setItem("theme", "dark");
