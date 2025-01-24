@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import darkbtn from "@/public/dark_btn.svg";
-import lightbtn from "@/public/light_btn.svg";
+// import darkbtn from "@/public/dark_btn.svg";
+// import lightbtn from "@/public/light_btn.svg";
 
 const DarkMode = () => {
   // Use a default theme value, and set it using localStorage if available after the component mounts
