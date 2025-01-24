@@ -3,7 +3,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const DarkMode = () => {
   // Use a default theme value, and set it using localStorage if available after the component mounts
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (typeof window !== "undefined") {

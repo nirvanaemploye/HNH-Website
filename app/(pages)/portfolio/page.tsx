@@ -6,7 +6,7 @@ import React from "react";
 
 const PortfolioPage = () => {
   return (
-    <div className="dark:text-white dark:bg-[#170C3F]">
+    <div className="dark:text-white dark:bg-[#170C3F] md:pb-32">
       <div className="pt-[150px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image

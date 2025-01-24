@@ -7,6 +7,8 @@ import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
 import DarkMode from "./DarkMode";
+import LightHit from "../../../public/Hit_Hammer 2.svg";
+import DarkHit from "../../../public/logo.svg";
 
 const navitems = [
   {
@@ -39,6 +41,9 @@ const navitems = [
 const Navbar = () => {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
+  const [theme] = useState();
+  console.log(theme);
+  
 
   return (
     <>
@@ -47,7 +52,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between sm:px-9 px-4 py-5">
           <Link href="/">
             <Image
-              src="/logo.svg"
+              // src="/logo.svg"
+              src={theme === "dark" ? DarkHit : LightHit}
               alt="hit n hammer"
               className="sm:w-[159px] w-[140px]"
               width={159}
@@ -62,7 +68,7 @@ const Navbar = () => {
                   key={idx}
                   className={twMerge(
                     "uppercase font-medium",
-                    isactive && "text-primary border-b-2"
+                    isactive && "text-primary border-b-2 border-primary"
                   )}
                 >
                   <Link href={item.href}>{item.name}</Link>
@@ -91,7 +97,7 @@ const Navbar = () => {
             >
               Hire us
             </button>
-            <DarkMode />
+            {/* <DarkMode /> */}
             <button
               onClick={() => setMenuVisible(true)}
               className="text-sm md:hidden block"
@@ -122,7 +128,7 @@ const Navbar = () => {
                 key={idx}
                 className={twMerge(
                   "uppercase font-medium text-2xl",
-                  isactive && "text-primary"
+                  isactive && "text-primary border-b-2 border-primary"
                 )}
               >
                 <Link href={item.href}>{item.name}</Link>
@@ -139,6 +145,7 @@ const Navbar = () => {
             >
               Hire us
             </button>
+            <DarkMode />
           </li>
         </ul>
       </div>

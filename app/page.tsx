@@ -404,7 +404,7 @@ export default function Home() {
   };
 
   return (
-    <div className="dark:text-white dark:bg-[#170C3F]">
+    <div className="dark:text-white dark:bg-[#170C3F]  md:pb-32">
       <div className="container max-w-[1320px] space-y-32">
         <HeroSection />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
