@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+// import { MdDarkMode, MdLightMode } from "react-icons/md";
 // import darkbtn from "@/public/dark_btn.svg";
 // import lightbtn from "@/public/light_btn.svg";
 
