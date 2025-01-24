@@ -82,7 +82,7 @@
   padding: 0.5em;
   text-align: center;
   z-index: 1;
-  box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.1); */
   /* overflow: hidden; */
   transition: transform 0.3s ease;
 }
@@ -95,7 +95,7 @@
   object-fit: cover;
   object-position: center;
   /* filter: grayscale(100%); */
-  background: #6b6a6a88;
+  /* background: #6b6a6a88; */
 }
 
 .honeycomb-cell::before,
@@ -125,8 +125,9 @@
 }
 
 .honeycomb-cell::before {
-  background: url("../public/Polygon3.png");
-  background: #6b6a6a88;
+  /* background: url("../public/Polygon3.png"); */
+  /* background: #6b6a6a88; */
+  border: 1px;
   transform: scale(1.055);
   z-index: -100;
 }
@@ -134,6 +135,8 @@
 .honeycomb-cell::after {
   background: #727272;
   background: #ffffff7c;
+  border: 1px;
+  border-color: #4c3aa5;
   opacity: 0.8;
   transition: opacity 350ms;
   -webkit-transition: opacity 350ms;
@@ -147,7 +150,7 @@
 .honeycomb-cell:hover::before {
   /* background: #fc5130; */
   z-index: -1;
-  background: url("../public/Polygon.png");
+  /* background: url("../public/Polygon.png"); */
   background: #927dfa4b;
   object-fit: cover;
 }

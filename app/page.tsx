@@ -3,7 +3,7 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
-import polygonstats from "@/public/polygon-stats.svg";
+import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
 
 const members = [

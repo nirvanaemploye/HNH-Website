@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import darkbtn from "@/public/dark_btn.svg";
+import lightbtn from "@/public/light_btn.svg";
 
 const DarkMode = () => {
   // Use a default theme value, and set it using localStorage if available after the component mounts
@@ -31,7 +33,7 @@ const DarkMode = () => {
 
   return (
     <div className="relative">
-      <MdLightMode
+      {/* <MdLightMode
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         className={`cursor-pointer transition-all duration-300 absolute right-0 z-10 ${
           theme === "dark" ? "opacity-0" : "opacity-100"
@@ -39,6 +41,23 @@ const DarkMode = () => {
       />
 
       <MdDarkMode
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        className={`cursor-pointer transition-all duration-300 ${
+          theme === "light" ? "opacity-0" : "opacity-100"
+        }`}
+      /> */}
+
+      <img
+        src="/dark_btn.svg"
+        alt=""
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        className={`cursor-pointer transition-all duration-300 absolute right-0 z-10 ${
+          theme === "dark" ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <img
+        src="/light_btn.svg"
+        alt=""
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         className={`cursor-pointer transition-all duration-300 ${
           theme === "light" ? "opacity-0" : "opacity-100"
