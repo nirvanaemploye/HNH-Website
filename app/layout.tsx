@@ -5,7 +5,6 @@ import "./globals.css";
 import { metaObject } from "@/config/site.config";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
-import { createContext } from "react";
 import { ThemeProvider } from "./components/context/themeContext";
 
 const koho = KoHo({
@@ -19,9 +18,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
- const metadata: Metadata = {
-  ...metaObject("Home"),
-};
+
 
 export default function RootLayout({
   children,

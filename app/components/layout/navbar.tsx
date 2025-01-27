@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Topbar from "./topbar";
 import Image from "next/image";
 import { usePathname } from "next/navigation";

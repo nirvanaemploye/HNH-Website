@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "../context/themeContext";
 // import { MdDarkMode, MdLightMode } from "react-icons/md";
 // import darkbtn from "@/public/dark_btn.svg";
