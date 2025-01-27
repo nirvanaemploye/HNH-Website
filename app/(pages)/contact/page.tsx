@@ -1,10 +1,31 @@
+"use client";
+import { useTheme } from "@/app/components/context/themeContext";
 import ContactUsForm from "@/app/components/forms/contact-us";
 import Image from "next/image";
 import React from "react";
 
 const ContactPage = () => {
+  const { theme } = useTheme();
+
+  const bgDark = {
+    backgroundImage: "url(/Home-page-dark.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const bgLight = {
+    backgroundImage: "url(/Home-page-light.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
-    <div className="dark:text-white dark:bg-[#170C3F] md:pb-32">
+    <div
+      className="dark:text-white dark:bg-[#170C3F] md:pb-32"
+      style={theme === "dark" ? bgDark : bgLight}
+    >
       <div className="pt-[150px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image
@@ -18,7 +39,7 @@ const ContactPage = () => {
             <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center">
               Contact Us
             </h3>
-            <p className="sm:text-xl text-lg text-[#E1E0E0] mt-5 md:text-left text-center">
+            <p className="sm:text-xl text-lg text-[#717070] mt-5 md:text-left text-center">
               Our company offers a comprehensive range of services tailored to
               meet the diverse needs of our clients. From innovative digital
               solutions to traditional marketing strategies, we provide a

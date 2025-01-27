@@ -5,6 +5,7 @@ import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
 import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
+import { useTheme } from "./components/context/themeContext";
 
 const members = [
   {
@@ -114,6 +115,7 @@ const developers = [
   {
     id: 1,
     image: "ui-ux-icon.svg",
+    image1: "ui-ux-dark-icon.svg",
     name: "ui/ux designer",
     experiance: "10 year",
     rating: "4.8",
@@ -145,6 +147,7 @@ const developers = [
   {
     id: 2,
     image: "php-icon.svg",
+    image1: "php-dark.svg",
     name: "php developer",
     experiance: "8 year",
     rating: "4",
@@ -176,6 +179,7 @@ const developers = [
   {
     id: 3,
     image: "android-icon.svg",
+    image1: "Android-dark.svg",
     name: "android developer",
     experiance: "10 year",
     rating: "5",
@@ -207,6 +211,7 @@ const developers = [
   {
     id: 4,
     image: "react-icon.svg",
+    image1: "react-dark.svg",
     name: "REACT.JS DEVELOPERS",
     experiance: "10 year",
     rating: "5",
@@ -237,39 +242,41 @@ const developers = [
   },
   {
     id: 5,
-    image: "ui-ux-icon.svg",
-    name: "ui/ux designer",
-    experiance: "10 year",
-    rating: "4.8",
-    project: "12",
-    rate: "$12",
+    image: "ios-dark.svg",
+    image1: "ios-light.svg",
+    name: "ios DEVELOPERS",
+    experiance: "4 year",
+    rating: "4.3",
+    project: "5",
+    rate: "$8",
     skills: [
       {
         id: 1,
-        name: "photoshop",
-        src: "ps-icon.svg",
+        name: "swift",
+        src: "swift.svg",
       },
       {
         id: 2,
-        name: "illustrator",
-        src: "ai-icon.svg",
+        name: "JS",
+        src: "JS.svg",
       },
       {
         id: 3,
-        name: "figma",
-        src: "figma-icon.svg",
+        name: "dash",
+        src: "dash.svg",
       },
       {
         id: 4,
-        name: "after effects",
-        src: "ae-icon.svg",
+        name: "react",
+        src: "REACT.svg",
       },
     ],
   },
   {
     id: 6,
-    image: "php-icon.svg",
-    name: "php developer",
+    image: "mern-dark.svg",
+    image1: "mern-light.svg",
+    name: "MERNSTACK DEVELOPERS",
     experiance: "8 year",
     rating: "4",
     project: "8",
@@ -277,30 +284,31 @@ const developers = [
     skills: [
       {
         id: 1,
-        name: "html",
-        src: "html-icon.svg",
+        name: "JS",
+        src: "JS.svg",
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
+        name: "express",
+        src: "express.svg",
       },
       {
         id: 3,
-        name: "js",
-        src: "js-icon.svg",
+        name: "react",
+        src: "REACT.svg",
       },
       {
         id: 4,
-        name: "php",
-        src: "php-icon.svg",
+        name: "android",
+        src: "android-logo.svg",
       },
     ],
   },
   {
     id: 7,
-    image: "android-icon.svg",
-    name: "android developer",
+    image: "node-dark.svg",
+    image1: "node-light.svg",
+    name: "NODE.JS DEVELOPERS",
     experiance: "10 year",
     rating: "5",
     project: "10",
@@ -330,32 +338,33 @@ const developers = [
   },
   {
     id: 8,
-    image: "react-icon.svg",
-    name: "REACT.JS DEVELOPERS",
+    image: "unity-dark.svg",
+    image1: "unity-light.svg",
+    name: "UNITY GAME DEVELOPERS",
     experiance: "10 year",
     rating: "5",
     project: "10",
-    rate: "$12",
+    rate: "$22",
     skills: [
       {
         id: 1,
-        name: "html",
-        src: "html-icon.svg",
+        name: "unity",
+        src: "unity.svg",
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
+        name: "photoshop",
+        src: "ps-icon.svg",
       },
       {
         id: 3,
-        name: "js",
-        src: "js-icon.svg",
+        name: "vs-code",
+        src: "vs-code.svg",
       },
       {
         id: 4,
-        name: "php",
-        src: "php-icon.svg",
+        name: "blender",
+        src: "blender.svg",
       },
     ],
   },
@@ -403,8 +412,24 @@ export default function Home() {
     setHoveredMember(hoveredMember);
   };
 
+  const { theme } = useTheme();
+
+    const bgDark = {
+      backgroundImage: "url(/Home-page-dark.svg)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    
+    const bgLight = {
+      backgroundImage: "url(/Home-page-light.svg)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+
   return (
-    <div className="dark:text-white dark:bg-[#170C3F]  md:pb-32">
+    <div className="dark:text-white dark:bg-[#170C3F]  md:pb-32" style={theme === "dark" ? bgDark : bgLight}>
       <div className="container max-w-[1320px] space-y-32">
         <HeroSection />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -785,7 +810,8 @@ export default function Home() {
                 >
                   <Image
                     className="mx-auto"
-                    src={develoer.image}
+                    // src={develoer.image}
+                    src={theme === "dark" ? develoer.image : develoer.image1}
                     width={60}
                     height={60}
                     alt={develoer.name}
@@ -834,7 +860,12 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  src="discover-icon.svg"
+                  // src="discover-icon.svg"
+                  src={
+                    theme === "dark"
+                      ? "discover-icon.svg"
+                      : "discover-light.svg"
+                  }
                   width={64}
                   height={64}
                   alt="dicover"
@@ -849,7 +880,10 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  src="design-icon.svg"
+                  // src="design-icon.svg"
+                  src={
+                    theme === "dark" ? "design-icon.svg" : "design-light.svg"
+                  }
                   width={64}
                   height={64}
                   alt="dicover"
@@ -864,7 +898,10 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  src="deliver-icon.svg"
+                  // src="deliver-icon.svg"
+                  src={
+                    theme === "dark" ? "deliver-icon.svg" : "deliver-light.svg"
+                  }
                   width={64}
                   height={64}
                   alt="dicover"

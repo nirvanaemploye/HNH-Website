@@ -1,9 +1,12 @@
+"use client";
 import type { Metadata } from "next";
-import { KoHo,Poppins } from "next/font/google";
+import { KoHo, Poppins } from "next/font/google";
 import "./globals.css";
 import { metaObject } from "@/config/site.config";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
+import { createContext } from "react";
+import { ThemeProvider } from "./components/context/themeContext";
 
 const koho = KoHo({
   subsets: ["latin"],
@@ -13,10 +16,10 @@ const koho = KoHo({
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300","400","500","600","700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata : Metadata = {
+ const metadata: Metadata = {
   ...metaObject("Home"),
 };
 
@@ -25,17 +28,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+ 
   return (
     <html lang="en">
       <body
         className={`${koho.variable} ${poppins.variable} antialiased font-sans`}
       >
-        <div className="relative">
-          <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-white/10 via-white/5 to-transparent h-[250px] -z-10"></div>
-        </div>
-        <Navbar />
-        <main className="" >{children}</main>
-        <Footer/>
+        <ThemeProvider>
+          <div className="relative">
+            <div className="w-full absolute top-0 left-0 bg-gradient-to-b from-white/10 via-white/5 to-transparent h-[250px] -z-10"></div>
+          </div>
+          <Navbar />
+          <main className="">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

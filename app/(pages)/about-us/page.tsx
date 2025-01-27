@@ -1,3 +1,5 @@
+"use client";
+import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
 import React from "react";
 
@@ -32,8 +34,27 @@ const principles = [
 ];
 
 const AboutUs = () => {
+  const { theme } = useTheme();
+
+  const bgDark = {
+    backgroundImage: "url(/Home-page-dark.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const bgLight = {
+    backgroundImage: "url(/Home-page-light.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
-    <div className="dark:text-white dark:bg-[#170C3F] md:pb-32">
+    <div
+      className="dark:text-white dark:bg-[#170C3F] md:pb-32"
+      style={theme === "dark" ? bgDark : bgLight}
+    >
       <div className="pt-[150px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image
@@ -45,7 +66,7 @@ const AboutUs = () => {
           />
           <div>
             <h3 className="font-serif text-8xl">About Us</h3>
-            <p className="text-xl text-[#E1E0E0] mt-5">
+            <p className="text-xl text-[#717070] mt-5">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -66,7 +87,7 @@ const AboutUs = () => {
                   className="border border-[#8B68FF40] p-10 h-full flex flex-col justify-start items-center rounded-tr-3xl rounded-bl-3xl shadow-[0px_0px_6px_#8B68FF80]"
                   key={idx}
                 >
-                  <h5 className="text-3xl font-bold uppercase text-center justify-center">
+                  <h5 className="text-3xl font-bold uppercase text-center justify-center text-[#7049EE] dark:text-white">
                     {principle.title}
                   </h5>
                   <Image
@@ -76,7 +97,7 @@ const AboutUs = () => {
                     height={principle.iconHeight}
                     width={principle.iconWidth}
                   />
-                  <p className="text-center text-[#B7B0B0] mt-4">
+                  <p className="text-center text-[#717070] mt-4">
                     {principle.description}
                   </p>
                 </div>
@@ -89,7 +110,7 @@ const AboutUs = () => {
             <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
               OUR MISSION
             </h3>
-            <p className="text-[#B7B0B0] mt-3 ">
+            <p className="text-[#717070] mt-3 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
@@ -131,7 +152,7 @@ const AboutUs = () => {
             <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
               OUR VISION
             </h3>
-            <p className="text-[#B7B0B0] mt-3 ">
+            <p className="text-[#717070] mt-3 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
@@ -191,7 +212,7 @@ const AboutUs = () => {
                   OUR VISION
                 </h5>
                 <p className="mt-[3px]">Founder</p>
-                <p className="text-xs font-light text-[#E1E0E0] text-center mt-2">
+                <p className="text-xs font-light text-[#717070] text-center mt-2">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                   The point of using Lorem Ipsum is that it has a more-or-less

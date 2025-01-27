@@ -13,7 +13,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({service}:ServiceCardProps) => {
   return (
-    <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
+    <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
       <div>
         <Image
           src={service.image}
@@ -23,8 +23,10 @@ const ServiceCard = ({service}:ServiceCardProps) => {
         />
       </div>
       <div>
-        <h5 className="font-bold text-2xl">{service.name}</h5>
-        <p className="mt-2 text-[#B7B0B0]">{service.description}</p>
+        <h5 className="font-bold text-2xl dark:text-white text-[#7049EE]">
+          {service.name}
+        </h5>
+        <p className="mt-2 text-[#717070]">{service.description}</p>
         <div className="flex flex-wrap mt-6 gap-3">
           {service.services.map((service, idx) => {
             return (

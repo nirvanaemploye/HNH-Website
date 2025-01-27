@@ -84,8 +84,8 @@ const PortfolioItems = () => {
               className={twMerge(
                 "px-6 py-3 rounded-xl",
                 type.key === selectedPortfolioType
-                  ? "bg-primary text-white"
-                  : "bg-[#1A142C] border border-primary "
+                  ? "bg-primary dark:text-white"
+                  : "bg-[#1A142C] text-white border border-primary "
               )}
               key={idx}
             >

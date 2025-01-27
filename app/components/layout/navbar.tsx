@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Topbar from "./topbar";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,7 @@ import { LuMenu, LuX } from "react-icons/lu";
 import DarkMode from "./DarkMode";
 import LightHit from "../../../public/Hit_Hammer 2.svg";
 import DarkHit from "../../../public/logo.svg";
+import { useTheme } from "../context/themeContext";
 
 const navitems = [
   {
@@ -41,9 +42,7 @@ const navitems = [
 const Navbar = () => {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
-  const [theme] = useState();
-  console.log(theme);
-  
+  const { theme } = useTheme();
 
   return (
     <>

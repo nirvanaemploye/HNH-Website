@@ -15,7 +15,7 @@ const ContactUsForm = () => {
         <h5 className="capitalize text-primary font-serif font-semibold text-3xl">
           Get in touch
         </h5>
-        <p className="text-[#E1E0E0] mt-1">
+        <p className="text-[#717070] mt-1">
           We are here for you! How can we help?
         </p>
         <form className="sm:mt-14 mt-7 sm:space-y-9 space-y-5">

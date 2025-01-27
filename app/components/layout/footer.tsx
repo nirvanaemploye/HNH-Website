@@ -2,12 +2,30 @@ import Image from "next/image";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
+import { useTheme } from "../context/themeContext";
 
 const Footer = () => {
+
+  const { theme } = useTheme();
+
+  const footerDark = {
+    backgroundImage: "url(/footer-dark.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const footerLight = {
+    backgroundImage: "url(/footer-light.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
     <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F]">
-      <div className="">
-        <div className="border-t border-[#6D6969] relative py-16">
+      <div className="" style={theme === "dark"? footerDark : footerLight}>
+        <div className=" relative py-16">
           <div className="container max-w-[1320px] h-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
             <div className="flex flex-col items-start justify-between h-full">
               <div>
