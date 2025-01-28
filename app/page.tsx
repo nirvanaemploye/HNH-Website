@@ -3,7 +3,7 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
-import polygonstats from "@/public/Group_87.svg";
+// import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
 import { useTheme } from "./components/context/themeContext";
 
@@ -723,7 +723,8 @@ export default function Home() {
             </p>
           </div>
           <Image
-            src={polygonstats}
+            // src="/Group-87.svg"
+            src={theme === "dark" ? "Group-87.svg" : "Group-87-light.svg"}
             width={500}
             height={500}
             alt="stats"
@@ -836,11 +837,13 @@ export default function Home() {
                   alt="dicover"
                 />
               </div>
-              <h4 className="text-4xl font-semibold uppercase">discover</h4>
-              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore m
-              </p>
+              <div className="space-y-4">
+                <h4 className="text-4xl font-semibold uppercase">discover</h4>
+                <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore m
+                </p>
+              </div>
             </div>
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
@@ -854,11 +857,13 @@ export default function Home() {
                   alt="dicover"
                 />
               </div>
-              <h4 className="text-4xl font-semibold uppercase">design</h4>
-              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore m
-              </p>
+              <div className="space-y-4">
+                <h4 className="text-4xl font-semibold uppercase">design</h4>
+                <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore m
+                </p>
+              </div>
             </div>
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
@@ -872,11 +877,13 @@ export default function Home() {
                   alt="dicover"
                 />
               </div>
-              <h4 className="text-4xl font-semibold uppercase">deliver</h4>
-              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore m
-              </p>
+              <div className="space-y-4">
+                <h4 className="text-4xl font-semibold uppercase">deliver</h4>
+                <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore m
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -914,12 +921,32 @@ export default function Home() {
               </ul>
             </div>
           </section>
+          <div className="items-center justify-items-center mt-48 space-y-3">
+            <div>
+              <p className="text-base dark:text-[#B7B0B0] text-[#717070] max-w-[929px] text-center">
+                AdasIt is a long established fact that a reader will be
+                distracted by the readable content of a page when looking at its
+                layout. The point of using Lorem Ipsum is that it has a
+                more-or-less normal distribution of letters, as opposed to using
+                'Content here, content here', making it look like readable
+                English.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl text-[#8B68FF] font-semibold text-center">
+                Allena Smith
+              </h2>
+              <p className="font-medium text-base dark:text-[#FFFFFF] text-[#717070]">
+                Awesome IT, Company
+              </p>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col items-center">
           <h3 className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase font-serif">
             get in touch
           </h3>
-          <p className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-4xl mx-auto">
+          <p className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-[1093px] text-xl font-normal mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
