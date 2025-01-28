@@ -6,22 +6,24 @@ import DarkMode from "./DarkMode";
 const Topbar = () => {
   return (
     <div className="border-b dark:border-[#FFFFFF47] border-[#B7B0B099] py-2 px-9 md:flex hidden items-center justify-between">
-      <p>what&apos;s the next . . .</p>
+      <p className="text-sm font-normal dark:text-[#FFFFFF] text-[#171616]">
+        what&apos;s the next . . .
+      </p>
       <div className="flex items-center justify-end gap-5">
         <div className="flex space-x-1">
-          <FiPhone className="text-xl" />
+          <FiPhone className="text-xl text-[#8B68FF]" />
           <p className="font-semibold text-xs ">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
-          <FiPhone className="text-xl" />
+          <FiPhone className="text-xl text-[#8B68FF]" />
           <p className="font-semibold text-xs ">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
-          <IoIosMail className="text-xl" />
+          <IoIosMail className="text-xl text-[#8B68FF]" />
           <p className="font-semibold text-xs">
             <a href="mailto:nirvanatechlabs@gmail.com">
               nirvanatechlabs@gmail.com

@@ -447,7 +447,7 @@ export default function Home() {
             <h3 className="font-serif font-bold text-[40px]">
               HIT-N-HAMMER COMPANY
             </h3>
-            <p className="mt-7 leading-9">
+            <p className=" leading-9">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -915,60 +915,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div>
-        <p className="text-primary text-2xl font-medium text-center border-b-2 border-dashed w-fit mx-auto uppercase">
-          CLIENTS TESTIMONIAL
-        </p>
-        <h3 className="uppercase font-serif text-white font-bold text-2xl md:text-4xl text-center mt-4">
-          what our client’s are saying
-        </h3>
-        <div className="mt-10 grid grid-rows-2 items-center justify-items-center gap-4">
-          <div className="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-4">
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px] md:block hidden"></div>
-          </div>
-          <div className="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-4">
-            <div className="w-[210px] h-[210px] md:block hidden"></div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-            <div className="w-[210px] h-[210px]">
-              <Image src="/client-1.png" alt="" height={210} width={210} />
-            </div>
-          </div>
-        </div>
-        <div className="mt-5 flex flex-col items-center justify-center">
-          <Image src="/quotes.svg" height={68} width={68} alt="quotes" />
-          <p className="text-[15px] text-[#B7B0B0] text-center max-w-4xl">
-            AdasIt is a long established fact that a reader will be distracted
-            by the readable content of a page when looking at its layout. The
-            point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using &apos;Content here,
-            content here, making it look like readable English.
-          </p>
-          <h5 className="mt-5 text-xl text-primary font-semibold">
-            Allena Smith
-          </h5>
-          <p className="font-medium">Awesome IT, Company</p>
-        </div>
-      </div> */}
+        
 
         <div>
           <section id="testimonialSection">
@@ -1014,7 +961,7 @@ export default function Home() {
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
             accumsan lacus vel facilisis
           </p>
-          <button className="mt-12 uppercase px-4 py-2 border rounded-xl hover:bg-[#5533C8]">
+          <button className="mt-12 uppercase px-8 py-2 border rounded-xl hover:bg-[#5533C8]">
             contact us
           </button>
         </div>
