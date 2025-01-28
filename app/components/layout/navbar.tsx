@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full top-0 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100 z-20 dark:text-white dark:bg-[#170C3F]">
+      <nav className="fixed w-full top-0 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100 z-20 dark:text-white dark:bg-[##7348FF]">
         <Topbar />
         <div className="flex items-center justify-between sm:px-9 px-4 py-5">
           <Link href="/">

@@ -417,7 +417,7 @@ export default function Home() {
     const bgDark = {
       backgroundImage: "url(/Home-page-dark.svg)",
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: "top",
       backgroundRepeat: "no-repeat",
     };
     
@@ -429,7 +429,10 @@ export default function Home() {
     };
 
   return (
-    <div className="dark:text-white dark:bg-[#170C3F]  md:pb-32" style={theme === "dark" ? bgDark : bgLight}>
+    <div
+      className="dark:text-white dark:bg-[#170C3F]  md:pb-32"
+      style={theme === "dark" ? bgDark : bgLight}
+    >
       <div className="container max-w-[1320px] space-y-32">
         <HeroSection />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -447,7 +450,7 @@ export default function Home() {
             <h3 className="font-serif font-bold text-[40px]">
               HIT-N-HAMMER COMPANY
             </h3>
-            <p className=" leading-9">
+            <p className="dark:text-[#B7B0B0] text-[#717070] leading-9">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -455,49 +458,11 @@ export default function Home() {
               dedicated to driving innovation and delivering results that exceed
               our clients&apos; expectations.
             </p>
-            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-10">
+            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8">
               Read more
             </button>
           </div>
         </div>
-        {/* <div className="flex flex-col items-center justify-center gap-2 relative z-10">
-        <div className="bg-[#5729F1] size-[256px] rounded-full blur-[200px] absolute right-0 -z-10"></div>
-        <span className="uppercase text-primary text-xl border-b-2 border-dashed border-white pb-1 w-fit">
-          OUR SERVICES
-        </span>
-        <h3 className="font-serif font-bold text-[40px]">
-          HIT-N-HAMMER SERVICES
-        </h3>
-        <p className="mt-5 leading-9 text-[#B7B0B0]">
-          Technologies Design And Develop Mobile Apps, Web Apps, Blockchain
-          Solutions.
-        </p>
-
-        <div className="min-h-screen py-10">
-          <div className="container mx-auto flex flex-wrap justify-center gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 text-white w-60 h-72 p-6 flex flex-col items-center justify-center text-center shadow-lg hover:scale-105 transition-transform duration-300"
-                style={{
-                  clipPath:
-                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                }}
-              >
-                <div>
-                  <service.icon className="text-[#FFFFFF80] text-4xl mb-4" />
-                </div>
-                <h3 className="text-[#FFFFFF] text-xl font-bold mb-2 text-center">
-                  {service.title}
-                </h3>
-                <p className="text-[#B7B0B0] text-sm text-center">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
         <section id="servicesSection">
           <div className="servicesContainer">
@@ -505,10 +470,10 @@ export default function Home() {
               <span className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit">
                 OUR SERVICES
               </span>
-              <h1 className="uppercase font-serif dark:text-[#ffffff] text-black font-bold text-[40px]">
+              <h1 className="uppercase font-serif dark:text-[#ffffff] text-[#171616] font-bold text-[40px]">
                 HIT-N-HAMMER SERVICES
               </h1>
-              <p className="mt-5 leading-9 text-[#B7B0B0] text-lg">
+              <p className="mt-5 leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg">
                 Technologies Design And Develop Mobile Apps, Web Apps,
                 Blockchain Solutions.
               </p>
@@ -547,10 +512,10 @@ export default function Home() {
                     <path d="M20.7991 23.1471H19.7324V24.2144H20.7991V23.1471Z" />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     App <br /> Development
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -576,10 +541,10 @@ export default function Home() {
                     <path d="M1.76866 25.3158H15.9178V29.3988H10.5382V31.7603H27.1929V29.3988H21.8133V25.3158H35.9625C36.9353 25.3158 37.7311 24.5188 37.7311 23.5447V2.4884C37.7311 1.51428 36.9353 0.717285 35.9625 0.717285H1.76866C0.795895 0.717285 0 1.51428 0 2.4884V23.5448C0 24.5188 0.795895 25.3158 1.76866 25.3158ZM2.35819 3.07875H35.3729V22.9543H2.35819V3.07875Z" />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     WEB <br /> Development
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -605,11 +570,11 @@ export default function Home() {
                     <path d="M7.43063 13.4286V16.247C7.43063 16.5289 7.49997 16.7458 7.63865 16.898C7.77734 17.0501 7.98089 17.1261 8.24931 17.1261C8.51773 17.1261 8.72352 17.0501 8.86668 16.898C9.00984 16.7458 9.08142 16.5289 9.08142 16.247V13.4286H10.2289V16.2403C10.2289 16.6608 10.1394 17.0165 9.9605 17.3073C9.78155 17.5981 9.53997 17.8173 9.23576 17.9649C8.93602 18.1126 8.6005 18.1864 8.22918 18.1864C7.85786 18.1864 7.52457 18.1148 7.22931 17.9716C6.93852 17.824 6.70812 17.6048 6.53812 17.314C6.36812 17.0187 6.28312 16.6608 6.28312 16.2403V13.4286H7.43063ZM12.3835 13.4286V18.1394H11.236V13.4286H12.3835ZM15.9731 11.7644L14.1747 19.3943H13.0675L14.8659 11.7644H15.9731ZM17.7858 13.4286V16.247C17.7858 16.5289 17.8552 16.7458 17.9939 16.898C18.1325 17.0501 18.3361 17.1261 18.6045 17.1261C18.8729 17.1261 19.0787 17.0501 19.2219 16.898C19.365 16.7458 19.4366 16.5289 19.4366 16.247V13.4286H20.5841V16.2403C20.5841 16.6608 20.4947 17.0165 20.3157 17.3073C20.1368 17.5981 19.8952 17.8173 19.591 17.9649C19.2912 18.1126 18.9557 18.1864 18.5844 18.1864C18.2131 18.1864 17.8798 18.1148 17.5845 17.9716C17.2937 17.824 17.0633 17.6048 16.8933 17.314C16.7233 17.0187 16.6383 16.6608 16.6383 16.2403V13.4286H17.7858ZM24.4768 18.1394L23.5172 16.6966L22.6716 18.1394H21.3698L22.8797 15.7437L21.3362 13.4286H22.6716L23.6178 14.8512L24.4499 13.4286H25.7518L24.2553 15.8041L25.8122 18.1394H24.4768Z" />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     UI/UX
                     <br /> DESIGN
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -636,11 +601,11 @@ export default function Home() {
                     </defs>
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     CLOUD
                     <br /> SERVICES
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -668,11 +633,11 @@ export default function Home() {
                     />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     BUSINESS
                     <br /> SOLUTION
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -699,11 +664,11 @@ export default function Home() {
                     <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     CLOUD E-MAIL
                     <br /> MIGRATION
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -730,11 +695,11 @@ export default function Home() {
                     <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
                   </svg>
 
-                  <h2 className="">
+                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
                     CLOUD E-MAIL
                     <br /> MIGRATION
                   </h2>
-                  <p className="">
+                  <p className="dark:text-[#B7B0B0] text-[#717070]">
                     simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the.
                   </p>
@@ -781,7 +746,7 @@ export default function Home() {
                   </div>
 
                   <h5 className="uppercase font-bold text-2xl">{meth.title}</h5>
-                  <p className="text-[#B7B0B0] leading-[25px] mt-5">
+                  <p className="dark:text-[#B7B0B0] text-[#717070] leading-[25px] mt-5 text-base ">
                     {meth.description}
                   </p>
                 </div>
@@ -796,7 +761,7 @@ export default function Home() {
           <h3 className="uppercase font-serif dark:text-[#ffffff] text-black font-bold text-2xl md:text-4xl text-center mt-4">
             HIRE ON-DEMAND DEVELOPERS
           </h3>
-          <p className="text-lg mt-6 text-center max-w-screen-lg mx-auto text-[#B7B0B0]">
+          <p className="text-lg mt-6 text-center max-w-screen-lg mx-auto dark:text-[#B7B0B0] text-[#717070]">
             Do you want to hire an on-demand mobile app developer for a specific
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP, Blockchain, On-Demand.
@@ -872,7 +837,7 @@ export default function Home() {
                 />
               </div>
               <h4 className="text-4xl font-semibold uppercase">discover</h4>
-              <p className="text-[#B7B0B0] max-w-xs">
+              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore m
               </p>
@@ -890,7 +855,7 @@ export default function Home() {
                 />
               </div>
               <h4 className="text-4xl font-semibold uppercase">design</h4>
-              <p className="text-[#B7B0B0] max-w-xs">
+              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore m
               </p>
@@ -908,14 +873,13 @@ export default function Home() {
                 />
               </div>
               <h4 className="text-4xl font-semibold uppercase">deliver</h4>
-              <p className="text-[#B7B0B0] max-w-xs">
+              <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore m
               </p>
             </div>
           </div>
         </div>
-        
 
         <div>
           <section id="testimonialSection">
@@ -955,13 +919,13 @@ export default function Home() {
           <h3 className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase font-serif">
             get in touch
           </h3>
-          <p className="mt-11 text-center text-[#B7B0B0] max-w-4xl mx-auto">
+          <p className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-4xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
             accumsan lacus vel facilisis
           </p>
-          <button className="mt-12 uppercase px-8 py-2 border rounded-xl hover:bg-[#5533C8]">
+          <button className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]">
             contact us
           </button>
         </div>

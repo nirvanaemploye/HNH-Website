@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F]">
-      <div className="" style={theme === "dark"? footerDark : footerLight}>
+      <div className="" style={theme === "dark" ? footerDark : footerLight}>
         <div className=" relative py-16">
           <div className="container max-w-[1320px] h-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
             <div className="flex flex-col items-start justify-between h-full">
@@ -32,7 +32,7 @@ const Footer = () => {
                 <h5 className="uppercase font-bold text-lg md:text-left text-center">
                   ABOUT HIT-N-HAMMER
                 </h5>
-                <p className="mt-1 text-sm text-[#B8B6B6] md:text-left text-center">
+                <p className="mt-1 text-sm dark:text-[#B8B6B6] text-[#717070] md:text-left text-center">
                   Hit-N- Hammer is a leading provider of technology solutions
                   for businesses. With a focus on delivering the highest quality
                   products and services, we help businesses harness the power of
@@ -59,7 +59,7 @@ const Footer = () => {
                     <a href="/contact">contact</a>
                   </li>
                 </ul>
-                <p className="font-light text-[#B8B6B6] text-xs mt-3 md:text-left text-center">
+                <p className="font-light dark:text-[#B8B6B6] text-[#717070] text-xs mt-3 md:text-left text-center">
                   Copyright @ 2014 Hit-N Hammer Services. All Rights Reserved
                 </p>
               </div>
@@ -68,16 +68,16 @@ const Footer = () => {
               <div className=" md:text-left text-center">
                 <h5 className="uppercase text-lg font-bold mb-1 ">Services</h5>
                 <ul className="space-y-1 sm:list-disc">
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     Web development
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     App development
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     Business solutions
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     block chain technology
                   </li>
                 </ul>
@@ -87,16 +87,16 @@ const Footer = () => {
                   quick links
                 </h5>
                 <ul className="space-y-1 sm:list-disc">
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     Web development
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     App development
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     Business solutions
                   </li>
-                  <li className="text-[15px] text-[#B8B6B6] capitalize">
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     block chain technology
                   </li>
                 </ul>
@@ -106,7 +106,8 @@ const Footer = () => {
               <div className="flex flex-col gap-1 items-center md:items-start ">
                 <a href="/">
                   <Image
-                    src="/logo.svg"
+                    // src="/logo.svg"
+                    src={theme === "dark" ? "logo.svg" : "footer-dark-logo.svg"}
                     width={184}
                     height={43}
                     alt="hit n hammer"
