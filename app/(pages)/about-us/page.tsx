@@ -65,7 +65,9 @@ const AboutUs = () => {
             alt="about us"
           />
           <div>
-            <h3 className="font-serif text-8xl">About Us</h3>
+            <h3 className="font-serif text-8xl">
+              About Us
+            </h3>
             <p className="text-xl text-[#717070] mt-5">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
