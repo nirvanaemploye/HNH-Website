@@ -3,13 +3,13 @@ import React from "react";
 
 const HeroSection = () => {
 
-  const bgImg = {
-    backgroundImage: "url(/hero-bg.svg)",
-    backgroundSize: "100% auto",
-    backgroundPosition: "top",
-    backgroundRepeat: "no-repeat",
+  // const bgImg = {
+  //   backgroundImage: "url(/hero-bg.svg)",
+  //   backgroundSize: "100% auto",
+  //   backgroundPosition: "top",
+  //   backgroundRepeat: "no-repeat",
     
-  };
+  // };
 
   return (
     <div className="md:pt-28">
