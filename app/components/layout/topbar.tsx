@@ -11,19 +11,19 @@ const Topbar = () => {
       <div className="flex items-center justify-end gap-5">
         <div className="flex space-x-1 ">
           <FiPhone className="text-lg text-[#8B68FF]" />
-          <p className="font-semibold text-xs leading-5 ">
+          <p className="font-medium text-xs leading-5 ">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
           <FiPhone className="text-lg text-[#8B68FF]" />
-          <p className="font-semibold text-xs leading-5">
+          <p className="font-medium text-xs leading-5">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
           <IoIosMail className="text-lg text-[#8B68FF]" />
-          <p className="font-semibold text-xs leading-5">
+          <p className="font-medium text-xs leading-5">
             <a href="mailto:nirvanatechlabs@gmail.com">
               nirvanatechlabs@gmail.com
             </a>
