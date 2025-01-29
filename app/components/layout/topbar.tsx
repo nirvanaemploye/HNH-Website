@@ -9,21 +9,21 @@ const Topbar = () => {
         what&apos;s the next . . .
       </p>
       <div className="flex items-center justify-end gap-5">
-        <div className="flex space-x-1">
-          <FiPhone className="text-xl text-[#8B68FF]" />
-          <p className="font-semibold text-xs ">
+        <div className="flex space-x-1 ">
+          <FiPhone className="text-lg text-[#8B68FF]" />
+          <p className="font-semibold text-xl ">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
-          <FiPhone className="text-xl text-[#8B68FF]" />
-          <p className="font-semibold text-xs ">
+          <FiPhone className="text-lg text-[#8B68FF]" />
+          <p className="font-semibold text-xl ">
             <a href="tel:+91 97222 78859">+91 97222 78859</a>
           </p>
         </div>
         <div className="flex space-x-1">
-          <IoIosMail className="text-xl text-[#8B68FF]" />
-          <p className="font-semibold text-xs">
+          <IoIosMail className="text-lg text-[#8B68FF]" />
+          <p className="font-semibold text-xl">
             <a href="mailto:nirvanatechlabs@gmail.com">
               nirvanatechlabs@gmail.com
             </a>

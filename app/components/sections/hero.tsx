@@ -22,7 +22,7 @@ const HeroSection = () => {
             Driving Innovation, Delivering Results
           </p>
           <button className="bg-primary px-8 py-3 hover:outline rounded-lg mt-8 font-semibold text-base">
-            Learn more
+            Learn More
           </button>
         </div>
         <Image
