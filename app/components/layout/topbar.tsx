@@ -1,7 +1,6 @@
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
-import DarkMode from "./DarkMode";
 
 const Topbar = () => {
   return (
