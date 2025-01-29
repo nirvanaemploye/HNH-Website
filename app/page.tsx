@@ -458,7 +458,7 @@ export default function Home() {
               dedicated to driving innovation and delivering results that exceed
               our clients&apos; expectations.
             </p>
-            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8">
+            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold">
               Read more
             </button>
           </div>
@@ -479,8 +479,8 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb grid gap-y-12">
-              <li className={`honeycomb-cell`}>
+            <ul className="honeycomb grid gap-y-12 md:gap-y-3">
+              <li className="honeycomb-cell">
                 {/* <img className="honeycomb-cell_img" src="img/work-1.jpg"> */}
                 <div className="honeycomb-cell_title">
                   <svg
@@ -724,7 +724,7 @@ export default function Home() {
           </div>
           <Image
             // src="/Group-87.svg"
-            src={theme === "dark" ? "Group-87.svg" : "Group-87-light.svg"}
+            src={theme === "dark" ? "IMAGE_122.svg" : "IMAGE_LIGHTE.svg"}
             width={500}
             height={500}
             alt="stats"
@@ -826,7 +826,7 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  // src="discover-icon.svg"
+                  //src="discover.svg"
                   src={
                     theme === "dark"
                       ? "discover-icon.svg"
@@ -848,7 +848,7 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  // src="design-icon.svg"
+                  //src="design.svg"
                   src={
                     theme === "dark" ? "design-icon.svg" : "design-light.svg"
                   }
@@ -868,7 +868,7 @@ export default function Home() {
             <div className="text-center">
               <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
                 <Image
-                  // src="deliver-icon.svg"
+                  //src="deliver.svg"
                   src={
                     theme === "dark" ? "deliver-icon.svg" : "deliver-light.svg"
                   }
@@ -901,7 +901,7 @@ export default function Home() {
               </div>
             </div>
             <div className="clientImgsContainer ">
-              <ul className="honeycomb grid gap-y-12">
+              <ul className="honeycomb grid gap-y-12 md:gap-y-3">
                 {members.map((member) => (
                   <li
                     key={member.id}

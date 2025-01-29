@@ -81,7 +81,7 @@ const Navbar = () => {
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden"
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden text-white"
             >
               Hire us
             </button>
@@ -132,7 +132,7 @@ const Navbar = () => {
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full "
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full text-white"
             >
               Hire us
             </button>
