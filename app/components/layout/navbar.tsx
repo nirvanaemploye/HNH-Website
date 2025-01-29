@@ -51,7 +51,6 @@ const Navbar = () => {
         <div className="flex items-center justify-between sm:px-9 px-4 py-5">
           <Link href="/">
             <Image
-              // src="/logo.svg"
               src={theme === "dark" ? DarkHit : LightHit}
               alt="hit n hammer"
               className="sm:w-[159px] w-[140px]"
@@ -59,7 +58,7 @@ const Navbar = () => {
               height={24}
             />
           </Link>
-          <ul className="md:flex hidden items-center justify-center gap-5">
+          <ul className="lg:flex hidden items-center justify-center gap-2 lg:gap-5">
             {navitems.map((item, idx) => {
               const isactive = pathname === item.href;
               return (
@@ -74,35 +73,28 @@ const Navbar = () => {
                 </li>
               );
             })}
-            {/* <li className="ml-8">
-              <button
-                style={{
-                  boxShadow:
-                    "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
-                }}
-                className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full "
-              >
-                Hire us
-              </button>
-            </li> */}
           </ul>
-          <div className="flex items-center gap-4 justify-end">
+
+          <div className="flex xl:-ml-56">
             <button
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full sm:block hidden"
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden"
             >
               Hire us
             </button>
-            {/* <DarkMode /> */}
+
             <button
               onClick={() => setMenuVisible(true)}
               className="text-sm md:hidden block"
             >
               <LuMenu className="text-3xl" />
             </button>
+          </div>
+          <div className="md:block hidden">
+            <DarkMode />
           </div>
         </div>
       </nav>

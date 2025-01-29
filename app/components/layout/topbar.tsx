@@ -30,9 +30,9 @@ const Topbar = () => {
             </a>
           </p>
         </div>
-        <div className="flex space-x-1">
+        {/* <div className="flex space-x-1">
           <DarkMode />
-        </div>
+        </div> */}
       </div>
     </div>
   );

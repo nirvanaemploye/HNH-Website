@@ -53,7 +53,7 @@ const DarkMode = () => {
         src="/dark_btn.svg"
         alt=""
         onClick={toggleTheme}
-        className={`cursor-pointer transition-all duration-300 absolute right-0 z-10 ${
+        className={`cursor-pointer transition-all duration-300 absolute ${
           theme === "dark" ? "opacity-0" : "opacity-100"
         }`}
       />

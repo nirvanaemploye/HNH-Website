@@ -479,7 +479,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb">
+            <ul className="honeycomb grid gap-y-12">
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/work-1.jpg"> */}
                 <div className="honeycomb-cell_title">
@@ -792,7 +792,7 @@ export default function Home() {
                     <li>Rate : {develoer.rate}</li>
                   </ul>
                   <div className="mt-4 flex items-center justify-between">
-                    <button className="bg-primary rounded-xl px-4 py-2 font-semibold">
+                    <button className="bg-primary rounded-xl lg:px-4 lg:py-2 font-semibold">
                       Hire now
                     </button>
                     <ul className="flex items-center justify-end gap-2">
@@ -900,8 +900,8 @@ export default function Home() {
                 </h1>
               </div>
             </div>
-            <div className="clientImgsContainer">
-              <ul className="honeycomb">
+            <div className="clientImgsContainer ">
+              <ul className="honeycomb grid gap-y-12">
                 {members.map((member) => (
                   <li
                     key={member.id}
