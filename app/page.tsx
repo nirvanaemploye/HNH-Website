@@ -411,9 +411,9 @@ export default function Home() {
       img: client7,
     },
   ];
-  const [hoveredMember, setHoveredMember] = useState(String);
+  const [hoveredMember, setHoveredMember] = useState(Number);
 
-    const handleMouseEnter = (id: string) => {
+    const handleMouseEnter = (id: number) => {
     setHoveredMember(id);
   };
 
