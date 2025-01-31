@@ -480,7 +480,11 @@ export default function Home() {
             </div>
 
             <ul className="honeycomb grid gap-y-12 md:gap-y-4 md:gap-x-3">
-              <li className="honeycomb-cell">
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
@@ -522,7 +526,11 @@ export default function Home() {
                   </div>
                 </div>
               </li>
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 {/* <img className="honeycomb-cell_img" src="img/work-2.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -553,7 +561,11 @@ export default function Home() {
                   </div>
                 </div>
               </li>
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 {/* <img className="honeycomb-cell_img" src="img/Work3.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -585,7 +597,11 @@ export default function Home() {
                   </div>
                 </div>
               </li>
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
@@ -621,7 +637,11 @@ export default function Home() {
 
               <li className="honeycomb-cell honeycomb_Hidden"></li>
 
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 {/* <img className="honeycomb-cell_img" src="img/work5.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -652,7 +672,11 @@ export default function Home() {
                   </div>
                 </div>
               </li>
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 {/* <img className="honeycomb-cell_img" src="img/work06.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -685,7 +709,11 @@ export default function Home() {
                   </div>
                 </div>
               </li>
-              <li className={`honeycomb-cell`}>
+              <li
+                className={`honeycomb-cell ${
+                  theme === "light" ? "honeycomb-cell-light" : ""
+                }`}
+              >
                 {/* <img className="honeycomb-cell_img" src="img/work07.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg

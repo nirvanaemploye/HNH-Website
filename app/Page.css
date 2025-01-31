@@ -166,6 +166,8 @@
   object-fit: cover;
 }
 
+
+
 .honeycomb-cell:hover .icon {
   fill: #4c3aa5;
   /* Color on hover */
@@ -194,6 +196,32 @@
 
 
 
+.honeycomb-cell-light::before {
+  /* background: hsla(0, 0%, 100%, 0.18); */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: scale(1.055);
+  background: url("../public/lightMode.png");
+  height: 320px;
+  width: 270px;
+  /* z-index: -10000; */
+}
+
+.honeycomb-cell-light::after {
+  background: none;
+  opacity: 0.7;
+  transition: opacity 350ms;
+  -webkit-transition: opacity 350ms;
+}
+
+.honeycomb-cell-light:hover .icon {
+  fill: #927DFA;
+  /* Color on hover */
+}
+.honeycomb-cell-light .icon {
+  fill: #B7B0B0;
+  /* Color on hover */
+}
 
 /* ---------------------------------------------------- */
 
