@@ -3,7 +3,8 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
-import doubleQuotes from "../public/double-quotes.png"
+import doubleQuotesDark from "../public/Quote_dark.png"
+import doubleQuoteLight from "../public/Quote_lighte.png"
 import client1 from "../public/45631.jpg";
 import client2 from "../public/1287.jpg";
 import client3 from "../public/18155.jpg";
@@ -877,17 +878,16 @@ export default function Home() {
           </h3>
           <div className="flex md:flex-row flex-col items-center justify-center gap-24 mt-14">
             <div className="text-center">
-              <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
+              <div className="mx-auto flex items-center justify-center">
                 <Image
-                  //src="discover.svg"
                   src={
                     theme === "dark"
-                      ? "discover-icon.svg"
-                      : "discover-light.svg"
+                      ? "Discover_dark.svg"
+                      : "Discover_lighte.svg"
                   }
-                  width={64}
-                  height={64}
-                  alt="dicover"
+                  width={154}
+                  height={154}
+                  alt="discover"
                 />
               </div>
               <div className="space-y-4">
@@ -899,15 +899,14 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
+              <div className="mx-auto flex items-center justify-center">
                 <Image
-                  //src="design.svg"
                   src={
-                    theme === "dark" ? "design-icon.svg" : "design-light.svg"
+                    theme === "dark" ? "Design-dark.svg" : "Design_lighte.svg"
                   }
-                  width={64}
-                  height={64}
-                  alt="dicover"
+                  width={154}
+                  height={154}
+                  alt="design"
                 />
               </div>
               <div className="space-y-4">
@@ -919,15 +918,14 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <div className="border border-primary bg-[#ffffff08] mx-auto size-[100px] flex items-center justify-center rounded-full mb-4 p-4">
+              <div className="mx-auto flex items-center justify-center">
                 <Image
-                  //src="deliver.svg"
                   src={
-                    theme === "dark" ? "deliver-icon.svg" : "deliver-light.svg"
+                    theme === "dark" ? "Deliver-dark.svg" : "Deliver_lighte.svg"
                   }
-                  width={64}
-                  height={64}
-                  alt="dicover"
+                  width={154}
+                  height={154}
+                  alt="deliver"
                 />
               </div>
               <div className="space-y-4">
@@ -974,7 +972,11 @@ export default function Home() {
                 </ul>
               </div>
               <div className="doubleQuotes1">
-                <Image src={doubleQuotes} alt="doubleQuotes"  className="mx-auto"/>
+                <Image
+                  src={theme === "dark" ? doubleQuotesDark : doubleQuoteLight}
+                  alt="doubleQuotes"
+                  className="mx-auto"
+                />
 
                 {members.map((member) => (
                   <div
