@@ -411,11 +411,11 @@ export default function Home() {
       img: client7,
     },
   ];
-  const [hoveredMember, setHoveredMember] = useState(null);
+  const [hoveredMember, setHoveredMember] = useState(String);
 
-   const handleMouseEnter = (id) => {
+    const handleMouseEnter = (id: string) => {
     setHoveredMember(id);
-   };
+  };
 
   const handleMouseLeave = () => {
     setHoveredMember(hoveredMember);
