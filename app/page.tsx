@@ -492,7 +492,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb grid gap-y-12 md:gap-y-4 md:gap-x-3">
+            <ul className="honeycomb grid gap-y-12 md:gap-y-6 md:gap-x-6">
               <li
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
@@ -878,7 +878,7 @@ export default function Home() {
           </h3>
           <div className="flex md:flex-row flex-col items-center justify-center gap-24 mt-14">
             <div className="text-center">
-              <div className="mx-auto flex items-center justify-center">
+              <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
                     theme === "dark"
@@ -899,7 +899,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <div className="mx-auto flex items-center justify-center">
+              <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
                     theme === "dark" ? "Design-dark.svg" : "Design_lighte.svg"
@@ -918,7 +918,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <div className="mx-auto flex items-center justify-center">
+              <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
                     theme === "dark" ? "Deliver-dark.svg" : "Deliver_lighte.svg"
