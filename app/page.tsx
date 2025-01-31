@@ -479,7 +479,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb grid gap-y-12 md:gap-y-3">
+            <ul className="honeycomb grid gap-y-12 md:gap-y-4 md:gap-x-3">
               <li className="honeycomb-cell">
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -511,13 +511,15 @@ export default function Home() {
                     <path d="M20.7991 23.1471H19.7324V24.2144H20.7991V23.1471Z" />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    App <br /> Development
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      App <br /> Development
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
@@ -540,13 +542,15 @@ export default function Home() {
                     <path d="M1.76866 25.3158H15.9178V29.3988H10.5382V31.7603H27.1929V29.3988H21.8133V25.3158H35.9625C36.9353 25.3158 37.7311 24.5188 37.7311 23.5447V2.4884C37.7311 1.51428 36.9353 0.717285 35.9625 0.717285H1.76866C0.795895 0.717285 0 1.51428 0 2.4884V23.5448C0 24.5188 0.795895 25.3158 1.76866 25.3158ZM2.35819 3.07875H35.3729V22.9543H2.35819V3.07875Z" />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    WEB <br /> Development
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      WEB <br /> Development
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
@@ -569,14 +573,16 @@ export default function Home() {
                     <path d="M7.43063 13.4286V16.247C7.43063 16.5289 7.49997 16.7458 7.63865 16.898C7.77734 17.0501 7.98089 17.1261 8.24931 17.1261C8.51773 17.1261 8.72352 17.0501 8.86668 16.898C9.00984 16.7458 9.08142 16.5289 9.08142 16.247V13.4286H10.2289V16.2403C10.2289 16.6608 10.1394 17.0165 9.9605 17.3073C9.78155 17.5981 9.53997 17.8173 9.23576 17.9649C8.93602 18.1126 8.6005 18.1864 8.22918 18.1864C7.85786 18.1864 7.52457 18.1148 7.22931 17.9716C6.93852 17.824 6.70812 17.6048 6.53812 17.314C6.36812 17.0187 6.28312 16.6608 6.28312 16.2403V13.4286H7.43063ZM12.3835 13.4286V18.1394H11.236V13.4286H12.3835ZM15.9731 11.7644L14.1747 19.3943H13.0675L14.8659 11.7644H15.9731ZM17.7858 13.4286V16.247C17.7858 16.5289 17.8552 16.7458 17.9939 16.898C18.1325 17.0501 18.3361 17.1261 18.6045 17.1261C18.8729 17.1261 19.0787 17.0501 19.2219 16.898C19.365 16.7458 19.4366 16.5289 19.4366 16.247V13.4286H20.5841V16.2403C20.5841 16.6608 20.4947 17.0165 20.3157 17.3073C20.1368 17.5981 19.8952 17.8173 19.591 17.9649C19.2912 18.1126 18.9557 18.1864 18.5844 18.1864C18.2131 18.1864 17.8798 18.1148 17.5845 17.9716C17.2937 17.824 17.0633 17.6048 16.8933 17.314C16.7233 17.0187 16.6383 16.6608 16.6383 16.2403V13.4286H17.7858ZM24.4768 18.1394L23.5172 16.6966L22.6716 18.1394H21.3698L22.8797 15.7437L21.3362 13.4286H22.6716L23.6178 14.8512L24.4499 13.4286H25.7518L24.2553 15.8041L25.8122 18.1394H24.4768Z" />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    UI/UX
-                    <br /> DESIGN
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      UI/UX
+                      <br /> DESIGN
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
@@ -600,14 +606,16 @@ export default function Home() {
                     </defs>
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    CLOUD
-                    <br /> SERVICES
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      CLOUD
+                      <br /> SERVICES
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
 
@@ -632,14 +640,16 @@ export default function Home() {
                     />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    BUSINESS
-                    <br /> SOLUTION
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      BUSINESS
+                      <br /> SOLUTION
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
@@ -663,14 +673,16 @@ export default function Home() {
                     <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    CLOUD E-MAIL
-                    <br /> MIGRATION
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      CLOUD E-MAIL
+                      <br /> MIGRATION
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
@@ -694,14 +706,16 @@ export default function Home() {
                     <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
                   </svg>
 
-                  <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                    CLOUD E-MAIL
-                    <br /> MIGRATION
-                  </h2>
-                  <p className="dark:text-[#B7B0B0] text-[#717070]">
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the.
-                  </p>
+                  <div className="ml-3 space-y-5 mt-10">
+                    <h2 className="dark:text-[#FFFFFF] text-[#171616]">
+                      CLOUD E-MAIL
+                      <br /> MIGRATION
+                    </h2>
+                    <p className="dark:text-[#B7B0B0] text-[#717070]">
+                      simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the.
+                    </p>
+                  </div>
                 </div>
               </li>
               <li className="honeycomb-cell honeycomb_Hidden"></li>
@@ -709,7 +723,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="flex md:flex-row flex-col-reverse items-center justify-items-center gap-4">
+        <div className="flex md:flex-row flex-col-reverse items-center justify-items-center gap-4 md:pt-32">
           <div>
             <h3 className="capitalize text-primary font-serif font-bold sm:text-5xl text-4xl">
               over 400+ projects completed
@@ -730,7 +744,7 @@ export default function Home() {
             className="sm:w-2/4 w-full"
           />
         </div>
-        <div className="relative z-10">
+        <div className="relative z-10 md:pt-32">
           <h3 className="font-serif text-primary font-bold text-2xl md:text-5xl text-center border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] uppercase w-fit mx-auto">
             methodology
           </h3>
@@ -754,7 +768,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div>
+        <div className="md:pt-32">
           <p className="text-primary text-2xl font-medium capitalize text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto">
             hire us
           </p>
@@ -814,7 +828,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div>
+        <div className="md:pt-32">
           <p className="text-primary text-2xl font-medium text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase">
             why
           </p>
@@ -887,7 +901,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="md:pt-32">
           <section id="testimonialSection">
             <div className="testimonialContainer">
               <div className="testimonialTitle">
