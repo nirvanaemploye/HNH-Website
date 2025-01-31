@@ -3,68 +3,19 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
+import doubleQuotes from "../public/double-quotes.png"
+import client1 from "../public/45631.jpg";
+import client2 from "../public/1287.jpg";
+import client3 from "../public/18155.jpg";
+import client4 from "../public/27767.jpg";
+import client5 from "../public/6837.jpg";
+import client6 from "../public/2148767055.jpg";
+import client7 from "../public/21959.jpg";
 // import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
 import { useTheme } from "./components/context/themeContext";
 
-const members = [
-  {
-    id: 1,
-    name: "John Smith",
-    company: "Awesome IT, Company",
-    testimonial:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: "/team-member-7.png",
-  },
-  {
-    id: 2,
-    name: "Alex ",
-    company: "Awesome IT, Company",
-    testimonial:
-      "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: "/team-member-5.png",
-  },
-  {
-    id: 3,
-    name: "Vipin",
-    company: "Tech Mahindra IT, Company",
-    testimonial:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
-    img: "/team-member-6.png",
-  },
-  {
-    id: 4,
-    name: "Ellyse Perry ",
-    company: "Sonata Software IT, Company",
-    testimonial:
-      "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: "/team-member-8.png",
-  },
-  {
-    id: 5,
-    name: "Peter",
-    company: "Wipro Limited IT, Company",
-    testimonial:
-      "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: "/team-member-2.png",
-  },
-  {
-    id: 6,
-    name: "Allena Smith",
-    company: "HCL Technologies IT, Company",
-    testimonial:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
-    img: "/team-member-3.png",
-  },
-  {
-    id: 7,
-    name: "Sundar",
-    company: "Infosys IT, Company",
-    testimonial:
-      "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: "/team-member-4.png",
-  },
-];
+
 
 // const services = [
 //   {
@@ -402,11 +353,69 @@ const methodologies = [
 ];
 
 export default function Home() {
+  const members = [
+    {
+      id: 1,
+      name: "John Smith",
+      company: "Awesome IT, Company",
+      testimonial:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: client1,
+    },
+    {
+      id: 2,
+      name: "Alex ",
+      company: "Awesome IT, Company",
+      testimonial:
+        "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: client2,
+    },
+    {
+      id: 3,
+      name: "Vipin",
+      company: "Tech Mahindra IT, Company",
+      testimonial:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+      img: client3,
+    },
+    {
+      id: 4,
+      name: "Ellyse Perry ",
+      company: "Sonata Software IT, Company",
+      testimonial:
+        "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: client4,
+    },
+    {
+      id: 5,
+      name: "Peter",
+      company: "Wipro Limited IT, Company",
+      testimonial:
+        "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: client5,
+    },
+    {
+      id: 6,
+      name: "Allena Smith",
+      company: "HCL Technologies IT, Company",
+      testimonial:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+      img: client6,
+    },
+    {
+      id: 7,
+      name: "Sundar",
+      company: "Infosys IT, Company",
+      testimonial:
+        "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: client7,
+    },
+  ];
   const [hoveredMember, setHoveredMember] = useState(null);
 
-  // const handleMouseEnter = (id) => {
-  //   setHoveredMember(id);
-  // };
+   const handleMouseEnter = (id) => {
+    setHoveredMember(id);
+   };
 
   const handleMouseLeave = () => {
     setHoveredMember(hoveredMember);
@@ -466,14 +475,17 @@ export default function Home() {
 
         <section id="servicesSection">
           <div className="servicesContainer">
-            <div className="servicesHeading">
-              <span className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit">
+            <div className="servicesHeading gap-2">
+              <span
+                className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF]
+              pb-1 w-fit"
+              >
                 OUR SERVICES
               </span>
               <h1 className="uppercase font-serif dark:text-[#ffffff] text-[#171616] font-bold text-[40px]">
                 HIT-N-HAMMER SERVICES
               </h1>
-              <p className="mt-5 leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg">
+              <p className="leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg">
                 Technologies Design And Develop Mobile Apps, Web Apps,
                 Blockchain Solutions.
               </p>
@@ -796,14 +808,14 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="md:pt-32">
-          <p className="text-primary text-2xl font-medium capitalize text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto">
+        <div className="md:pt-32 gap-3">
+          <p className="text-primary text-2xl font-medium capitalize text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto pb-1">
             hire us
           </p>
           <h3 className="uppercase font-serif dark:text-[#ffffff] text-black font-bold text-2xl md:text-4xl text-center mt-4">
             HIRE ON-DEMAND DEVELOPERS
           </h3>
-          <p className="text-lg mt-6 text-center max-w-screen-lg mx-auto dark:text-[#B7B0B0] text-[#717070]">
+          <p className="text-lg mt-4 text-center max-w-screen-lg mx-auto dark:text-[#B7B0B0] text-[#717070]">
             Do you want to hire an on-demand mobile app developer for a specific
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP, Blockchain, On-Demand.
@@ -857,7 +869,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:pt-32">
-          <p className="text-primary text-2xl font-medium text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase">
+          <p className="text-primary text-2xl font-medium text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase pb-1">
             why
           </p>
           <h3 className="uppercase font-serif text-black dark:text-[#FFFFFF] font-bold sm:text-4xl text-3xl text-center mt-4">
@@ -930,9 +942,9 @@ export default function Home() {
         </div>
 
         <div className="md:pt-32">
-          <section id="testimonialSection">
-            <div className="testimonialContainer">
-              <div className="testimonialTitle">
+          <section id="testimonialSection1">
+            <div className="testimonialContainer1">
+              <div className="testimonialTitle1">
                 <p className="font-serif text-[#6c42f8] border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed">
                   CLIENTS TESTIMONIAL
                 </p>
@@ -940,29 +952,47 @@ export default function Home() {
                   WHAT OUR CLIENTS ARE SAYING
                 </h1>
               </div>
-            </div>
-            <div className="clientImgsContainer ">
-              <ul className="honeycomb grid gap-y-12 md:gap-y-3">
+
+              <div className="clientImgsContainer ">
+                <ul className="honeycomb1 grid gap-y-12 md:gap-y-3">
+                  {members.map((member) => (
+                    <li
+                      key={member.id}
+                      className={`honeycomb-cell1 honeycomb-cell-client1 ${
+                        hoveredMember === member.id ? "transform" : ""
+                      }`}
+                      onMouseEnter={() => handleMouseEnter(member.id)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <Image
+                        className="honeycomb-cell_img1"
+                        src={member.img}
+                        alt={member.name}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="doubleQuotes1">
+                <Image src={doubleQuotes} alt="doubleQuotes"  className="mx-auto"/>
+
                 {members.map((member) => (
-                  <li
+                  <div
                     key={member.id}
-                    className={`honeycomb-cell honeycomb-cell-client ${
-                      hoveredMember === member.id ? "transform" : ""
-                    }`}
-                    // onMouseEnter={() => handleMouseEnter(member.id)}
-                    onMouseLeave={handleMouseLeave}
+                    className="hoveredContent"
+                    style={{
+                      display: hoveredMember === member.id ? "block" : "none",
+                    }}
                   >
-                    <img
-                      className="honeycomb-cell_img"
-                      src={member.img}
-                      alt={member.name}
-                    />
-                  </li>
+                    <p className="dark:text-[#B7B0B0]">{member.testimonial}</p>
+                    <h3 className="text-[#8B68FF]">{member.name}</h3>
+                    <h5 className="dark:text-[#FFFFFF]">{member.company}</h5>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </section>
-          <div className="items-center justify-items-center mt-48 space-y-3">
+          {/* <div className="items-center justify-items-center mt-48 space-y-3">
             <div>
               <p className="text-base dark:text-[#B7B0B0] text-[#717070] max-w-[929px] text-center">
                 AdasIt is a long established fact that a reader will be
@@ -981,7 +1011,7 @@ export default function Home() {
                 Awesome IT, Company
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col items-center">
           <h3 className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase font-serif">
