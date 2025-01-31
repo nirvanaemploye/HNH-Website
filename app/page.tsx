@@ -492,7 +492,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb grid gap-y-12 md:gap-y-6 md:gap-x-6">
+            <ul className="honeycomb grid gap-y-24  xl:gap-y-6 md:gap-x-6">
               <li
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
