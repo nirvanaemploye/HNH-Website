@@ -481,8 +481,7 @@ export default function Home() {
 
             <ul className="honeycomb grid gap-y-12 md:gap-y-3">
               <li className="honeycomb-cell">
-                {/* <img className="honeycomb-cell_img" src="img/work-1.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-46px", left: "110px" }}
@@ -523,7 +522,7 @@ export default function Home() {
               </li>
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/work-2.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-46px", left: "110px" }}
@@ -552,7 +551,7 @@ export default function Home() {
               </li>
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/Work3.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-46px", left: "110px" }}
@@ -581,7 +580,7 @@ export default function Home() {
                 </div>
               </li>
               <li className={`honeycomb-cell`}>
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-52px", left: "104px" }}
@@ -616,7 +615,7 @@ export default function Home() {
 
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/work5.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-52px", left: "104px" }}
@@ -645,7 +644,7 @@ export default function Home() {
               </li>
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/work06.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-52px", left: "110px" }}
@@ -676,7 +675,7 @@ export default function Home() {
               </li>
               <li className={`honeycomb-cell`}>
                 {/* <img className="honeycomb-cell_img" src="img/work07.jpg"> */}
-                <div className="honeycomb-cell_title">
+                <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
                     style={{ top: "-52px", left: "110px" }}

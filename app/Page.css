@@ -122,23 +122,29 @@
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  
   z-index: -1;
 }
 
 .honeycomb-cell::before {
   /* background: url("../public/Polygon3.png"); */
-  /* background: url("../public/Before.png"); */
+  background: url("../public/Before.png");
+  height: 320px;
+  width: 270px;
   /* background: #6b6a6a88; */
-  border: 1px;
+  /* border: 1px; */
   transform: scale(1.055);
   z-index: -100;
 }
 
 .honeycomb-cell::after {
-  background: #727272;
+  /* background: #727272;
   background: #ffffff7c;
-  border: 1px;
-  border-color: #4c3aa5;
+   */
+  /* background-color: #170C3F; */
+  /* border: 2px solid; */
+  /* border-color: #ffffff7c; */
+  /* border-color: #FFFFFF99; */
   opacity: 0.8;
   transition: opacity 350ms;
   -webkit-transition: opacity 350ms;
@@ -153,8 +159,10 @@
   /* background: #fc5130; */
   z-index: -1;
   /* background: url("../public/Polygon.png"); */
-  /* background: url("../public/After.png"); */
-  background: #927dfa4b;
+  background: url("../public/After.png");
+  height: 320px;
+  width: 270px;
+  /* background: #927dfa4b; */
   object-fit: cover;
 }
 
@@ -183,6 +191,8 @@
   /* filter: grayscale(100%); */
   background: #6b6a6a88;
 }
+
+
 
 
 /* ---------------------------------------------------- */
