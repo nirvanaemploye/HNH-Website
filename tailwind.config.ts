@@ -16,6 +16,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        sm: "450px",
+      },
       clipPath: {
         hexagon:
           "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",

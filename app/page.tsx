@@ -821,7 +821,7 @@ export default function Home() {
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP, Blockchain, On-Demand.
           </p>
-          <div className="mt-10 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
+          <div className="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
             {developers.map((develoer, idx) => {
               return (
                 <div
@@ -952,7 +952,7 @@ export default function Home() {
               </div>
 
               <div className="clientImgsContainer ">
-                <ul className="honeycomb1 grid gap-y-12 md:gap-y-3">
+                <ul className="honeycomb1 grid gap-y-20 xl:gap-y-3">
                   {members.map((member) => (
                     <li
                       key={member.id}
