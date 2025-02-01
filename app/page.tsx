@@ -474,7 +474,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section id="servicesSection">
+        <section id="servicesSection" className="container">
           <div className="servicesContainer">
             <div className="servicesHeading gap-2">
               <span
@@ -939,7 +939,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="md:pt-32">
+        <div className="md:pt-32 container">
           <section id="testimonialSection1">
             <div className="testimonialContainer1">
               <div className="testimonialTitle1">

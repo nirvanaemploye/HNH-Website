@@ -136,7 +136,9 @@ const Navbar = () => {
             >
               Hire us
             </button>
-            <DarkMode />
+            <div className="mt-9 ">
+              <DarkMode />
+            </div>
           </li>
         </ul>
       </div>

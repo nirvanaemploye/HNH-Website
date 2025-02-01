@@ -26,9 +26,9 @@ const Footer = () => {
     <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F]">
       <div className="" style={theme === "dark" ? footerDark : footerLight}>
         <div className=" relative py-16">
-          <div className="container max-w-[1320px] h-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
+          <div className="container max-w-[1320px] mx-auto h-full grid lg1:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
             <div className="flex flex-col items-start justify-between h-full">
-              <div>
+              <div className="">
                 <h5 className="uppercase font-bold text-lg md:text-left text-center">
                   ABOUT HIT-N-HAMMER
                 </h5>
@@ -118,21 +118,21 @@ const Footer = () => {
                 <p className="text-[15px] text-right">what’s the next . . .</p>
               </div>
               <ul className="mt-11 space-y-4 md:text-start text-center">
-                <div className="flex space-x-1">
+                <div className="flex space-x-1 justify-center md:justify-start">
                   <FiPhone className="text-2xl" />
                   <li className="font-medium text-[15px]">
                     <a href="tel:+91 97222 78859">+91 97222 78859</a>
                   </li>
                 </div>
                 <hr className="border-t-2 border-[#6D6969] border-dashed" />
-                <div className="flex space-x-1">
+                <div className="flex space-x-1 justify-center md:justify-start">
                   <FiPhone className="text-2xl" />
                   <li className="font-medium text-[15px]">
                     <a href="tel:+91 97222 78859">+91 97222 78859</a>
                   </li>
                 </div>
                 <hr className="border-t-2 border-[#6D6969] border-dashed" />
-                <div className="flex space-x-1">
+                <div className="flex space-x-1 justify-center md:justify-start">
                   <IoIosMail className="text-2xl" />
                   <li className="font-medium text-[15px] text-primary">
                     <a href="mailto:nirvanatechlabs@gmail.com">

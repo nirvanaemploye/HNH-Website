@@ -126,16 +126,17 @@
   z-index: -1;
 }
 
-.honeycomb-cell::before {
+.honeycomb-cell::before{
   /* background: url("../public/Polygon3.png"); */
   background: url("../public/Before.png");
   height: 320px;
   width: 270px;
   /* background: #6b6a6a88; */
   /* border: 1px; */
-  transform: scale(1.055);
-  z-index: -100;
+  /* transform: scale(1.055); */
+  /* z-index: -100; */
 }
+
 
 .honeycomb-cell::after {
   /* background: #727272;

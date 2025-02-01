@@ -18,6 +18,7 @@ const config: Config = {
     extend: {
       screens: {
         sm: "450px",
+        lg1: "1100px",
       },
       clipPath: {
         hexagon:
