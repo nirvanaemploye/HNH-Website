@@ -975,13 +975,13 @@ export default function Home() {
                 <Image
                   src={theme === "dark" ? doubleQuotesDark : doubleQuoteLight}
                   alt="doubleQuotes"
-                  className="mx-auto"
+                  className="mx-auto mt-36"
                 />
 
                 {members.map((member) => (
                   <div
                     key={member.id}
-                    className="hoveredContent mt-36"
+                    className="hoveredContent mt-8"
                     style={{
                       display: hoveredMember === member.id ? "block" : "none",
                     }}
