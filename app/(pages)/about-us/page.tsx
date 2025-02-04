@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
-import React, { useState } from "react";
+
 
 
 const principles = [
