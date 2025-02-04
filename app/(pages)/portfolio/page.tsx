@@ -10,7 +10,7 @@ const PortfolioPage = () => {
   const bgDark = {
     backgroundImage: "url(/Home-page-dark.svg)",
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
   };
 
