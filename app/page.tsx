@@ -826,7 +826,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="border-2 dark:bg-[#241653] border-primary rounded-tl-3xl rounded-br-3xl px-8 py-4"
+                  className="border-2 dark:bg-[#241653] border-primary rounded-tl-3xl rounded-br-3xl px-4 py-4"
                 >
                   <Image
                     className="mx-auto"
