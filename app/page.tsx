@@ -786,7 +786,7 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 md:pt-32">
-          <h3 className="font-serif text-primary font-bold text-2xl md:text-5xl text-center border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] uppercase w-fit mx-auto">
+          <h3 className="font-serif text-primary font-bold text-4xl md:text-5xl text-center border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] uppercase w-fit mx-auto">
             methodology
           </h3>
           <div className="mt-[150px] grid md:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-4 gap-x-4 md:gap-y-0 gap-y-28">
@@ -981,7 +981,7 @@ export default function Home() {
                 {members.map((member) => (
                   <div
                     key={member.id}
-                    className="hoveredContent"
+                    className="hoveredContent mt-36"
                     style={{
                       display: hoveredMember === member.id ? "block" : "none",
                     }}
