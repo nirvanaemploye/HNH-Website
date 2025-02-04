@@ -18,7 +18,7 @@ const HeroSection = () => {
           <h1 className="sm:text-[60px] text-[45px] sm:leading-[65px] leading-normal font-bold font-serif">
             Empower your business with hit-n-hammer
           </h1>
-          <p className="mt-2 text-[#b7b0b0] font-normal text-xl">
+          <p className="mt-2 dark:text-[#b7b0b0] text-[#717070] font-normal text-xl">
             Driving Innovation, Delivering Results
           </p>
           <button className="bg-primary px-8 py-3 hover:outline rounded-lg mt-8 font-semibold text-base">

@@ -821,7 +821,7 @@ export default function Home() {
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP, Blockchain, On-Demand.
           </p>
-          <div className="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
+          <div className="mt-20 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
             {developers.map((develoer, idx) => {
               return (
                 <div
@@ -946,7 +946,7 @@ export default function Home() {
                 <p className="font-serif text-[#6c42f8] border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed">
                   CLIENTS TESTIMONIAL
                 </p>
-                <h1 className="uppercase font-serif text-black dark:text-[#FFFFFF] font-bold sm:text-4xl text-3xl text-center mt-4">
+                <h1 className="uppercase font-serif dark:text-[#FFFFFF] text-[#171616] font-bold sm:text-4xl text-3xl text-center mt-4">
                   WHAT OUR CLIENTS ARE SAYING
                 </h1>
               </div>
