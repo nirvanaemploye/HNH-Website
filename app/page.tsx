@@ -460,7 +460,7 @@ export default function Home() {
             <h3 className="font-serif font-bold text-[40px]">
               HIT-N-HAMMER COMPANY
             </h3>
-            <p className="dark:text-[#B7B0B0] text-[#717070] leading-9">
+            <p className="dark:text-[#B7B0B0] text-[#717070] leading-9 text-xl">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -468,7 +468,7 @@ export default function Home() {
               dedicated to driving innovation and delivering results that exceed
               our clients&apos; expectations.
             </p>
-            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold">
+            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white">
               Read more
             </button>
           </div>

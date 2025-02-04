@@ -21,7 +21,7 @@ const HeroSection = () => {
           <p className="mt-2 dark:text-[#b7b0b0] text-[#717070] font-normal text-xl">
             Driving Innovation, Delivering Results
           </p>
-          <button className="bg-primary px-8 py-3 hover:outline rounded-lg mt-8 font-semibold text-base">
+          <button className="bg-primary px-8 py-3 hover:outline rounded-lg mt-8 font-semibold text-base text-white">
             Learn More
           </button>
         </div>
