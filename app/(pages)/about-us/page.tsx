@@ -1,7 +1,8 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+
 
 const principles = [
   {
@@ -33,6 +34,8 @@ const principles = [
   },
 ];
 
+
+
 const AboutUs = () => {
   const { theme } = useTheme();
 
@@ -50,6 +53,8 @@ const AboutUs = () => {
     backgroundRepeat: "no-repeat",
   };
 
+
+
   return (
     <div
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
@@ -65,10 +70,8 @@ const AboutUs = () => {
             alt="about us"
           />
           <div>
-            <h3 className="font-serif text-8xl">
-              About Us
-            </h3>
-            <p className="text-xl text-[#717070] mt-5">
+            <h3 className="font-serif text-8xl">About Us</h3>
+            <p className="text-xl dark:text-[#E1E0E0] text-[#717070] mt-5">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -99,7 +102,7 @@ const AboutUs = () => {
                     height={principle.iconHeight}
                     width={principle.iconWidth}
                   />
-                  <p className="text-center text-[#717070] mt-4">
+                  <p className="text-center dark:text-[#B7B0B0] text-[#717070] mt-4">
                     {principle.description}
                   </p>
                 </div>
@@ -112,7 +115,7 @@ const AboutUs = () => {
             <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
               OUR MISSION
             </h3>
-            <p className="text-[#717070] mt-3 ">
+            <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
@@ -154,7 +157,7 @@ const AboutUs = () => {
             <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
               OUR VISION
             </h3>
-            <p className="text-[#717070] mt-3 ">
+            <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
@@ -177,6 +180,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+
         <div className="md:block hidden">
           <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed border-white uppercase w-fit mx-auto">
             Meet the best team ever

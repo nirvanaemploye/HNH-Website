@@ -26,7 +26,9 @@ const ServiceCard = ({service}:ServiceCardProps) => {
         <h5 className="font-bold text-2xl dark:text-white text-[#7049EE]">
           {service.name}
         </h5>
-        <p className="mt-2 text-[#717070]">{service.description}</p>
+        <p className="mt-2 text-[#717070] dark:text-[#B7B0B0]">
+          {service.description}
+        </p>
         <div className="flex flex-wrap mt-6 gap-3">
           {service.services.map((service, idx) => {
             return (

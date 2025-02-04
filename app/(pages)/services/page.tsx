@@ -129,7 +129,7 @@ const ServicesPage = () => {
             <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center">
               Services
             </h3>
-            <p className="sm:text-xl text-lg text-[#717070] mt-5 md:text-left text-center">
+            <p className="sm:text-xl text-lg dark:text-[#E1E0E0] text-[#717070] mt-5 md:text-left text-center">
               Our company offers a comprehensive range of services tailored to
               meet the diverse needs of our clients. From innovative digital
               solutions to traditional marketing strategies, we provide a
