@@ -107,7 +107,7 @@ const ServicesPage = () => {
   const bgLight = {
     backgroundImage: "url(/Home-page-light.svg)",
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
   };
 
