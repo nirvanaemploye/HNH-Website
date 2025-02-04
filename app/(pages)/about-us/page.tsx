@@ -1,7 +1,18 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
+import "./page.css";
 import Image from "next/image";
 
+// import teamMember1 from "../../../public/18155.jpg";
+import teamMember1 from "../../../public/team-member-6.png";
+import teamMember2 from "../../../public/team-member-3.png";
+import teamMember3 from "../../../public/team-member-5.png";
+import teamMember4 from "../../../public/team-member-2.png";
+import teamMember5 from "../../../public/team-member-8.png";
+import teamMember6 from "../../../public/team-member-4.png";
+import teamMember7 from "../../../public/team-member-7.png";
+import teamMember8 from "../../../public/executive-business-woman-office.jpg";
+import { useState } from "react";
 
 
 const principles = [
@@ -36,8 +47,9 @@ const principles = [
 
 
 
-const AboutUs = () => {
+export default function AboutUs() {
   const { theme } = useTheme();
+  const [hoveredMember, setHoveredMember] = useState(2);
 
   const bgDark = {
     backgroundImage: "url(/Home-page-dark.svg)",
@@ -49,11 +61,88 @@ const AboutUs = () => {
   const bgLight = {
     backgroundImage: "url(/Home-page-light.svg)",
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
   };
 
+  
 
+
+const members = [
+  {
+    id: 1,
+    name: "John Smith",
+    designation: "CEO",
+    details:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    img: teamMember1,
+  },
+  {
+    id: 2,
+    name: "Alexa ",
+    designation: "Founder",
+    details:
+      "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    img: teamMember2,
+  },
+  {
+    id: 3,
+    name: "Vipin",
+    designation: "Software Engineer",
+    details:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+    img: teamMember3,
+  },
+  {
+    id: 4,
+    name: "Ellyse Perry ",
+    designation: "UI/UX Designer",
+    details:
+      "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    img: teamMember4,
+  },
+  {
+    id: 5,
+    name: "Peter",
+    designation: "Quality Assurance Analyst",
+    details:
+      "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters normal distribution of letters..",
+    img: teamMember5,
+  },
+  {
+    id: 6,
+    name: "Allena Smith",
+    designation: "Web Developer",
+    details:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+    img: teamMember6,
+  },
+  {
+    id: 7,
+    name: "Sundar",
+    designation: "Systems Analyst",
+    details:
+      "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    img: teamMember7,
+  },
+  {
+    id: 8,
+    name: "Sundar",
+    designation: "Network Engineer",
+    details:
+      "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    img: teamMember8,
+  },
+  // Add other members here...
+];
+
+    const handleMouseEnter = (id: number) => {
+      setHoveredMember(id);
+    };
+
+    const handleMouseLeave = () => {
+      setHoveredMember(hoveredMember);
+    };
 
   return (
     <div
@@ -187,33 +276,55 @@ const AboutUs = () => {
           </h3>
           <div className="mt-14 space-y-12">
             <div className="flex items-end justify-center gap-12">
-              <Image
-                src="/team-member-1.png"
-                width={165}
-                height={120}
-                alt="team member"
-              />
-              <Image
-                src="/team-member-2.png"
-                width={235}
-                height={170}
-                alt="team member"
-              />
-              <Image
-                src="/team-member-3.png"
-                width={165}
-                height={120}
-                alt="team member"
-              />
+              <div className="">
+                <Image
+                  src={teamMember1}
+                  // width={165}
+                  // height={120}
+                  width={163}
+                  height={119}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(1)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 1 ? "imgTransform" : ""}
+                />
+              </div>
+              <div>
+                <Image
+                  src={teamMember2}
+                  width={235}
+                  height={170}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(2)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 2 ? "imgTransform" : ""}
+                />
+              </div>
+              <div>
+                <Image
+                  src={teamMember3}
+                  width={165}
+                  height={120}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(3)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 3 ? "imgTransform" : ""}
+                />
+              </div>
             </div>
             <div className="flex items-center justify-center gap-12">
-              <Image
-                src="/team-member-4.png"
-                width={235}
-                height={170}
-                alt="team member"
-              />
-              <div className="bg-white/10 border border-primary rounded-3xl px-6 py-4 flex flex-col items-center justify-center max-w-[590px]">
+              <div>
+                <Image
+                  src={teamMember8}
+                  width={235}
+                  height={170}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(8)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 8 ? "imgTransform" : ""}
+                />
+              </div>
+              {/* <div className="bg-white/10 border border-primary rounded-3xl px-6 py-4 flex flex-col items-center justify-center max-w-[590px]">
                 <h5 className="font-serif text-primary font-bold text-xl border-b-2 border-dashed border-white uppercase w-fit">
                   OUR VISION
                 </h5>
@@ -224,39 +335,198 @@ const AboutUs = () => {
                   The point of using Lorem Ipsum is that it has a more-or-less
                   normal distribution of letters.
                 </p>
+              </div> */}
+
+              {members.map((member) => (
+                <div
+                  className={`aboutMember ${
+                    theme === "dark" ? "changeShadow" : ""
+                  }`}
+                  style={{
+                    display: hoveredMember === member.id ? "block" : "none",
+                  }}
+                >
+                  <div className="memberName">
+                    <h2
+                      className={`mb-0 ${
+                        theme === "dark" ? "text-[#8B68FF]" : "text-[#8B68FF]"
+                      }`}
+                    >
+                      {member.name}
+                    </h2>
+                  </div>
+                  <h6 className={`${theme === "dark" ? "text-white" : ""}`}>
+                    {member.designation}
+                  </h6>
+                  <p className={`${theme === "dark" ? "teamInfoDarkClr" : ""}`}>
+                    {member.details}
+                  </p>
+                </div>
+              ))}
+
+              <div>
+                <Image
+                  src={teamMember4}
+                  width={235}
+                  height={170}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(4)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 4 ? "imgTransform" : ""}
+                />
               </div>
-              <Image
-                src="/team-member-5.png"
-                width={235}
-                height={170}
-                alt="team member"
-              />
             </div>
             <div className="flex items-start justify-center gap-12">
-              <Image
-                src="/team-member-6.png"
-                width={165}
-                height={120}
-                alt="team member"
-              />
-              <Image
-                src="/team-member-7.png"
-                width={235}
-                height={170}
-                alt="team member"
-              />
-              <Image
-                src="/team-member-8.png"
-                width={165}
-                height={120}
-                alt="team member"
-              />
+              <div>
+                <Image
+                  src={teamMember7}
+                  width={165}
+                  height={120}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(7)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 7 ? "imgTransform" : ""}
+                />
+              </div>
+              <div>
+                <Image
+                  src={teamMember6}
+                  width={235}
+                  height={170}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(6)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 6 ? "imgTransform" : ""}
+                />
+              </div>
+              <div>
+                <Image
+                  src={teamMember5}
+                  width={165}
+                  height={120}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(5)}
+                  onMouseLeave={handleMouseLeave}
+                  className={hoveredMember === 5 ? "imgTransform" : ""}
+                />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* <div className="ourTeamContainer container">
+          <div className="ourTeamHeading">
+            <h1>MEET THE BEST TEAM EVER</h1>
+          </div>
+          <div className="teamTopImagesFlex">
+            <div className="teamMember firstMember">
+              <Image
+                src={teamMember1}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 1 ? "imgTransform" : ""}
+              />
+            </div>
+            <div className="teamMember secondMember">
+              <Image
+                src={teamMember2}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(2)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 2 ? "imgTransform" : ""}
+              />
+            </div>
+            <div className="teamMember thirdMember">
+              <Image
+                src={teamMember3}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(3)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 3 ? "imgTransform" : ""}
+              />
+            </div>
+          </div>
+          <div className="teamMiddleFlex">
+            <div className="teamMember eightMember">
+              <Image
+                src={teamMember8}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(8)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 8 ? "imgTransform" : ""}
+              />
+            </div>
+
+            {members.map((member) => (
+              <div
+                className={`aboutMember ${
+                  theme === "dark" ? "changeShadow" : ""
+                }`}
+                style={{
+                  display: hoveredMember === member.id ? "block" : "none",
+                }}
+              >
+                <div className="memberName">
+                  <h2
+                    className={`mb-0 ${
+                      theme === "dark" ? "text-[#8B68FF]" : ""
+                    }`}
+                  >
+                    {member.name}
+                  </h2>
+                </div>
+                <h6 className={`${theme === "dark" ? "text-white" : ""}`}>
+                  {member.designation}
+                </h6>
+                <p className={`${theme === "dark" ? "teamInfoDarkClr" : ""}`}>
+                  {member.details}
+                </p>
+              </div>
+            ))}
+            <div className="teamMember fourthMember">
+              <Image
+                src={teamMember4}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(4)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 4 ? "imgTransform" : ""}
+              />
+            </div>
+          </div>
+          <div className="teamTopImagesFlex teamBottom">
+            <div className="teamMember seventhMember">
+              <Image
+                src={teamMember7}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(7)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 7 ? "imgTransform" : ""}
+              />
+            </div>
+            <div className="teamMember sixthMember">
+              <Image
+                src={teamMember6}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(6)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 6 ? "imgTransform" : ""}
+              />
+            </div>
+            <div className="teamMember fifthMember">
+              <Image
+                src={teamMember5}
+                alt="teamMember"
+                onMouseEnter={() => handleMouseEnter(5)}
+                onMouseLeave={handleMouseLeave}
+                className={hoveredMember === 5 ? "imgTransform" : ""}
+              />
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default AboutUs;
+

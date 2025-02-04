@@ -18,50 +18,6 @@ import { useTheme } from "./components/context/themeContext";
 
 
 
-// const services = [
-//   {
-//     id: 1,
-//     icon: PiDeviceMobileCameraFill,
-//     title: "App Development",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-//   {
-//     id: 2,
-//     icon: PiDesktopFill,
-//     title: "WEB Development",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-//   {
-//     id: 3,
-//     icon: PiDesktopFill,
-//     title: "UI/UX DESIGN",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-//   {
-//     id: 4,
-//     icon: HiCloudArrowDown,
-//     title: "CLOUD SERVICES",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-//   {
-//     id: 5,
-//     icon: HiCloudArrowDown,
-//     title: "BUSINESS SOLUTION",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-//   {
-//     id: 6,
-//     icon: HiCloudArrowDown,
-//     title: "CLOUD E-MAIL MIGRATION",
-//     description:
-//       "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
-//   },
-// ];
 
 const developers = [
   {
@@ -425,7 +381,7 @@ export default function Home() {
   const { theme } = useTheme();
 
     const bgDark = {
-      backgroundImage: "url(/Home-page-dark.svg)",
+      backgroundImage: "url(/Home-page-dark_15.svg)",
       backgroundSize: "cover",
       backgroundPosition: "top",
       backgroundRepeat: "no-repeat",
