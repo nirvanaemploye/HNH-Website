@@ -32,6 +32,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        "custom-red": "#FA4417",
+        "custom-orange": "#FCAA1C",
       },
     },
   },

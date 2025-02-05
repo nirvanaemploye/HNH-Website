@@ -1,0 +1,17 @@
+.borderFont{
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFFFFF;
+}
+
+
+
+.text-gradient {
+    /* background: linear-gradient(to right, #FA4417, #FCAA1C); */
+    background-image: linear-gradient(90deg, #FA4417, #FCAA1C);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    color: #170C3F;
+}

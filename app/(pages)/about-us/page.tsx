@@ -149,7 +149,7 @@ const members = [
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
       style={theme === "dark" ? bgDark : bgLight}
     >
-      <div className="pt-[150px] container max-w-[1320px] space-y-32">
+      <div className="pt-[250px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image
             src="/about-hero.png"
@@ -159,7 +159,12 @@ const members = [
             alt="about us"
           />
           <div>
-            <h3 className="font-serif text-8xl">About Us</h3>
+            <h3 className="font-serif text-8xl borderFont">
+              <span className="text-gradient">
+                Ab
+              </span>
+              <span>out Us</span>
+            </h3>
             <p className="text-xl dark:text-[#E1E0E0] text-[#717070] mt-5">
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
@@ -339,7 +344,7 @@ const members = [
 
               {members.map((member) => (
                 <div
-                key={member.id}
+                  key={member.id}
                   className={`aboutMember ${
                     theme === "dark" ? "changeShadow" : ""
                   }`}

@@ -26,7 +26,7 @@ const ContactPage = () => {
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
       style={theme === "dark" ? bgDark : bgLight}
     >
-      <div className="pt-[150px] container max-w-[1320px] space-y-32">
+      <div className="pt-[250px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image
             src="/contact-hero.png"
@@ -36,8 +36,9 @@ const ContactPage = () => {
             alt="about us"
           />
           <div>
-            <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center">
-              Contact Us
+            <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center borderFont">
+              <span className="text-gradient">Cont</span>
+              <span>act Us</span>
             </h3>
             <p className="sm:text-xl text-lg dark:text-[#E1E0E0] text-[#717070] mt-5 md:text-left text-center">
               Our company offers a comprehensive range of services tailored to
