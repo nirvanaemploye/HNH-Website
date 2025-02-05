@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import { FaApple } from "react-icons/fa";
+import { ImAndroid } from "react-icons/im";
+import { TbWorld } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 
 const portfolioTyps = [
@@ -30,42 +33,48 @@ const portfolioItems = [
   {
     id: 1,
     name: "Petro Website",
-    icon: "website-icon.png",
+    // icon: "website-icon.png",
+    icon: <TbWorld />,
     image: "/petro-website.png",
     key: "web",
   },
   {
     id: 2,
     name: "Artix",
-    icon: "android-icon.png",
+    // icon: "android-icon.png",
+    icon: <ImAndroid />,
     image: "/artix.png",
     key: "android",
   },
   {
     id: 3,
     name: "QuizzPe",
-    icon: "web-icon.png",
+    // icon: "web-icon.png",
+    icon: <FaApple />,
     image: "/quizzpe.png",
     key: "web",
   },
   {
     id: 4,
     name: "PlayFit",
-    icon: "ios-icon.png",
+    // icon: "ios-icon.png",
+    icon: <FaApple />,
     image: "/playfit.png",
     key: "ios",
   },
   {
     id: 5,
     name: "Banking App",
-    icon: "androidweb-icon.png",
+    // icon: "androidweb-icon.png",
+    icon: <TbWorld />,
     image: "/bankingapp.png",
     key: "web",
   },
   {
     id: 6,
     name: "Hexa Club",
-    icon: "ios-icon.png",
+    // icon: "ios-icon.png",
+    icon: <FaApple />,
     image: "/hexaclub.png",
     key: "ios",
   },
@@ -106,8 +115,9 @@ const PortfolioItems = () => {
                     alt={item.name}
                     className="w-full h-[300px] object-cover rounded-xl"
                   />
-                  <div className="absolute -bottom-[40px] left-0 right-0 bg-white rounded-xl flex flex-col items-center justify-center w-[225px] h-[80px] mx-auto">
-                    <h3 className="text-black font-bold">{item.name}</h3>
+                  <div className="absolute -bottom-[40px] left-0 right-0 bg-white rounded-xl flex flex-col items-center justify-center w-[225px] h-[80px] mx-auto hover:border-[#8B68FF] hover:text-[#8B68FF] text-black font-bold hover:border-2">
+                    <h3 className="text-black">{item.name}</h3>
+                    <h1 className="text-2xl">{item.icon}</h1>
                   </div>
                 </div>
               );
@@ -126,6 +136,7 @@ const PortfolioItems = () => {
                     />
                     <div className="absolute -bottom-[40px] left-0 right-0 bg-white rounded-xl flex flex-col items-center justify-center w-[225px] h-[80px] mx-auto">
                       <h3 className="text-black font-bold">{item.name}</h3>
+                      
                     </div>
                   </div>
                 );
