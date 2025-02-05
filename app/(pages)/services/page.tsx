@@ -127,7 +127,13 @@ const ServicesPage = () => {
           />
           <div>
             <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center borderFont">
-              <span className="text-gradient">Ser</span>
+              <span
+                className={
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                }
+              >
+                Ser
+              </span>
               <span>vices</span>
             </h3>
             <p className="sm:text-xl text-lg dark:text-[#E1E0E0] text-[#717070] mt-5 md:text-left text-center">

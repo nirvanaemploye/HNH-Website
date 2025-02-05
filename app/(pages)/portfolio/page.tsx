@@ -38,7 +38,13 @@ const PortfolioPage = () => {
           <div>
             <h3 className="font-serif sm:text-8xl text-5xl borderFont">
               <span>Port</span>
-              <span className="text-gradient">folio</span>
+              <span
+                className={
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                }
+              >
+                folio
+              </span>
             </h3>
             <p className="sm:text-xl text-lg dark:text-[#E1E0E0] text-[#717070] mt-5">
               Our company offers a comprehensive range of services tailored to

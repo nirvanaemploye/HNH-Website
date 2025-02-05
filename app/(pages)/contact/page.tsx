@@ -37,7 +37,13 @@ const ContactPage = () => {
           />
           <div>
             <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center borderFont">
-              <span className="text-gradient">Cont</span>
+              <span
+                className={
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                }
+              >
+                Cont
+              </span>
               <span>act Us</span>
             </h3>
             <p className="sm:text-xl text-lg dark:text-[#E1E0E0] text-[#717070] mt-5 md:text-left text-center">

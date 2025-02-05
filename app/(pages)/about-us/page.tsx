@@ -160,7 +160,13 @@ const members = [
           />
           <div>
             <h3 className="font-serif text-8xl borderFont">
-              <span className="text-gradient">Ab</span>
+              <span
+                className={
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                }
+              >
+                Ab
+              </span>
               <span>out Us</span>
             </h3>
             <p className="text-xl dark:text-[#E1E0E0] text-[#717070] mt-5">
