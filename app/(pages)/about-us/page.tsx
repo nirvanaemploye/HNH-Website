@@ -49,7 +49,7 @@ const principles = [
 
 export default function AboutUs() {
   const { theme } = useTheme();
-  const [hoveredMember, setHoveredMember] = useState(2);
+  const [hoveredMember, setHoveredMember] = useState(1);
 
   const bgDark = {
     backgroundImage: "url(/Home-page-dark.svg)",
@@ -292,7 +292,7 @@ const members = [
               <div>
                 <Image
                   src={teamMember2}
-                  width={235}
+                  width={232}
                   height={170}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(2)}
@@ -303,8 +303,8 @@ const members = [
               <div>
                 <Image
                   src={teamMember3}
-                  width={165}
-                  height={120}
+                  width={163}
+                  height={119}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(3)}
                   onMouseLeave={handleMouseLeave}
@@ -316,7 +316,7 @@ const members = [
               <div>
                 <Image
                   src={teamMember8}
-                  width={235}
+                  width={232}
                   height={170}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(8)}
@@ -367,7 +367,7 @@ const members = [
               <div>
                 <Image
                   src={teamMember4}
-                  width={235}
+                  width={232}
                   height={170}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(4)}
@@ -380,7 +380,7 @@ const members = [
               <div>
                 <Image
                   src={teamMember7}
-                  width={165}
+                  width={163}
                   height={120}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(7)}
@@ -391,7 +391,7 @@ const members = [
               <div>
                 <Image
                   src={teamMember6}
-                  width={235}
+                  width={232}
                   height={170}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(6)}
@@ -402,8 +402,8 @@ const members = [
               <div>
                 <Image
                   src={teamMember5}
-                  width={165}
-                  height={120}
+                  width={163}
+                  height={119}
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(5)}
                   onMouseLeave={handleMouseLeave}

@@ -146,8 +146,8 @@
     }
 
 .aboutMember {
-    /* width: 594px;
-height: 170.44px; */
+    width: 594px;
+    height: 170.44px;
     border-radius: 20px;
     background: #FFFFFF1A;
     box-shadow: 0px 0px 15px 0px #927dfa9d inset;
@@ -194,7 +194,7 @@ height: 170.44px; */
 
 .aboutMember .memberName h2 {
     border-bottom: 2px dashed #6C42F8;
-    font-family: poppins;
+    
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
