@@ -34,7 +34,7 @@ const ServiceCard = ({service}:ServiceCardProps) => {
             return (
               <div
                 key={idx}
-                className="border sm:text-base text-sm border-primary bg-[#171616] rounded-full font-semibold px-4 py-2 [box-shadow:0px_0px_7px_#8260F4]"
+                className="border sm:text-base text-sm border-primary dark:bg-[#171616] bg-[#FFFFFF] dark:text-[#FFFFFF] text-primary rounded-full font-semibold px-4 py-2 [box-shadow:0px_0px_7px_#8260F4]"
               >
                 {service}
               </div>

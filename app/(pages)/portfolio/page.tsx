@@ -59,7 +59,7 @@ const PortfolioPage = () => {
           </div>
         </div>
         <div>
-          <h3 className="font-serif text-primary font-bold sm:text-5xl text-4xl border-b-2 border-dashed border-white uppercase w-fit mx-auto mb-16">
+          <h3 className="font-serif text-primary font-bold sm:text-5xl text-4xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             OUR PORTFOLIO
           </h3>
           <PortfolioItems />

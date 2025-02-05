@@ -144,7 +144,7 @@ const ServicesPage = () => {
           </div>
         </div>
         <div>
-          <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed border-white uppercase w-fit mx-auto mb-16">
+          <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             WE TRY TO SERV BEST SERVICES
           </h3>
           <div className="mt-20 space-y-12">

@@ -12,7 +12,7 @@ const ContactUsForm = () => {
       className="bg-white/5 rounded-2xl sm:p-10 p-5 grid md:grid-cols-2 grid-cols-1 gap-24  "
     >
       <div>
-        <h5 className="capitalize text-primary font-serif font-semibold text-3xl">
+        <h5 className="capitalize text-primary font-oswald font-semibold text-3xl">
           Get in touch
         </h5>
         <p className="dark:text-[#E1E0E0] text-[#717070] mt-1">

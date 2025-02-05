@@ -180,7 +180,7 @@ const members = [
           </div>
         </div>
         <div>
-          <h3 className="font-serif text-primary font-bold text-3xl md:text-5xl text-center border-b-2 border-dashed border-white uppercase w-fit mx-auto">
+          <h3 className="font-serif text-primary font-bold text-3xl md:text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             OUR PRINCIPLES
           </h3>
           <div className="grid md:grid-cols-3 sm:grid-cols-1 items-center justify-items-center gap-10 mt-20">
@@ -210,7 +210,7 @@ const members = [
         </div>
         <div className="flex md:flex-row flex-col-reverse items-start justify-between gap-24 max-w-[968px] mx-auto">
           <div className="">
-            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
+            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit">
               OUR MISSION
             </h3>
             <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
@@ -252,7 +252,7 @@ const members = [
             className="md:w-[450px] w-full"
           />
           <div className="">
-            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed border-white uppercase w-fit">
+            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit">
               OUR VISION
             </h3>
             <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
@@ -280,7 +280,7 @@ const members = [
         </div>
 
         <div className="md:block hidden">
-          <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed border-white uppercase w-fit mx-auto">
+          <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             Meet the best team ever
           </h3>
           <div className="mt-14 space-y-12">
