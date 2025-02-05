@@ -1,19 +1,20 @@
-'use client'
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
 interface ServiceCardProps {
-    service: {
-        name: string;
-        description: string;
-        image: string;
-        services: string[];
-        toolImages: { name: string; image: string }[];
-    };
+  service: {
+    name: string;
+    description: string;
+    image: string;
+    services: string[];
+    toolImages: { name: string; image: string }[];
+  };
 }
 
-const ServiceCard = ({service}:ServiceCardProps) => {
+const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
+      <div><h1>{}</h1></div>
       <div>
         <Image
           src={service.image}
@@ -61,6 +62,6 @@ const ServiceCard = ({service}:ServiceCardProps) => {
       </div>
     </div>
   );
-}
+};
 
-export default ServiceCard
+export default ServiceCard;
