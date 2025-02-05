@@ -339,6 +339,7 @@ const members = [
 
               {members.map((member) => (
                 <div
+                key={member.id}
                   className={`aboutMember ${
                     theme === "dark" ? "changeShadow" : ""
                   }`}
