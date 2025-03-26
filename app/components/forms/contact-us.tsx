@@ -2,10 +2,9 @@ import Image from 'next/image';
 import React from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaEnvelope, FaPhone } from "react-icons/fa6";
-import { useTheme } from '../context/themeContext';
 
 const ContactUsForm = () => {
-  const { theme } = useTheme();
+  
   return (
     <div
       /* style={{
