@@ -17,8 +17,6 @@ import React, { useState } from "react";
 import { useTheme } from "./components/context/themeContext";
 
 
-
-
 const developers = [
   {
     id: 1,
