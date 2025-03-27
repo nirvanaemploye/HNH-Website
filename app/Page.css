@@ -166,7 +166,13 @@
   /* background: #927dfa4b; */
   object-fit: cover;
 }
-
+.honeycomb-cell.selected-cell::before {
+  background: url("../public/After.png");
+  height: 320px;
+  width: 270px;
+  z-index: -1;
+  object-fit: cover;
+}
 
 
 .honeycomb-cell:hover .icon {

@@ -60,7 +60,8 @@ const Footer = () => {
                   </li>
                 </ul>
                 <p className="font-light dark:text-[#B8B6B6] text-[#717070] text-xs mt-3 md:text-left text-center">
-                  Copyright @ 2014 Hit-N Hammer Services. All Rights Reserved
+                  Copyright @ 2014 Hit-N Hammer Tech Services. All Rights
+                  Reserved
                 </p>
               </div>
             </div>
@@ -128,15 +129,15 @@ const Footer = () => {
                 <div className="flex space-x-1 justify-center md:justify-start">
                   <FiPhone className="text-2xl" />
                   <li className="font-medium text-[15px]">
-                    <a href="tel:+91 97222 78859">+91 97222 78859</a>
+                    <a href="tel:+91 7861973807">+91 7861973807</a>
                   </li>
                 </div>
                 <hr className="border-t-2 border-[#6D6969] border-dashed" />
                 <div className="flex space-x-1 justify-center md:justify-start">
                   <IoIosMail className="text-2xl" />
                   <li className="font-medium text-[15px] text-primary">
-                    <a href="mailto:nirvanatechlabs@gmail.com">
-                      nirvanatechlabs@gmail.com
+                    <a href="mailto:hitnhammertechnologies0706@gmail.com">
+                      hitnhammertechnologies0706@gmail.com
                     </a>
                   </li>
                 </div>
@@ -167,12 +168,17 @@ const Footer = () => {
                   />
                 </li>
                 <li>
-                  <Image
-                    src={"/linkedin.svg"}
-                    width={32.8}
-                    height={32.8}
-                    alt="linkedin"
-                  />
+                  <a
+                    href="https://in.linkedin.com/company/nirvana-tech-labs?_l=en_US"
+                    target="_blank"
+                  >
+                    <Image
+                      src={"/linkedin.svg"}
+                      width={32.8}
+                      height={32.8}
+                      alt="linkedin"
+                    />
+                  </a>
                 </li>
               </ul>
             </div>

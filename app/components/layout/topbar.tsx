@@ -18,14 +18,14 @@ const Topbar = () => {
         <div className="flex space-x-1">
           <FiPhone className="text-lg text-[#8B68FF]" />
           <p className="font-medium text-xs leading-5">
-            <a href="tel:+91 97222 78859">+91 97222 78859</a>
+            <a href="tel:+91 7861973807">+91 7861973807</a>
           </p>
         </div>
         <div className="flex space-x-1">
           <IoIosMail className="text-lg text-[#8B68FF]" />
           <p className="font-medium text-xs leading-5">
-            <a href="mailto:nirvanatechlabs@gmail.com">
-              nirvanatechlabs@gmail.com
+            <a href="mailto:hitnhammertechnologies0706@gmail.com">
+              hitnhammertechnologies0706@gmail.com
             </a>
           </p>
         </div>

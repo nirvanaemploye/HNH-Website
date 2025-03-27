@@ -395,6 +395,7 @@ export default function Home() {
   return (
     <div
       className="dark:text-white dark:bg-[#170C3F]  md:pb-32"
+      //className={`app ${theme} dark:text-white dark:bg-[#170C3F]  md:pb-32`}
       style={theme === "dark" ? bgDark : bgLight}
     >
       <div className="container max-w-[1320px] space-y-32">
@@ -917,7 +918,7 @@ export default function Home() {
                       onMouseLeave={handleMouseLeave}
                     >
                       <Image
-                        className="honeycomb-cell_img1"
+                        className="honeycomb-cell_img1 object-cover"
                         src={member.img}
                         alt={member.name}
                       />
@@ -980,7 +981,7 @@ export default function Home() {
             accumsan lacus vel facilisis
           </p>
           <button className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]">
-            contact us
+            <a href="/contact">contact us</a>
           </button>
         </div>
       </div>
