@@ -12,8 +12,9 @@ import teamMember5 from "../../../public/team-member-8.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
 import teamMember8 from "../../../public/executive-business-woman-office.jpg";
-import { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const principles = [
   {
@@ -45,8 +46,6 @@ const principles = [
   },
 ];
 
-
-
 export default function AboutUs() {
   const { theme } = useTheme();
   const [hoveredMember, setHoveredMember] = useState(1);
@@ -65,84 +64,88 @@ export default function AboutUs() {
     backgroundRepeat: "no-repeat",
   };
 
-  
+  const members = [
+    {
+      id: 1,
+      name: "John Smith",
+      designation: "CEO",
+      details:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: teamMember1,
+    },
+    {
+      id: 2,
+      name: "Alexa ",
+      designation: "Founder",
+      details:
+        "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: teamMember2,
+    },
+    {
+      id: 3,
+      name: "Vipin",
+      designation: "Software Engineer",
+      details:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+      img: teamMember3,
+    },
+    {
+      id: 4,
+      name: "Ellyse Perry ",
+      designation: "UI/UX Designer",
+      details:
+        "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: teamMember4,
+    },
+    {
+      id: 5,
+      name: "Peter",
+      designation: "Quality Assurance Analyst",
+      details:
+        "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters normal distribution of letters..",
+      img: teamMember5,
+    },
+    {
+      id: 6,
+      name: "Allena Smith",
+      designation: "Web Developer",
+      details:
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+      img: teamMember6,
+    },
+    {
+      id: 7,
+      name: "Sundar",
+      designation: "Systems Analyst",
+      details:
+        "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: teamMember7,
+    },
+    {
+      id: 8,
+      name: "Sundar",
+      designation: "Network Engineer",
+      details:
+        "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      img: teamMember8,
+    },
+    // Add other members here...
+  ];
 
+  const handleMouseEnter = (id: number) => {
+    setHoveredMember(id);
+  };
 
-const members = [
-  {
-    id: 1,
-    name: "John Smith",
-    designation: "CEO",
-    details:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: teamMember1,
-  },
-  {
-    id: 2,
-    name: "Alexa ",
-    designation: "Founder",
-    details:
-      "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: teamMember2,
-  },
-  {
-    id: 3,
-    name: "Vipin",
-    designation: "Software Engineer",
-    details:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
-    img: teamMember3,
-  },
-  {
-    id: 4,
-    name: "Ellyse Perry ",
-    designation: "UI/UX Designer",
-    details:
-      "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: teamMember4,
-  },
-  {
-    id: 5,
-    name: "Peter",
-    designation: "Quality Assurance Analyst",
-    details:
-      "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters normal distribution of letters..",
-    img: teamMember5,
-  },
-  {
-    id: 6,
-    name: "Allena Smith",
-    designation: "Web Developer",
-    details:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
-    img: teamMember6,
-  },
-  {
-    id: 7,
-    name: "Sundar",
-    designation: "Systems Analyst",
-    details:
-      "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: teamMember7,
-  },
-  {
-    id: 8,
-    name: "Sundar",
-    designation: "Network Engineer",
-    details:
-      "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-    img: teamMember8,
-  },
-  // Add other members here...
-];
+  const handleMouseLeave = () => {
+    setHoveredMember(hoveredMember);
+  };
 
-    const handleMouseEnter = (id: number) => {
-      setHoveredMember(id);
-    };
-
-    const handleMouseLeave = () => {
-      setHoveredMember(hoveredMember);
-    };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   return (
     <div
@@ -152,14 +155,21 @@ const members = [
       <div className="pt-[250px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
           <Image
+            data-aos="fade-up"
+            data-aos-duration="500"
             src="/about-hero.png"
             width={650}
             height={294}
             className="md:w-[650px] w-full"
             alt="about us"
           />
+
           <div>
-            <h3 className="font-serif text-8xl borderFont">
+            <h3
+              className="font-serif text-8xl borderFont"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <span
                 className={
                   theme === "dark" ? "text-gradient" : "text-gradient1"
@@ -169,7 +179,11 @@ const members = [
               </span>
               <span>out Us</span>
             </h3>
-            <p className="text-xl dark:text-[#E1E0E0] text-[#717070] mt-5">
+            <p
+              className="text-xl dark:text-[#E1E0E0] text-[#717070] mt-5"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -537,6 +551,4 @@ const members = [
       </div>
     </div>
   );
-};
-
-
+}

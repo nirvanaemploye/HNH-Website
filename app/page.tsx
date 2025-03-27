@@ -3,8 +3,8 @@
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
-import doubleQuotesDark from "../public/Quote_dark.png"
-import doubleQuoteLight from "../public/Quote_lighte.png"
+import doubleQuotesDark from "../public/Quote_dark.png";
+import doubleQuoteLight from "../public/Quote_lighte.png";
 import client1 from "../public/45631.jpg";
 import client2 from "../public/1287.jpg";
 import client3 from "../public/18155.jpg";
@@ -15,7 +15,6 @@ import client7 from "../public/21959.jpg";
 // import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
 import { useTheme } from "./components/context/themeContext";
-
 
 const developers = [
   {
@@ -368,7 +367,7 @@ export default function Home() {
   ];
   const [hoveredMember, setHoveredMember] = useState(Number);
 
-    const handleMouseEnter = (id: number) => {
+  const handleMouseEnter = (id: number) => {
     setHoveredMember(id);
   };
 
@@ -378,19 +377,19 @@ export default function Home() {
 
   const { theme } = useTheme();
 
-    const bgDark = {
-      backgroundImage: "url(/Home-page-dark_15.svg)",
-      backgroundSize: "cover",
-      backgroundPosition: "top",
-      backgroundRepeat: "no-repeat",
-    };
-    
-    const bgLight = {
-      backgroundImage: "url(/Home-page-light.svg)",
-      backgroundSize: "cover",
-      backgroundPosition: "top",
-      backgroundRepeat: "no-repeat",
-    };
+  const bgDark = {
+    backgroundImage: "url(/Home-page-dark_15.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "top",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const bgLight = {
+    backgroundImage: "url(/Home-page-light.svg)",
+    backgroundSize: "cover",
+    backgroundPosition: "top",
+    backgroundRepeat: "no-repeat",
+  };
 
   return (
     <div
@@ -402,6 +401,8 @@ export default function Home() {
         <HeroSection />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <Image
+            data-aos="fade-up"
+            data-aos-duration="1200"
             src="/who-we-are.png"
             width={555}
             height={380}
@@ -409,13 +410,25 @@ export default function Home() {
             className="md:w-[555px] w-full"
           />
           <div className="flex flex-col gap-2">
-            <span className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center">
+            <span
+              className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
               who we are
             </span>
-            <h3 className="font-serif font-bold text-[40px]">
+            <h3
+              className="font-serif font-bold text-[40px]"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               HIT-N-HAMMER COMPANY
             </h3>
-            <p className="dark:text-[#B7B0B0] text-[#717070] leading-9 text-xl">
+            <p
+              className="dark:text-[#B7B0B0] text-[#717070] leading-9 text-xl"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               Hit-N-Hammer is a leading provider of technology solutions for
               businesses. With a focus on delivering the highest quality
               products and services, we help businesses harness the power of
@@ -423,7 +436,11 @@ export default function Home() {
               dedicated to driving innovation and delivering results that exceed
               our clients&apos; expectations.
             </p>
-            <button className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white">
+            <button
+              className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white"
+              data-aos="fade-up"
+              data-aos-duration="1700"
+            >
               Read more
             </button>
           </div>

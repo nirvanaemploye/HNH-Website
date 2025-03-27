@@ -42,7 +42,7 @@ const navitems = [
 const Navbar = () => {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
-  const { theme } = useTheme();
+  const { theme,toggleTheme } = useTheme();
 
   return (
     <>
@@ -75,7 +75,7 @@ const Navbar = () => {
             })}
           </ul>
 
-          <div className="flex xl:-ml-56">
+          <div className="flex xl:-ml-56 justify-between">
             <button
               style={{
                 boxShadow:
@@ -88,6 +88,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setMenuVisible(true)}
+              
               className="text-sm md:hidden block"
             >
               <LuMenu className="text-3xl" />

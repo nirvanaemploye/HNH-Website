@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@html-polygon/react": "^0.1.4",
+    "aos": "^2.3.4",
+    "motion": "^12.6.2",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
