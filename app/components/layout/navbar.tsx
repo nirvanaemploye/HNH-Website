@@ -42,7 +42,7 @@ const navitems = [
 const Navbar = () => {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
-  const { theme,toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <>
