@@ -40,8 +40,6 @@ export const useTheme = (): ThemeContextType => {
 
  */
 
-
-
 /* import {
   createContext,
   useState,
@@ -112,7 +110,6 @@ export const useTheme = (): ThemeContextType => {
   return context;
 };
  */
-
 
 import {
   createContext,

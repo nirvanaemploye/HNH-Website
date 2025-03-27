@@ -379,6 +379,7 @@ export default function Home() {
 
   const bgDark = {
     backgroundImage: "url(/Home-page-dark_15.svg)",
+    // backgroundImage: "url(/dark-bg.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
