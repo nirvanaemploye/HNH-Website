@@ -25,6 +25,7 @@ const PortfolioPage = () => {
     <div
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
       style={theme === "dark" ? bgDark : bgLight}
+      data-aos="fade-in"
     >
       <div className="pt-[250px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
@@ -37,12 +38,8 @@ const PortfolioPage = () => {
             className="md:w-[650px] w-full"
             alt="about us"
           />
-          <div>
-            <h3
-              className="font-serif sm:text-8xl text-5xl borderFont"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <h3 className="font-serif sm:text-8xl text-5xl borderFont">
               <span>Port</span>
               <span
                 className={
@@ -68,7 +65,7 @@ const PortfolioPage = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="1000">
           <h3 className="font-serif text-primary font-bold sm:text-5xl text-4xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             OUR PORTFOLIO
           </h3>

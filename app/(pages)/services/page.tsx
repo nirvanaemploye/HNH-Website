@@ -115,6 +115,7 @@ const ServicesPage = () => {
     <div
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
       style={theme === "dark" ? bgDark : bgLight}
+      data-aos="fade-in"
     >
       <div className="pt-[250px] container max-w-[1320px] space-y-32">
         <div className="flex md:flex-row flex-col gap-16 items-center">
@@ -127,12 +128,8 @@ const ServicesPage = () => {
             className="md:w-[650px] w-full"
             alt="about us"
           />
-          <div>
-            <h3
-              className="font-serif sm:text-8xl text-4xl md:text-left text-center borderFont"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <h3 className="font-serif sm:text-8xl text-4xl md:text-left text-center borderFont">
               <span
                 className={
                   theme === "dark" ? "text-gradient" : "text-gradient1"
@@ -153,14 +150,16 @@ const ServicesPage = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="1000">
           <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             WE TRY TO SERV BEST SERVICES
           </h3>
           <div className="mt-20 space-y-12">
-            {services.map((service, idx) => {
-              return <ServiceCard service={service} key={idx} />;
-            })}
+            {services.map((service, idx) => (
+              <div key={idx} data-aos="fade-up" data-aos-delay={idx * 200}>
+                <ServiceCard service={service} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

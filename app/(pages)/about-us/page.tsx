@@ -51,14 +51,16 @@ export default function AboutUs() {
   const [hoveredMember, setHoveredMember] = useState(1);
 
   const bgDark = {
-    backgroundImage: "url(/Home-page-dark.svg)",
+    // backgroundImage: "url(/Home-page-dark.svg)",
+    backgroundImage: "url(/Background_Dark_about.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
   };
 
   const bgLight = {
-    backgroundImage: "url(/Home-page-light.svg)",
+    // backgroundImage: "url(/Home-page-light.svg)",
+    backgroundImage: "url(/Background_Light_about.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
@@ -194,7 +196,10 @@ export default function AboutUs() {
           </div>
         </div>
         <div>
-          <h3 className="font-serif text-primary font-bold text-3xl md:text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
+          <h3
+            className="font-serif text-primary font-bold text-3xl md:text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto"
+            data-aos="fade-up"
+          >
             OUR PRINCIPLES
           </h3>
           <div className="grid md:grid-cols-3 sm:grid-cols-1 items-center justify-items-center gap-10 mt-20">
@@ -203,6 +208,7 @@ export default function AboutUs() {
                 <div
                   className="border border-[#8B68FF40] p-10 h-full flex flex-col justify-start items-center rounded-tr-3xl rounded-bl-3xl shadow-[0px_0px_6px_#8B68FF80]"
                   key={idx}
+                  data-aos="fade-up-left"
                 >
                   <h5 className="text-3xl font-bold uppercase text-center justify-center text-[#7049EE] dark:text-white">
                     {principle.title}
@@ -224,27 +230,49 @@ export default function AboutUs() {
         </div>
         <div className="flex md:flex-row flex-col-reverse items-start justify-between gap-24 max-w-[968px] mx-auto">
           <div className="">
-            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit">
+            <h3
+              className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit"
+              data-aos="fade-right"
+            >
               OUR MISSION
             </h3>
-            <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
+            <p
+              className="dark:text-[#B7B0B0] text-[#717070] mt-3 "
+              data-aos="fade-left"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
             <div className="grid grid-cols-2 mt-10 gap-5">
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-right"
+                data-aos-duration="500"
+              >
                 <p className="font-semibold uppercase">innovation</p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-left"
+                data-aos-duration="500"
+              >
                 <p className="font-semibold uppercase">CLIENT-CENTRICK</p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-right"
+                data-aos-duration="800"
+              >
                 <p className="font-semibold uppercase break-all">
                   COLLABORATION
                 </p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-left"
+                data-aos-duration="800"
+              >
                 <p className="font-semibold uppercase">ETHICAL</p>
               </div>
             </div>
@@ -255,6 +283,7 @@ export default function AboutUs() {
             height={390}
             alt="our mission"
             className="md:w-[450px] w-full"
+            data-aos="flip-up"
           />
         </div>
         <div className="flex md:flex-row flex-col items-start justify-between gap-24 max-w-[968px] mx-auto">
@@ -264,27 +293,50 @@ export default function AboutUs() {
             height={390}
             alt="our mission"
             className="md:w-[450px] w-full"
+            data-aos="flip-down"
           />
           <div className="">
-            <h3 className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit">
+            <h3
+              className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit"
+              data-aos="fade-right"
+            >
               OUR VISION
             </h3>
-            <p className="dark:text-[#B7B0B0] text-[#717070] mt-3 ">
+            <p
+              className="dark:text-[#B7B0B0] text-[#717070] mt-3 "
+              data-aos="fade-left"
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
             <div className="grid grid-cols-2 mt-10 gap-5">
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-right"
+                data-aos-duration="500"
+              >
                 <p className="font-semibold uppercase">EXCELLENCE</p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-left"
+                data-aos-duration="500"
+              >
                 <p className="font-semibold uppercase">EFFICIENCY</p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-right"
+                data-aos-duration="800"
+              >
                 <p className="font-semibold uppercase">GLOBAL</p>
               </div>
-              <div className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]">
+              <div
+                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                data-aos="fade-up-left"
+                data-aos-duration="800"
+              >
                 <p className="font-semibold uppercase break-all">
                   SUSTAINABILITY
                 </p>
@@ -293,7 +345,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="md:block hidden">
+        {/* <div className="md:block hidden">
           <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             Meet the best team ever
           </h3>
@@ -347,18 +399,7 @@ export default function AboutUs() {
                   className={hoveredMember === 8 ? "imgTransform" : ""}
                 />
               </div>
-              {/* <div className="bg-white/10 border border-primary rounded-3xl px-6 py-4 flex flex-col items-center justify-center max-w-[590px]">
-                <h5 className="font-serif text-primary font-bold text-xl border-b-2 border-dashed border-white uppercase w-fit">
-                  OUR VISION
-                </h5>
-                <p className="mt-[3px]">Founder</p>
-                <p className="text-xs font-light text-[#717070] text-center mt-2">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters.
-                </p>
-              </div> */}
+
 
               {members.map((member) => (
                 <div
@@ -438,116 +479,109 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* <div className="ourTeamContainer container">
-          <div className="ourTeamHeading">
-            <h1>MEET THE BEST TEAM EVER</h1>
-          </div>
-          <div className="teamTopImagesFlex">
-            <div className="teamMember firstMember">
-              <Image
-                src={teamMember1}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(1)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 1 ? "imgTransform" : ""}
-              />
+ */}
+
+        <div className="md:block hidden">
+          <h3
+            className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto"
+            data-aos="fade-down"
+          >
+            Meet the best team ever
+          </h3>
+          <div className="mt-14 space-y-12">
+            <div
+              className="flex items-end justify-center gap-12"
+              data-aos="zoom-in"
+            >
+              {[teamMember1, teamMember2, teamMember3].map((member, index) => (
+                <div key={index}>
+                  <Image
+                    src={member}
+                    width={index === 1 ? 232 : 163}
+                    height={index === 1 ? 170 : 119}
+                    alt="team member"
+                    onMouseEnter={() => handleMouseEnter(index + 1)}
+                    onMouseLeave={handleMouseLeave}
+                    className={
+                      hoveredMember === index + 1 ? "imgTransform" : ""
+                    }
+                    data-aos="flip-left"
+                  />
+                </div>
+              ))}
             </div>
-            <div className="teamMember secondMember">
-              <Image
-                src={teamMember2}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(2)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 2 ? "imgTransform" : ""}
-              />
-            </div>
-            <div className="teamMember thirdMember">
-              <Image
-                src={teamMember3}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(3)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 3 ? "imgTransform" : ""}
-              />
-            </div>
-          </div>
-          <div className="teamMiddleFlex">
-            <div className="teamMember eightMember">
+
+            <div
+              className="flex items-center justify-center gap-12"
+              data-aos="fade-up"
+            >
               <Image
                 src={teamMember8}
-                alt="teamMember"
+                width={232}
+                height={170}
+                alt="team member"
                 onMouseEnter={() => handleMouseEnter(8)}
                 onMouseLeave={handleMouseLeave}
                 className={hoveredMember === 8 ? "imgTransform" : ""}
+                data-aos="flip-right"
               />
-            </div>
-
-            {members.map((member) => (
-              <div
-                className={`aboutMember ${
-                  theme === "dark" ? "changeShadow" : ""
-                }`}
-                style={{
-                  display: hoveredMember === member.id ? "block" : "none",
-                }}
-              >
-                <div className="memberName">
-                  <h2
-                    className={`mb-0 ${
-                      theme === "dark" ? "text-[#8B68FF]" : ""
-                    }`}
-                  >
-                    {member.name}
-                  </h2>
+              {members.map((member) => (
+                <div
+                  key={member.id}
+                  className={`aboutMember ${
+                    theme === "dark" ? "changeShadow" : ""
+                  }`}
+                  style={{
+                    display: hoveredMember === member.id ? "block" : "none",
+                  }}
+                  data-aos="fade-in"
+                >
+                  <div className="memberName">
+                    <h2 className="mb-0 text-[#8B68FF]">{member.name}</h2>
+                  </div>
+                  <h6 className={theme === "dark" ? "text-white" : ""}>
+                    {member.designation}
+                  </h6>
+                  <p className={theme === "dark" ? "teamInfoDarkClr" : ""}>
+                    {member.details}
+                  </p>
                 </div>
-                <h6 className={`${theme === "dark" ? "text-white" : ""}`}>
-                  {member.designation}
-                </h6>
-                <p className={`${theme === "dark" ? "teamInfoDarkClr" : ""}`}>
-                  {member.details}
-                </p>
-              </div>
-            ))}
-            <div className="teamMember fourthMember">
+              ))}
               <Image
                 src={teamMember4}
-                alt="teamMember"
+                width={232}
+                height={170}
+                alt="team member"
                 onMouseEnter={() => handleMouseEnter(4)}
                 onMouseLeave={handleMouseLeave}
                 className={hoveredMember === 4 ? "imgTransform" : ""}
+                data-aos="flip-left"
               />
+            </div>
+
+            <div
+              className="flex items-start justify-center gap-12"
+              data-aos="zoom-in-up"
+            >
+              {[teamMember7, teamMember6, teamMember5].map((member, index) => (
+                <div key={index}>
+                  <Image
+                    src={member}
+                    width={index === 1 ? 232 : 163}
+                    height={index === 1 ? 170 : 119}
+                    alt="team member"
+                    onMouseEnter={() => handleMouseEnter(index + 7)}
+                    onMouseLeave={handleMouseLeave}
+                    className={
+                      hoveredMember === index + 7 ? "imgTransform" : ""
+                    }
+                    data-aos="flip-up"
+                  />
+                </div>
+              ))}
             </div>
           </div>
-          <div className="teamTopImagesFlex teamBottom">
-            <div className="teamMember seventhMember">
-              <Image
-                src={teamMember7}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(7)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 7 ? "imgTransform" : ""}
-              />
-            </div>
-            <div className="teamMember sixthMember">
-              <Image
-                src={teamMember6}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(6)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 6 ? "imgTransform" : ""}
-              />
-            </div>
-            <div className="teamMember fifthMember">
-              <Image
-                src={teamMember5}
-                alt="teamMember"
-                onMouseEnter={() => handleMouseEnter(5)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 5 ? "imgTransform" : ""}
-              />
-            </div>
-          </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

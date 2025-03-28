@@ -378,15 +378,17 @@ export default function Home() {
   const { theme } = useTheme();
 
   const bgDark = {
-    backgroundImage: "url(/Home-page-dark_15.svg)",
+    // backgroundImage: "url(/Home-page-dark_15.svg)",
     // backgroundImage: "url(/dark-bg.svg)",
+    backgroundImage: "url(/dark.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
   };
 
   const bgLight = {
-    backgroundImage: "url(/Home-page-light.svg)",
+    // backgroundImage: "url(/Home-page-light.svg)",
+    backgroundImage: "url(/Background_Light_home.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
@@ -453,13 +455,23 @@ export default function Home() {
               <span
                 className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF]
               pb-1 w-fit"
+                data-aos="fade-up"
+                data-aos-duration="500"
               >
                 OUR SERVICES
               </span>
-              <h1 className="uppercase font-serif dark:text-[#ffffff] text-[#171616] font-bold text-[40px]">
+              <h1
+                className="uppercase font-serif dark:text-[#ffffff] text-[#171616] font-bold text-[40px]"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 HIT-N-HAMMER SERVICES
               </h1>
-              <p className="leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg">
+              <p
+                className="leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
                 Technologies Design And Develop Mobile Apps, Web Apps,
                 Blockchain Solutions.
               </p>
@@ -470,6 +482,8 @@ export default function Home() {
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="200"
               >
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -513,9 +527,11 @@ export default function Home() {
                 </div>
               </li>
               <li
-                className={`honeycomb-cell ${
+                className={`honeycomb-cell  ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="300"
               >
                 {/* <img className="honeycomb-cell_img" src="img/work-2.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
@@ -548,9 +564,11 @@ export default function Home() {
                 </div>
               </li>
               <li
-                className={`honeycomb-cell ${
+                className={`honeycomb-cell  ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="400"
               >
                 {/* <img className="honeycomb-cell_img" src="img/Work3.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
@@ -584,9 +602,11 @@ export default function Home() {
                 </div>
               </li>
               <li
-                className={`honeycomb-cell ${
+                className={`honeycomb-cell  ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="500"
               >
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
@@ -624,9 +644,11 @@ export default function Home() {
               <li className="honeycomb-cell honeycomb_Hidden"></li>
 
               <li
-                className={`honeycomb-cell ${
+                className={`honeycomb-cell  ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="600"
               >
                 {/* <img className="honeycomb-cell_img" src="img/work5.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
@@ -662,6 +684,8 @@ export default function Home() {
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="700"
               >
                 {/* <img className="honeycomb-cell_img" src="img/work06.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
@@ -699,6 +723,8 @@ export default function Home() {
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
                 }`}
+                data-aos="zoom-out-up"
+                data-aos-duration="800"
               >
                 {/* <img className="honeycomb-cell_img" src="img/work07.jpg"> */}
                 <div className="honeycomb-cell_title gap-y-3">
@@ -739,10 +765,20 @@ export default function Home() {
 
         <div className="flex md:flex-row flex-col-reverse items-center justify-items-center gap-4 md:pt-32">
           <div>
-            <h3 className="capitalize text-primary font-serif font-bold sm:text-5xl text-4xl">
+            <h3
+              className="capitalize text-primary font-serif font-bold sm:text-5xl text-4xl"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="500"
+            >
               over 400+ projects completed
             </h3>
-            <p className=" mt-7 text-xl">
+            <p
+              className=" mt-7 text-xl"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
               ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
@@ -756,10 +792,16 @@ export default function Home() {
             height={500}
             alt="stats"
             className="sm:w-2/4 w-full"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
           />
         </div>
         <div className="relative z-10 md:pt-32">
-          <h3 className="font-serif text-primary font-bold text-4xl md:text-5xl text-center border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] uppercase w-fit mx-auto">
+          <h3
+            className="font-serif text-primary font-bold text-4xl md:text-5xl text-center border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] uppercase w-fit mx-auto"
+            data-aos="fade-up-right"
+          >
             methodology
           </h3>
           <div className="mt-[150px] grid md:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-4 gap-x-4 md:gap-y-0 gap-y-28">
@@ -768,6 +810,8 @@ export default function Home() {
                 <div
                   key={idx}
                   className="text-center bg-[#8B68FF06] px-6 pb-6 pt-[100px] rounded-[20px] border-2 border-primary shadow-[0px_0px_6px_#8B68FF80] flex flex-col items-center justify-start relative hover:scale-105 duration-150"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
                 >
                   <div className="absolute mx-auto -top-[75px] ">
                     <img src={meth.image} alt="icons" />
@@ -783,13 +827,25 @@ export default function Home() {
           </div>
         </div>
         <div className="md:pt-32 gap-3">
-          <p className="text-primary text-2xl font-medium capitalize text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto pb-1">
+          <p
+            className="text-primary text-2xl font-medium capitalize text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto pb-1"
+            data-aos="zoom-in-left"
+            data-aos-duration="300"
+          >
             hire us
           </p>
-          <h3 className="uppercase font-serif dark:text-[#ffffff] text-black font-bold text-2xl md:text-4xl text-center mt-4">
+          <h3
+            className="uppercase font-serif dark:text-[#ffffff] text-black font-bold text-2xl md:text-4xl text-center mt-4"
+            data-aos="zoom-in-right"
+            data-aos-duration="400"
+          >
             HIRE ON-DEMAND DEVELOPERS
           </h3>
-          <p className="text-lg mt-4 text-center max-w-screen-lg mx-auto dark:text-[#B7B0B0] text-[#717070]">
+          <p
+            className="text-lg mt-4 text-center max-w-screen-lg mx-auto dark:text-[#B7B0B0] text-[#717070]"
+            data-aos="zoom-out"
+            data-aos-duration="500"
+          >
             Do you want to hire an on-demand mobile app developer for a specific
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP, Blockchain, On-Demand.
@@ -800,6 +856,9 @@ export default function Home() {
                 <div
                   key={idx}
                   className="border-2 dark:bg-[#241653] border-primary rounded-tl-3xl rounded-br-3xl px-4 py-4"
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
                 >
                   <Image
                     className="mx-auto"
@@ -843,14 +902,20 @@ export default function Home() {
           </div>
         </div>
         <div className="md:pt-32">
-          <p className="text-primary text-2xl font-medium text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase pb-1">
+          <p
+            className="text-primary text-2xl font-medium text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase pb-1"
+            data-aos="zoom-out-down"
+          >
             why
           </p>
-          <h3 className="uppercase font-serif text-black dark:text-[#FFFFFF] font-bold sm:text-4xl text-3xl text-center mt-4">
+          <h3
+            className="uppercase font-serif text-black dark:text-[#FFFFFF] font-bold sm:text-4xl text-3xl text-center mt-4"
+            data-aos="zoom-out-up"
+          >
             the hit-n-hammer
           </h3>
           <div className="flex md:flex-row flex-col items-center justify-center gap-24 mt-14">
-            <div className="text-center">
+            <div className="text-center" data-aos="zoom-out-right">
               <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
@@ -871,7 +936,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center" data-aos="zoom-out-left">
               <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
@@ -890,7 +955,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center" data-aos="zoom-out">
               <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
@@ -916,10 +981,16 @@ export default function Home() {
           <section id="testimonialSection1">
             <div className="testimonialContainer1">
               <div className="testimonialTitle1">
-                <p className="font-serif text-[#6c42f8] border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed">
+                <p
+                  className="font-serif text-[#6c42f8] border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed"
+                  data-aos="zoom-out-down"
+                >
                   CLIENTS TESTIMONIAL
                 </p>
-                <h1 className="uppercase font-serif dark:text-[#FFFFFF] text-[#171616] font-bold sm:text-4xl text-3xl text-center mt-4">
+                <h1
+                  className="uppercase font-serif dark:text-[#FFFFFF] text-[#171616] font-bold sm:text-4xl text-3xl text-center mt-4"
+                  data-aos="zoom-out-up"
+                >
                   WHAT OUR CLIENTS ARE SAYING
                 </h1>
               </div>
@@ -934,6 +1005,8 @@ export default function Home() {
                       }`}
                       onMouseEnter={() => handleMouseEnter(member.id)}
                       onMouseLeave={handleMouseLeave}
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="center-bottom"
                     >
                       <Image
                         className="honeycomb-cell_img1 object-cover"
@@ -944,7 +1017,11 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <div className="doubleQuotes1">
+              <div
+                className="doubleQuotes1"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+              >
                 <Image
                   src={theme === "dark" ? doubleQuotesDark : doubleQuoteLight}
                   alt="doubleQuotes"
@@ -989,16 +1066,25 @@ export default function Home() {
           </div> */}
         </div>
         <div className="flex flex-col items-center">
-          <h3 className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase font-serif">
+          <h3
+            className="text-primary text-[40px] md:mt-20 font-bold text-center border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed w-fit mx-auto uppercase font-serif"
+            data-aos="zoom-in-up"
+          >
             get in touch
           </h3>
-          <p className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-[1093px] text-xl font-normal mx-auto">
+          <p
+            className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-[1093px] text-xl font-normal mx-auto"
+            data-aos="zoom-in-down"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
             accumsan lacus vel facilisis
           </p>
-          <button className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]">
+          <button
+            className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]"
+            data-aos="zoom-out-up"
+          >
             <a href="/contact">contact us</a>
           </button>
         </div>
