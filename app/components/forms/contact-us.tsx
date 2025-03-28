@@ -36,9 +36,8 @@ const ContactUsForm = () => {
           <textarea
             rows={4}
             className="dark:bg-[#262036] bg-[#FFFFFF0D] w-full text-[#898686] p-4 border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg"
-          >
-            Go ahead, We are listening...
-          </textarea>
+            placeholder="Go ahead, We are listening..."
+          ></textarea>
           <button className="w-full py-4 bg-primary rounded-lg font-semibold sm:text-2xl text-lg">
             Submit
           </button>
@@ -56,19 +55,32 @@ const ContactUsForm = () => {
             <span className="h-10 w-10 border border-primary text-primary rounded-full flex items-center justify-center">
               <FaMapMarkerAlt />
             </span>
-            <p>16 Plymouth Road,Braintree, MA 02184</p>
+            <p>
+              <a
+                href="https://www.google.com/maps/dir//Nirvana+Tech+Labs+Nursery+Rd+opp.+Anand+Cinema,+Maruti+Nagar+Society+Bilimora,+Gujarat+396321/@20.7680594,72.9737598,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3be0ee691bdc222d:0x8601d0112c1f6232"
+                target="_blank"
+              >
+                Nirvana Tech Labs
+              </a>
+            </p>
           </div>
           <div className="flex items-center justify-start gap-4">
             <span className="h-10 w-10 border border-primary text-primary rounded-full flex items-center justify-center">
               <FaPhone />
             </span>
-            <p>(978) 992 0049</p>
+            <p>
+              <a href="tel:+91 7861973807">+91 7861973807</a>
+            </p>
           </div>
           <div className="flex items-center justify-start gap-4">
             <span className="h-10 w-10 border border-primary text-primary rounded-full flex items-center justify-center">
               <FaEnvelope />
             </span>
-            <p>Coretechllc@icloud.com</p>
+            <p>
+              <a href="mailto:hitnhammertechnologies0706@gmail.com">
+                hitnhammertechnologies0706@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
