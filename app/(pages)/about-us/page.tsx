@@ -345,7 +345,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* <div className="md:block hidden">
+        <div className="md:block hidden" data-aos="fade-up">
           <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             Meet the best team ever
           </h3>
@@ -479,9 +479,7 @@ export default function AboutUs() {
           </div>
         </div>
 
- */}
-
-        <div className="md:block hidden">
+        {/* <div className="md:block hidden">
           <h3
             className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto"
             data-aos="fade-down"
@@ -581,7 +579,9 @@ export default function AboutUs() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
+
+
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import client7 from "../public/21959.jpg";
 // import polygonstats from "@/public/Group_87.svg";
 import React, { useState } from "react";
 import { useTheme } from "./components/context/themeContext";
+import Modal from "./components/ui/modal";
 
 const developers = [
   {
@@ -366,6 +367,8 @@ export default function Home() {
     },
   ];
   const [hoveredMember, setHoveredMember] = useState(Number);
+  const [selectedService, setSelectedService] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleMouseEnter = (id: number) => {
     setHoveredMember(id);
@@ -373,6 +376,10 @@ export default function Home() {
 
   const handleMouseLeave = () => {
     setHoveredMember(hoveredMember);
+  };
+
+  const handleServiceHover = (id: number) => {
+    setSelectedService(id);
   };
 
   const { theme } = useTheme();
@@ -394,10 +401,35 @@ export default function Home() {
     backgroundRepeat: "no-repeat",
   };
 
+  const modalContent = {
+    title: "About Hit-N-Hammer Company",
+    content: `Hit-N-Hammer is a leading provider of technology solutions for businesses. With a focus on delivering the highest quality products and services, we help businesses harness the power of technology to achieve their goals.
+
+Our Expertise:
+• Custom Software Development
+• Mobile App Development
+• Web Development
+• Cloud Solutions
+• UI/UX Design
+• Business Solutions
+• Cloud Email Migration
+
+Our Approach:
+We believe in a client-centric approach, working closely with our clients to understand their unique needs and challenges. Our team of experts combines technical expertise with industry knowledge to deliver solutions that drive business growth and innovation.
+
+Our Commitment:
+• Quality: We maintain the highest standards in all our deliverables
+• Innovation: We stay ahead of technological trends
+• Support: We provide exceptional customer support
+• Security: We ensure the security and reliability of all solutions
+• Partnership: We build long-term relationships with our clients
+
+At Hit-N-Hammer, we're not just a service provider; we're your technology partner in growth. Let us help you transform your business with our innovative solutions.`,
+  };
+
   return (
     <div
       className="dark:text-white dark:bg-[#170C3F]  md:pb-32"
-      //className={`app ${theme} dark:text-white dark:bg-[#170C3F]  md:pb-32`}
       style={theme === "dark" ? bgDark : bgLight}
     >
       <div className="container max-w-[1320px] space-y-32">
@@ -440,6 +472,7 @@ export default function Home() {
               our clients&apos; expectations.
             </p>
             <button
+              onClick={() => setIsModalOpen(true)}
               className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white"
               data-aos="fade-up"
               data-aos-duration="1700"
@@ -879,7 +912,15 @@ export default function Home() {
                   </ul>
                   <div className="mt-4 flex items-center justify-between">
                     <button className="bg-primary rounded-xl lg:px-4 lg:py-2 font-semibold">
-                      Hire now
+                      <a
+                        href={`/contact?developer=${encodeURIComponent(
+                          develoer.name
+                        )}&type=${encodeURIComponent(
+                          develoer.name.split(" ")[0]
+                        )}`}
+                      >
+                        Hire now
+                      </a>
                     </button>
                     <ul className="flex items-center justify-end gap-2">
                       {develoer.skills.map((skill, idx) => {
@@ -1005,8 +1046,6 @@ export default function Home() {
                       }`}
                       onMouseEnter={() => handleMouseEnter(member.id)}
                       onMouseLeave={handleMouseLeave}
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="center-bottom"
                     >
                       <Image
                         className="honeycomb-cell_img1 object-cover"
@@ -1017,11 +1056,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <div
-                className="doubleQuotes1"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-center"
-              >
+              <div className="doubleQuotes1">
                 <Image
                   src={theme === "dark" ? doubleQuotesDark : doubleQuoteLight}
                   alt="doubleQuotes"
@@ -1044,26 +1079,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {/* <div className="items-center justify-items-center mt-48 space-y-3">
-            <div>
-              <p className="text-base dark:text-[#B7B0B0] text-[#717070] max-w-[929px] text-center">
-                AdasIt is a long established fact that a reader will be
-                distracted by the readable content of a page when looking at its
-                layout. The point of using Lorem Ipsum is that it has a
-                more-or-less normal distribution of letters, as opposed to using
-                Content here, content here, making it look like readable
-                English.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-xl text-[#8B68FF] font-semibold text-center">
-                Allena Smith
-              </h2>
-              <p className="font-medium text-base dark:text-[#FFFFFF] text-[#717070]">
-                Awesome IT, Company
-              </p>
-            </div>
-          </div> */}
         </div>
         <div className="flex flex-col items-center">
           <h3
@@ -1089,6 +1104,12 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={modalContent.title}
+        content={modalContent.content}
+      />
     </div>
   );
 }
