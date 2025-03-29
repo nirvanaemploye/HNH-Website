@@ -375,7 +375,7 @@ export default function Home() {
   };
 
   const handleMouseLeave = () => {
-    setHoveredMember(hoveredMember);
+    setHoveredMember(null);
   };
 
   const handleServiceHover = (id: number) => {
@@ -385,8 +385,6 @@ export default function Home() {
   const { theme } = useTheme();
 
   const bgDark = {
-    // backgroundImage: "url(/Home-page-dark_15.svg)",
-    // backgroundImage: "url(/dark-bg.svg)",
     backgroundImage: "url(/dark.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",
@@ -394,7 +392,6 @@ export default function Home() {
   };
 
   const bgLight = {
-    // backgroundImage: "url(/Home-page-light.svg)",
     backgroundImage: "url(/Background_Light_home.svg)",
     backgroundSize: "cover",
     backgroundPosition: "top",

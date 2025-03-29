@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { useTheme } from "@/app/components/context/themeContext";
 
 const ContactUsForm = () => {
   const searchParams = useSearchParams();
-  const { theme } = useTheme();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

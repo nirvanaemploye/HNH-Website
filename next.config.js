@@ -2,7 +2,13 @@
 const nextConfig = {
   images: {
     domains: ["localhost"],
-    unoptimized: true,
+    unoptimized: process.env.NODE_ENV === "development",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   typescript: {
     ignoreBuildErrors: false,
@@ -10,6 +16,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  output: "standalone",
 };
 
 module.exports = nextConfig;
