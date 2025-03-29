@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
@@ -12,10 +13,8 @@ import client4 from "../public/27767.jpg";
 import client5 from "../public/6837.jpg";
 import client6 from "../public/2148767055.jpg";
 import client7 from "../public/21959.jpg";
-// import polygonstats from "@/public/Group_87.svg";
-import React, { useState } from "react";
-import { useTheme } from "./components/context/themeContext";
 import Modal from "./components/ui/modal";
+import { useTheme } from "./components/context/themeContext";
 
 const developers = [
   {
@@ -308,6 +307,7 @@ const methodologies = [
 ];
 
 export default function Home() {
+  const { theme } = useTheme();
   const members = [
     {
       id: 1,
@@ -366,8 +366,7 @@ export default function Home() {
       img: client7,
     },
   ];
-  const [hoveredMember, setHoveredMember] = useState(Number);
-  const [selectedService, setSelectedService] = useState(1);
+  const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleMouseEnter = (id: number) => {
@@ -378,23 +377,17 @@ export default function Home() {
     setHoveredMember(null);
   };
 
-  const handleServiceHover = (id: number) => {
-    setSelectedService(id);
-  };
-
-  const { theme } = useTheme();
-
   const bgDark = {
     backgroundImage: "url(/dark.svg)",
     backgroundSize: "cover",
-    backgroundPosition: "top",
+    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
 
   const bgLight = {
     backgroundImage: "url(/Background_Light_home.svg)",
     backgroundSize: "cover",
-    backgroundPosition: "top",
+    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
 
@@ -843,8 +836,14 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                   data-aos="fade-up"
                   data-aos-anchor-placement="bottom-bottom"
                 >
-                  <div className="absolute mx-auto -top-[75px] ">
-                    <img src={meth.image} alt="icons" />
+                  <div className="absolute mx-auto -top-[70px] ">
+                    <Image
+                      src={meth.image}
+                      alt="icons"
+                      width={150}
+                      height={150}
+                      priority
+                    />
                   </div>
 
                   <h5 className="uppercase font-bold text-2xl">{meth.title}</h5>

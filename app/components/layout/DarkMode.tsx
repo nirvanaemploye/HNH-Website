@@ -8,12 +8,18 @@ const DarkMode = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="h-10 w-10 border border-primary text-primary rounded-full flex items-center justify-center"
+      className="text-primary flex items-center justify-center"
     >
       {theme === "dark" ? (
-        <Image src="/moon.svg" alt="moon" width={20} height={20} priority />
+        <Image
+          src="/light_btn.svg"
+          alt="moon"
+          width={65}
+          height={65}
+          priority
+        />
       ) : (
-        <Image src="/sun.svg" alt="sun" width={20} height={20} priority />
+        <Image src="/dark_btn.svg" alt="sun" width={65} height={65} priority />
       )}
     </button>
   );

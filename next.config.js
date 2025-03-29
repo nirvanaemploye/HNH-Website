@@ -12,11 +12,13 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: false,
+    tsconfigPath: "./tsconfig.json",
   },
   eslint: {
     ignoreDuringBuilds: false,
   },
   output: "standalone",
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;
