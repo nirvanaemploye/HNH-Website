@@ -18,12 +18,19 @@ const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    const developer = searchParams.get("developer");
+    const service = searchParams.get("service");
     const type = searchParams.get("type");
-    if (developer && type) {
+    const developer = searchParams.get("developer");
+
+    if (service && type) {
       setFormData((prev) => ({
         ...prev,
-        message: `I want to hire a ${type} developer for ${developer}`,
+        message: `I am interested in ${service} services. Specifically looking for: ${type}`,
+      }));
+    } else if (developer) {
+      setFormData((prev) => ({
+        ...prev,
+        message: `I want to hire a ${developer}`,
       }));
     }
   }, [searchParams]);
@@ -64,6 +71,7 @@ const ContactUsForm = () => {
       setIsSubmitting(false);
     }
   };
+
   return (
     <div
       style={{
@@ -83,7 +91,7 @@ const ContactUsForm = () => {
           className="sm:mt-14 mt-7 sm:space-y-9 space-y-5"
         >
           <input
-            className="w-full h-14 px-4 bg-[#241653] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
+            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
             placeholder="Enter your name"
             type="text"
             value={formData.name}
@@ -93,7 +101,7 @@ const ContactUsForm = () => {
             required
           />
           <input
-            className="w-full h-14 px-4 bg-[#241653] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
+            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
             placeholder="Enter your email address"
             type="email"
             value={formData.email}
@@ -104,7 +112,7 @@ const ContactUsForm = () => {
           />
           <textarea
             rows={4}
-            className="bg-[#241653] w-full text-white p-4 border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg"
+            className="dark:bg-[#262036] bg-[#FFFFFF0D] w-full text-white p-4 border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg"
             placeholder="Go ahead, We are listening..."
             value={formData.message}
             onChange={(e) =>
@@ -150,7 +158,9 @@ const ContactUsForm = () => {
                 href="https://www.google.com/maps/place/Nirvana+Tech+Labs/@20.768061,72.973713,407m/data=!3m1!1e3!4m6!3m5!1s0x3be0ee691bdc222d:0x8601d0112c1f6232!8m2!3d20.768061!4d72.973713!16s%2Fg%2F11d_z79lt1?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-              >HitNHammer</a>
+              >
+                HitNHammer
+              </a>
             </p>
           </div>
           <div className="flex items-center justify-start gap-4">
@@ -178,3 +188,9 @@ const ContactUsForm = () => {
 };
 
 export default ContactUsForm;
+
+
+
+
+
+

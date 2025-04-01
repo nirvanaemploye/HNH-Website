@@ -76,19 +76,19 @@ const Navbar = () => {
           </ul>
 
           <div className="flex xl:-ml-56 justify-between">
-            <button
+            <Link
+              href="/hire-us"
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden text-white"
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden text-white items-center justify-center text-center"
             >
               Hire us
-            </button>
+            </Link>
 
             <button
               onClick={() => setMenuVisible(true)}
-              
               className="text-sm md:hidden block"
             >
               <LuMenu className="text-3xl" />
@@ -128,15 +128,17 @@ const Navbar = () => {
             );
           })}
           <li className="mt-8">
-            <button
+            <Link
+              href="/hire-us"
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full text-white"
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full text-white flex items-center justify-center text-center"
+              
             >
               Hire us
-            </button>
+            </Link>
             <div className="mt-9 ">
               <DarkMode />
             </div>

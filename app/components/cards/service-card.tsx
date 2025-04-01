@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ServiceCardProps {
   service: {
@@ -14,7 +15,6 @@ interface ServiceCardProps {
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
-      
       <div>
         <Image
           src={service.image}
@@ -42,9 +42,14 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
             );
           })}
         </div>
-        <button className="mt-10 bg-primary px-12 py-3 font-semibold text-lg rounded-xl">
+        <Link
+          href={`/contact?service=${encodeURIComponent(
+            service.name
+          )}&type=${encodeURIComponent(service.services.join(", "))}`}
+          className="mt-10 bg-primary px-12 py-3 font-semibold text-lg rounded-xl inline-block"
+        >
           Hire Us
-        </button>
+        </Link>
         <div className="flex flex-wrap items-center justify-start gap-8 mt-14">
           {service.toolImages.map((tool, idx) => {
             return (
