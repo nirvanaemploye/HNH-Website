@@ -22,7 +22,8 @@ const hireUsData = [
     id: 2,
     title: "Web Developers",
     description: "Full-stack developers who build robust web applications",
-    image: "/web-dev-icon.svg",
+    image: "/Web_Development.svg",
+    image1: "/Web_Development_Dark.svg",
     skills: ["React", "Node.js", "Python", "PHP"],
     rate: "$30/hour",
     experience: "4+ years",
@@ -31,7 +32,8 @@ const hireUsData = [
     id: 3,
     title: "Mobile Developers",
     description: "Native and cross-platform mobile app developers",
-    image: "/mobile-dev-icon.svg",
+    image: "/Mobile_Development.svg",
+    image1: "/Mobile_Development_Dark.svg",
     skills: ["React Native", "Flutter", "iOS", "Android"],
     rate: "$35/hour",
     experience: "4+ years",
@@ -40,7 +42,8 @@ const hireUsData = [
     id: 4,
     title: "Game Developers",
     description: "Creative developers who bring games to life",
-    image: "/game-dev-icon.svg",
+    image: "/game _Development.svg",
+    image1: "/game_DeveopmentDark.svg",
     skills: ["Unity", "Unreal Engine", "C#", "Game Design"],
     rate: "$40/hour",
     experience: "5+ years",
@@ -127,17 +130,17 @@ const HireUsPage = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-primary mb-2">
+                    <h4 className="text-2xl font-bold text-primary mb-2 dark:text-white text-black">
                       {talent.title}
                     </h4>
-                    <p className="dark:text-[#E1E0E0] text-[#717070] mb-4">
+                    <p className="dark:text-[#b7b0b0] text-[#717070] mb-4">
                       {talent.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {talent.skills.map((skill, skillIdx) => (
                         <span
                           key={skillIdx}
-                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                          className="px-3 py-1 bg-primary/10 text-black dark:text-white rounded-full text-sm"
                         >
                           {skill}
                         </span>
