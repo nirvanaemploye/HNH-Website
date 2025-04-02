@@ -175,8 +175,8 @@ const HireUsPage = () => {
             Need Something Else?
           </h3>
           <p className="dark:text-[#E1E0E0] text-[#717070] max-w-2xl mx-auto">
-            We have a diverse pool of talent. If you don&apos;t see what
-            you&apos;re looking for, contact us and we&apos;ll help you find the
+            We have a diverse pool of talent. If you don&#39;t see what
+            you&#39;re looking for, contact us and we&#39;ll help you find the
             right person for your project.
           </p>
           <Link
