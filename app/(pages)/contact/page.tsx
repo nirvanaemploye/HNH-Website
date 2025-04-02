@@ -2,7 +2,7 @@
 import { useTheme } from "@/app/components/context/themeContext";
 import ContactUsForm from "@/app/components/forms/contact-us";
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 
 const ContactPage = () => {
   const { theme } = useTheme();
@@ -61,7 +61,9 @@ const ContactPage = () => {
           </div>
         </div>
         <div data-aos="zoom-in" data-aos-duration="1000">
-          <ContactUsForm />
+          <Suspense>
+            <ContactUsForm />
+          </Suspense>
         </div>
         <div data-aos="fade-up" data-aos-duration="1000">
           <iframe

@@ -91,7 +91,7 @@ const ContactUsForm = () => {
           className="sm:mt-14 mt-7 sm:space-y-9 space-y-5"
         >
           <input
-            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
+            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg "
             placeholder="Enter your name"
             type="text"
             value={formData.name}
@@ -101,7 +101,7 @@ const ContactUsForm = () => {
             required
           />
           <input
-            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg text-white"
+            className="w-full h-14 px-4 dark:bg-[#262036] bg-[#FFFFFF0D] border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg "
             placeholder="Enter your email address"
             type="email"
             value={formData.email}
@@ -112,7 +112,7 @@ const ContactUsForm = () => {
           />
           <textarea
             rows={4}
-            className="dark:bg-[#262036] bg-[#FFFFFF0D] w-full text-white p-4 border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg"
+            className="dark:bg-[#262036] bg-[#FFFFFF0D] w-full  p-4 border border-primary [box-shadow:0px_4px_20px_#8B68FF25] rounded-lg"
             placeholder="Go ahead, We are listening..."
             value={formData.message}
             onChange={(e) =>
