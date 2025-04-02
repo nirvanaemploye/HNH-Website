@@ -10,6 +10,7 @@ import DarkMode from "./DarkMode";
 import LightHit from "../../../public/Hit_Hammer 2.svg";
 import DarkHit from "../../../public/logo.svg";
 import { useTheme } from "../context/themeContext";
+import { useRouter } from "next/navigation";
 
 const navitems = [
   {
@@ -43,6 +44,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
   const { theme } = useTheme();
+  const router = useRouter();
 
   return (
     <>
@@ -76,8 +78,8 @@ const Navbar = () => {
           </ul>
 
           <div className="flex xl:-ml-56 justify-between">
-            <Link
-              href="/hire-us"
+            <button
+              onClick={() => router.push("/hire-us")}
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
@@ -85,7 +87,7 @@ const Navbar = () => {
               className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden text-white items-center justify-center text-center"
             >
               Hire us
-            </Link>
+            </button>
 
             <button
               onClick={() => setMenuVisible(true)}
@@ -112,34 +114,40 @@ const Navbar = () => {
         >
           <LuX className="text-3xl" />
         </button>
-        <ul className="flex flex-col gap-4 items-start justify-center">
+        <ul className="flex flex-col gap-4 items-start justify-center w-full">
           {navitems.map((item, idx) => {
             const isactive = pathname === item.href;
             return (
               <li
                 key={idx}
                 className={twMerge(
-                  "uppercase font-medium text-2xl",
+                  "uppercase font-medium text-2xl w-full",
                   isactive && "text-primary border-b-2 border-primary"
                 )}
               >
-                <Link href={item.href}>{item.name}</Link>
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuVisible(false)}
+                  className="block w-full py-2"
+                >
+                  {item.name}
+                </Link>
               </li>
             );
           })}
-          <li className="mt-8">
+          <li className="mt-8 w-full">
             <Link
               href="/hire-us"
+              onClick={() => setMenuVisible(false)}
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full text-white flex items-center justify-center text-center"
-              
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full text-white flex items-center justify-center text-center w-full"
             >
               Hire us
             </Link>
-            <div className="mt-9 ">
+            <div className="mt-9">
               <DarkMode />
             </div>
           </li>

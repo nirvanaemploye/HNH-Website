@@ -169,7 +169,7 @@ export default function AboutUs() {
           <div>
             <h3
               className="font-serif text-8xl borderFont"
-              data-aos="fade-up"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <span
