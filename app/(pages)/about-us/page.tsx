@@ -21,7 +21,7 @@ const principles = [
     id: 1,
     title: "INNOVATION",
     description:
-      "We constantly strive to bring innovative IT solutions that revolutionize the way businesses operate.",
+      "At Hit-N-Hammer, innovation drives everything we do. We embrace new technologies and creative thinking to build future-ready solutions that set our clients apart in a constantly evolving digital world.",
     icon: "/innovation-icon.png",
     iconWidth: 131,
     iconHeight: 92,
@@ -30,7 +30,7 @@ const principles = [
     id: 2,
     title: "OUR EXPERTIES",
     description:
-      "We specialize in web development, software development, and mobile app development. Our team of experts has extensive experience in working with various technologies such as AI, PHP, Python, C#, JavaScript, HTML, CSS, Microsoft Technologies and more.",
+      "Our team excels in web development, app creation, game design, UI/UX, and server solutions. With hands-on experience and deep knowledge, we transform ideas into powerful, high-performance digital products.",
     icon: "/experties-icon.png",
     iconWidth: 95,
     iconHeight: 95,
@@ -39,7 +39,7 @@ const principles = [
     id: 3,
     title: "OUR CLIENTS",
     description:
-      "We constantly strive to bring innovative IT solutions that revolutionize the way businesses operate.",
+      "We value strong relationships with our clients, understanding their goals to deliver tailored solutions. From startups to enterprises, we ensure satisfaction through clear communication, reliability, and outstanding digital experiences.",
     icon: "/our-clients-icon.png",
     iconWidth: 110,
     iconHeight: 78,
@@ -186,12 +186,12 @@ export default function AboutUs() {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Hit-N-Hammer is a leading provider of technology solutions for
-              businesses. With a focus on delivering the highest quality
-              products and services, we help businesses harness the power of
-              technology to achieve their goals. Our team of experts is
-              dedicated to driving innovation and delivering results that exceed
-              our clients&apos; expectations.
+              Hit-N-Hammer is a forward-thinking IT company offering expert
+              services in web development, app creation, game development, UI/UX
+              design, and server solutions. We combine innovation, technical
+              excellence, and client-focused strategies to deliver impactful
+              digital experiences that help businesses thrive in today’s
+              competitive landscape. Your success is our mission and passion.
             </p>
           </div>
         </div>
@@ -240,27 +240,28 @@ export default function AboutUs() {
               className="dark:text-[#B7B0B0] text-[#717070] mt-3 "
               data-aos="fade-left"
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s
+              At Hit-N-Hammer, our mission is to drive innovation, prioritize
+              client success, foster collaboration, and uphold ethical
+              practices. We are committed to delivering cutting-edge digital
+              solutions that empower businesses worldwide.
             </p>
             <div className="grid grid-cols-2 mt-10 gap-5">
               <div
-                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                className="py-4 border border-primary text-center rounded-xl shadow-[0px_0px_6.9px_0.5px_#AD94FE70] relative group"
                 data-aos="fade-up-right"
                 data-aos-duration="500"
               >
                 <p className="font-semibold uppercase">innovation</p>
               </div>
               <div
-                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                className="py-4 border border-primary text-center rounded-xl shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
                 data-aos="fade-up-left"
                 data-aos-duration="500"
               >
                 <p className="font-semibold uppercase">CLIENT-CENTRICK</p>
               </div>
               <div
-                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                className="py-4 border border-primary text-center rounded-xl shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
                 data-aos="fade-up-right"
                 data-aos-duration="800"
               >
@@ -269,7 +270,7 @@ export default function AboutUs() {
                 </p>
               </div>
               <div
-                className="py-4 border border-primary text-center rounded-xl  shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
+                className="py-4 border border-primary text-center rounded-xl shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
                 data-aos="fade-up-left"
                 data-aos-duration="800"
               >
@@ -306,9 +307,10 @@ export default function AboutUs() {
               className="dark:text-[#B7B0B0] text-[#717070] mt-3 "
               data-aos="fade-left"
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s
+              Our vision is to lead in digital innovation by delivering
+              transformative solutions that empower businesses, inspire
+              creativity, and shape a future where technology drives growth,
+              efficiency, and lasting impact.
             </p>
             <div className="grid grid-cols-2 mt-10 gap-5">
               <div
@@ -399,7 +401,6 @@ export default function AboutUs() {
                   className={hoveredMember === 8 ? "imgTransform" : ""}
                 />
               </div>
-
 
               {members.map((member) => (
                 <div
@@ -580,8 +581,6 @@ export default function AboutUs() {
             </div>
           </div>
         </div> */}
-
-
       </div>
     </div>
   );

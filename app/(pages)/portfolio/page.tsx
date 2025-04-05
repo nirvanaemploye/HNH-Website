@@ -2,7 +2,9 @@
 import { useTheme } from "@/app/components/context/themeContext";
 import PortfolioItems from "@/app/components/sections/portfolio-items";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PortfolioPage = () => {
   const { theme } = useTheme();
@@ -20,6 +22,14 @@ const PortfolioPage = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Whether animation should happen only once
+      });
+    }, []);
+  
 
   return (
     <div
@@ -54,14 +64,12 @@ const PortfolioPage = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Our company offers a comprehensive range of services tailored to
-              meet the diverse needs of our clients. From innovative digital
-              solutions to traditional marketing strategies, we provide a
-              complete suite of services designed to help businesses thrive in
-              today&apos;s competitive landscape. Our expertise spans across
-              areas such as web development, mobile app development, graphic
-              design, content creation, social media management, SEO
-              optimization, and more.
+              Our portfolio showcases diverse projects across web development,
+              mobile apps, game design, and UI/UX. At Hit-N-Hammer, we turn
+              ideas into functional, visually stunning solutions. From startups
+              to enterprises, each project reflects our commitment to quality,
+              innovation, and client satisfaction, driving real results in the
+              ever-evolving digital landscape.
             </p>
           </div>
         </div>

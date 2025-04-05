@@ -2,7 +2,9 @@
 import ServiceCard from "@/app/components/cards/service-card";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
@@ -10,7 +12,7 @@ const services = [
     name: "Designing",
     image: "/designing-service.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas urna ac turpis pulvinar congue.",
+      "We deliver creative, impactful designs including apps, logos, websites, games, ads, UI/UX, and more.",
     services: [
       "App Design",
       "Logo Design",
@@ -34,7 +36,7 @@ const services = [
     name: "Web Development",
     image: "/webdevelopment-service.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas urna ac turpis pulvinar congue.",
+      "We offer PHP, WordPress, and custom CMS web development tailored to your business needs.",
     services: [
       "PHP Web Development",
       "Wordpress Development",
@@ -54,7 +56,7 @@ const services = [
     name: "App Development",
     image: "/appdevelopment-service.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas urna ac turpis pulvinar congue.",
+      "We develop mobile, iPhone, Android, iPad, software, and web apps with performance, precision, and innovation.",
     services: [
       "Mobile App Development",
       "Iphone App Development",
@@ -76,7 +78,7 @@ const services = [
     name: "Game Development",
     image: "/gamedevelopment-service.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas urna ac turpis pulvinar congue.",
+      "We create engaging Android, iOS, HTML5, Flash, Unity 3D, and custom games with excellence.",
     services: [
       "Android Game Development",
       "IOS Game Development",
@@ -111,6 +113,14 @@ const ServicesPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Whether animation should happen only once
+      });
+    }, []);
+  
+
   return (
     <div
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
@@ -144,9 +154,12 @@ const ServicesPage = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Our company offers a comprehensive range of services tailored to
-              meet the diverse needs of our clients. From innovative digital
-              solutions to traditional marketing strategies, we provide a
+              Hit-N-Hammer offers a full spectrum of IT services including web
+              development, mobile app development, game creation, UI/UX design,
+              server management, and hosting solutions. We deliver custom,
+              high-quality digital products tailored to your needs, combining
+              innovation and expertise to help your business grow, compete, and
+              succeed in the digital era.
             </p>
           </div>
         </div>

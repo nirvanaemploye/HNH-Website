@@ -2,7 +2,8 @@
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 const hireUsData = [
@@ -66,6 +67,13 @@ const HireUsPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <div
       className="dark:text-white dark:bg-[#170C3F] md:pb-32"
@@ -77,7 +85,8 @@ const HireUsPage = () => {
           <Image
             data-aos="fade-up"
             data-aos-duration="500"
-            src="/hire-dark.png"
+            // src="/hire-dark.png"
+            src="/hire-dar__1_-removebg-preview.png"
             width={650}
             height={294}
             className="md:w-[650px] w-full"
@@ -99,9 +108,10 @@ const HireUsPage = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Find the perfect talent for your project. Our team of experts is
-              ready to help you bring your ideas to life with their skills and
-              experience.
+              Partner with Hit-N-Hammer to bring your digital vision to life.
+              Our expert team delivers innovative, reliable, and tailored
+              solutions to meet your goals. Let&apos;s build something amazing
+              together.
             </p>
           </div>
         </div>

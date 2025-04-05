@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "../app/Page.css";
 import HeroSection from "./components/sections/hero";
@@ -15,6 +15,8 @@ import client6 from "../public/2148767055.jpg";
 import client7 from "../public/21959.jpg";
 import Modal from "./components/ui/modal";
 import { useTheme } from "./components/context/themeContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const developers = [
   {
@@ -280,28 +282,28 @@ const methodologies = [
     id: 1,
     title: "simplicity",
     description:
-      "We believe that the best solution is usually the most straightforward. Effectiveness and efficiency are not compromised by simplicity.",
+      "We craft intuitive, user-friendly solutions that prioritize clarity, usability, and seamless experiences for all users.",
     image: "/simplicity.png",
   },
   {
     id: 2,
     title: "Critical thinking",
     description:
-      "We believe that the best solution is usually the most straightforward. Effectiveness and efficiency are not compromised by simplicity.",
+      "Every challenge is met with strategic analysis, problem-solving expertise, and innovative approaches to deliver the best results.",
     image: "/criticalthinking.png",
   },
   {
     id: 3,
     title: "EFFECTIVENESS & EFFICIENCY",
     description:
-      "We believe that the best solution is usually the most straightforward. Effectiveness and efficiency are not compromised by simplicity.",
+      "Our solutions are designed to maximize performance, optimize workflows, and ensure seamless execution with minimal resources.",
     image: "/effectiveness.png",
   },
   {
     id: 4,
     title: "security",
     description:
-      "We believe that the best solution is usually the most straightforward. Effectiveness and efficiency are not compromised by simplicity.",
+      "We implement top-tier security measures, protecting data, applications, and infrastructure from threats while ensuring reliability and trust.",
     image: "/security.png",
   },
 ];
@@ -393,29 +395,33 @@ export default function Home() {
 
   const modalContent = {
     title: "About Hit-N-Hammer Company",
-    content: `Hit-N-Hammer is a leading provider of technology solutions for businesses. With a focus on delivering the highest quality products and services, we help businesses harness the power of technology to achieve their goals.
+    content: `Our expertise spans across:
 
-Our Expertise:
-• Custom Software Development
-• Mobile App Development
-• Web Development
-• Cloud Solutions
-• UI/UX Design
-• Business Solutions
-• Cloud Email Migration
+Web Development – Crafting responsive, scalable, and robust web solutions tailored to your business needs.
 
-Our Approach:
-We believe in a client-centric approach, working closely with our clients to understand their unique needs and challenges. Our team of experts combines technical expertise with industry knowledge to deliver solutions that drive business growth and innovation.
+App Development – Building intuitive and high-performance mobile applications for Android and iOS.
 
-Our Commitment:
-• Quality: We maintain the highest standards in all our deliverables
-• Innovation: We stay ahead of technological trends
-• Support: We provide exceptional customer support
-• Security: We ensure the security and reliability of all solutions
-• Partnership: We build long-term relationships with our clients
+Game Development – Designing engaging, interactive games that push boundaries and elevate user experience.
 
-At Hit-N-Hammer, we're not just a service provider; we're your technology partner in growth. Let us help you transform your business with our innovative solutions.`,
+Frontend Development – Creating sleek, modern interfaces with technologies like React and other modern frameworks.
+
+UI/UX Design – Designing user-centered digital experiences that are both beautiful and functional.
+
+Template Designing – Providing custom, ready-to-use templates that save time and maintain quality.
+
+Server Management – Ensuring your backend infrastructure is secure, reliable, and scalable.
+
+Hosting Solutions – Offering trusted and high-performance server hosting services for your applications.
+
+Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is your trusted partner in the digital world. Whether you're a startup or an enterprise, we have the tools and talent to bring your vision to life.`,
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   return (
     <div
@@ -454,12 +460,12 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Hit-N-Hammer is a leading provider of technology solutions for
-              businesses. With a focus on delivering the highest quality
-              products and services, we help businesses harness the power of
-              technology to achieve their goals. Our team of experts is
-              dedicated to driving innovation and delivering results that exceed
-              our clients&apos; expectations.
+              At Hit-N-Hammer, we&apos;re not just an IT company—we&apos;re a
+              team of passionate innovators and digital craftsmen committed to
+              transforming ideas into powerful digital solutions. From dynamic
+              websites and mobile apps to immersive games and cutting-edge UI/UX
+              designs, we bring creativity and technology together to deliver
+              exceptional results.
             </p>
             <button
               onClick={() => setIsModalOpen(true)}
@@ -495,8 +501,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
-                Technologies Design And Develop Mobile Apps, Web Apps,
-                Blockchain Solutions.
+                Technologies Design And Web Development, Mobile Apps, Web Apps,
+                Game Developing.
               </p>
             </div>
 
@@ -543,8 +549,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                       App <br /> Development
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Creating high-performance, user-friendly mobile apps
+                      tailored for iOS and Android platforms.
                     </p>
                   </div>
                 </div>
@@ -580,8 +586,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                       WEB <br /> Development
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Building responsive, scalable, and feature-rich websites
+                      optimized for performance and user experience.
                     </p>
                   </div>
                 </div>
@@ -618,8 +624,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                       <br /> DESIGN
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Designing visually stunning, intuitive interfaces that
+                      enhance user engagement and satisfaction.
                     </p>
                   </div>
                 </div>
@@ -634,31 +640,27 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
-                    style={{ top: "-52px", left: "104px" }}
+                    style={{ top: "-60px", left: "104px" }}
                     width="47"
                     height="47"
                     viewBox="0 0 47 47"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g clipPath="url(#clip0_265_567)">
-                      <path d="M39.6572 21.3458C39.5743 20.112 39.2355 18.909 38.6623 17.8132C38.0891 16.7175 37.2942 15.753 36.328 14.9813C35.325 14.1203 34.155 13.4759 32.8913 13.0883C31.6276 12.7008 30.2974 12.5785 28.9843 12.7292C27.9635 10.9967 26.5219 9.54993 24.7932 8.52293C23.0644 7.49593 21.1043 6.92195 19.0947 6.85417C17.4448 6.83486 15.8105 7.17525 14.3055 7.85164C12.8005 8.52804 11.461 9.5242 10.3801 10.7708C8.34369 13.0241 7.22573 15.9588 7.24675 18.9958C5.87706 19.8964 4.71467 21.0781 3.83679 22.4624C2.95891 23.8468 2.38565 25.4021 2.15508 27.025C1.81731 28.8111 1.91698 30.6525 2.44558 32.3917C2.97417 34.131 3.91597 35.7164 5.1905 37.0125C7.51822 39.119 10.5714 40.242 13.7092 40.1458H33.7822C41.3218 40.1458 44.8468 35.1521 45.0426 30.4521C45.1236 28.5757 44.6577 26.7161 43.7017 25.0995C42.7456 23.4829 41.3405 22.1788 39.6572 21.3458ZM19.5842 24.2833V31.3333C19.5842 31.8527 19.3779 32.3508 19.0107 32.7181C18.6434 33.0854 18.1453 33.2917 17.6259 33.2917C17.1065 33.2917 16.6084 33.0854 16.2412 32.7181C15.8739 32.3508 15.6676 31.8527 15.6676 31.3333V24.2833L14.1009 25.85C13.9031 26.0641 13.66 26.2313 13.3894 26.3394C13.1188 26.4476 12.8274 26.494 12.5366 26.4752C12.2457 26.4564 11.9627 26.373 11.7082 26.231C11.4537 26.0889 11.2342 25.8919 11.0655 25.6542C10.8051 25.2391 10.7014 24.7447 10.7732 24.26C10.8451 23.7753 11.0876 23.3322 11.4572 23.0104L16.2551 18.2125C16.4294 18.0226 16.6412 17.8709 16.8772 17.7672C17.1132 17.6634 17.3681 17.6099 17.6259 17.6099C17.8837 17.6099 18.1387 17.6634 18.3746 17.7672C18.6106 17.8709 18.8225 18.0226 18.9967 18.2125L23.7947 23.0104C24.1642 23.3322 24.4068 23.7753 24.4786 24.26C24.5504 24.7447 24.4468 25.2391 24.1863 25.6542C24.0177 25.8919 23.7981 26.0889 23.5436 26.231C23.2891 26.373 23.0061 26.4564 22.7153 26.4752C22.4244 26.494 22.1331 26.4476 21.8624 26.3394C21.5918 26.2313 21.3487 26.0641 21.1509 25.85L19.5842 24.2833ZM35.5447 30.8438L30.7467 35.6417C30.5725 35.8316 30.3606 35.9833 30.1246 36.087C29.8887 36.1908 29.6337 36.2443 29.3759 36.2443C29.1181 36.2443 28.8632 36.1908 28.6272 36.087C28.3912 35.9833 28.1794 35.8316 28.0051 35.6417L23.2072 30.8438C22.8538 30.5115 22.6229 30.0698 22.5518 29.59C22.4807 29.1102 22.5736 28.6204 22.8155 28.2C22.9842 27.9623 23.2037 27.7653 23.4582 27.6232C23.7127 27.4812 23.9957 27.3977 24.2866 27.379C24.5774 27.3602 24.8688 27.4066 25.1394 27.5148C25.41 27.6229 25.6531 27.7901 25.8509 28.0042L27.4176 29.5708V22.5208C27.4176 22.0015 27.6239 21.5033 27.9912 21.1361C28.3584 20.7688 28.8565 20.5625 29.3759 20.5625C29.8953 20.5625 30.3934 20.7688 30.7607 21.1361C31.1279 21.5033 31.3342 22.0015 31.3342 22.5208V29.5708L32.9009 28.0042C33.0987 27.7901 33.3418 27.6229 33.6124 27.5148C33.8831 27.4066 34.1744 27.3602 34.4653 27.379C34.7561 27.3977 35.0391 27.4812 35.2936 27.6232C35.5481 27.7653 35.7677 27.9623 35.9363 28.2C36.1782 28.6204 36.2711 29.1102 36.2001 29.59C36.129 30.0698 35.8981 30.5115 35.5447 30.8438Z" />
+                    <g id="_x32_5">
+                      <path d="m49.2335014 34.9259682-3.8099976-9.7799664c-1.3599854-3.5100098-5.3099976-5.2400513-8.8200073-3.8800049-.0099487.0100098-.0099487.0100098-.0099487.0100098h-.1700439c-1.8800049 3.5299683-5.8599854 6.4599609-10.7600098 6.4599609h-.1799927c-3.2299805-.0499878-6.2399902-1.3599854-8.4799805-3.6799927-.8599854-.8900146-1.5599985-1.8800049-2.0999765-2.9500122-.6500244-.2099609-1.3200073-.2999878-1.9700317-.2999878-2.7299805 0-5.3099971 1.6400146-6.3599849 4.3400269l-.0999756.25c-.4700317.7999878-.8200073 1.6699829-1.0100098 2.5999756l-2.6900024 6.9299908c-1.6900026 4.3200073.4599609 9.2000122 4.7799683 10.8800049 1.0100093.3900146 2.0400386.5800171 3.0599971.5800171 3.3600464 0 6.54004-2.0400391 7.830018-5.3599854l.1099854-.2900391c.6199951-1.5899658 2.1600342-2.6400146 3.8699951-2.6400146h7.1600342c1.7099609 0 3.2399902 1.0500488 3.8599854 2.6400146l.1099854.2900391c1.6900024 4.3299561 6.5599976 6.4699707 10.8900146 4.7799683 3.3300171-1.289978 5.3599854-4.4699707 5.3599854-7.8399658-.0000001-1.0100098-.1799928-2.0400391-.5700075-3.0400391zm-35.6567392-1.3319702c-2.2219849 0-4.0232544-1.8012676-4.0232544-4.0232525s1.8012695-4.0232544 4.0232544-4.0232544 4.0232553 1.8012695 4.0232553 4.0232544-1.8012704 4.0232525-4.0232553 4.0232525zm26.3712778-2.7110577h-1.2537231v1.2537823c0 .7016602-.5377197 1.2704468-1.2010498 1.2704468s-1.2010498-.5687866-1.2010498-1.2704468v-1.2537823h-1.2537842c-.7016602 0-1.2704468-.5377197-1.2704468-1.2009888 0-.6633301.5687866-1.2010498 1.2704468-1.2010498h1.2537842v-1.2537842c0-.7016602.5377197-1.2704468 1.2010498-1.2704468s1.2010498.5687866 1.2010498 1.2704468v1.2537842h1.2537231c.7016602 0 1.2704468.5377197 1.2704468 1.2010498 0 .6632691-.5687866 1.2009888-1.2704468 1.2009888z" />
+                      <path d="m25.8541069 5.6155448c-5.5557251-.0961304-10.1374521 4.3297734-10.2335215 9.885498s4.3298349 10.1373901 9.885499 10.2334595c5.5557251.0961304 10.1373901-4.3297729 10.2335205-9.885498.0960694-5.5557247-4.3298339-10.1373902-9.885498-10.2334595zm-3.677063 12.9672856c-.2522392.2517509-.6609745.2524185-.9129028 0l-2.8422241-2.8419189c-.2523994-.2513857-.2523403-.6616392 0-.9129639l2.8422241-2.8421631c.2514038-.2519531.6609497-.2519531.9123535 0 .2525024.2519531.2525024.6609497 0 .9129028l-2.385437 2.3857422 2.385437 2.385498c.2525024.2519532.2525024.6606446.0005493.9129029zm5.5718994-7.9171142-3.0182495 9.623291c-.0864868.276123-.3411255.4527588-.6159058.4527588-.4331818 0-.7465286-.4221935-.6158447-.8389282l3.0183105-9.623291c.1060791-.340271.4667969-.5301514.80896-.4227295.3400269.1066284.5293579.4689331.4227295.8088989zm2.3446656 7.9171142c-.2512188.2517071-.6598892.2524643-.9129639 0-.2519531-.2522583-.2519531-.6609497.0005493-.9129028l2.385498-2.385498-2.385498-2.3857422c-.2525024-.2519531-.2525024-.6609497 0-.9129028.2514648-.2519531.6609497-.2519531.9124146 0l2.8421631 2.8421631c.2515602.2505493.2533836.6605978 0 .9129639z" />
                     </g>
-                    <defs>
-                      <clipPath id="clip0_265_567">
-                        <rect width="47" height="47" fill="white" />
-                      </clipPath>
-                    </defs>
                   </svg>
 
                   <div className="ml-6 space-y-5 mt-10">
                     <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                      CLOUD
-                      <br /> SERVICES
+                      Game
+                      <br /> development
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Developing immersive, interactive games with cutting-edge
+                      graphics and seamless gameplay experiences.
                     </p>
                   </div>
                 </div>
@@ -697,8 +699,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                       <br /> SOLUTION
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Delivering smart, scalable solutions to streamline
+                      operations and drive business growth.
                     </p>
                   </div>
                 </div>
@@ -714,30 +716,91 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
-                    style={{ top: "-52px", left: "110px" }}
+                    style={{ top: "-52px", left: "100px" }}
                     width="39"
                     height="36"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M13.7114 9.32654L10.3203 13.3686H12.3441V21.6177H15.0788V13.3686H17.1026L13.7114 9.32654Z" />
-                    <path d="M7.64062 23.236L18.0465 29.6703C18.3826 29.8782 18.7775 29.9892 19.1814 29.9892C19.5853 29.9892 19.9802 29.8782 20.3163 29.6703L30.7222 23.236C30.6659 23.1323 30.5801 23.0449 30.474 22.9834C30.3679 22.9218 30.2456 22.8885 30.1206 22.887H8.24228C8.11719 22.8885 7.99494 22.9218 7.88886 22.9834C7.78277 23.0449 7.69691 23.1323 7.64062 23.236Z" />
-                    <path d="M21.9163 8.92688V17.176H19.8926L23.2837 21.2181L26.6748 17.176H24.6511V8.92688H21.9163Z" />
-                    <path d="M38.324 12.7342C38.3211 11.0521 37.5999 9.43966 36.3183 8.25023C35.0368 7.06081 33.2994 6.3914 31.487 6.38872C30.7158 6.3865 29.95 6.50889 29.224 6.75041C29.1365 6.77989 29.0433 6.79229 28.9504 6.78683C28.8574 6.78137 28.7667 6.75817 28.6839 6.71868C28.6013 6.68007 28.5279 6.62648 28.468 6.56109C28.4081 6.49569 28.363 6.41982 28.3352 6.33796C27.6985 4.40504 26.3706 2.73142 24.5708 1.5934C22.771 0.455392 20.6069 -0.0789705 18.4358 0.0785388C16.2646 0.236048 14.2162 1.07601 12.6288 2.45975C11.0414 3.8435 10.0098 5.68828 9.70448 7.68954C9.6905 7.78782 9.65161 7.88163 9.59099 7.96325C9.53038 8.04488 9.44978 8.112 9.3558 8.15911C9.26167 8.20587 9.15722 8.23191 9.05053 8.23521C8.94383 8.23851 8.83774 8.21898 8.74047 8.17814C7.94307 7.82977 7.07159 7.65196 6.19028 7.65782C4.60528 7.64897 3.07773 8.20812 1.92596 9.21877C0.774193 10.2294 0.0870465 11.6136 0.007718 13.0828C-0.0716105 14.5521 0.462998 15.9931 1.50014 17.1055C2.53728 18.2179 3.99694 18.916 5.57496 19.0543C5.77323 19.067 10.9762 19.0797 10.9762 19.0797V14.6378H8.92507C8.79713 14.6372 8.67189 14.6037 8.56327 14.5409C8.45464 14.4782 8.36688 14.3887 8.30974 14.2825C8.25406 14.176 8.2316 14.0571 8.24489 13.9394C8.25818 13.8217 8.30669 13.7097 8.38495 13.6162L13.1708 7.90529C13.2371 7.83226 13.3198 7.77355 13.4131 7.73328C13.5064 7.69301 13.608 7.67214 13.7109 7.67214C13.8138 7.67214 13.9155 7.69301 14.0088 7.73328C14.1021 7.77355 14.1848 7.83226 14.2511 7.90529L19.0369 13.6162C19.1152 13.7097 19.1637 13.8217 19.177 13.9394C19.1903 14.0571 19.1678 14.176 19.1121 14.2825C19.055 14.3887 18.9672 14.4782 18.8586 14.5409C18.75 14.6037 18.6247 14.6372 18.4968 14.6378H16.4457V19.0797H19.7548L17.9567 16.9286C17.8784 16.8351 17.8299 16.7231 17.8166 16.6054C17.8033 16.4876 17.8258 16.3688 17.8815 16.2623C17.9386 16.156 18.0264 16.0666 18.135 16.0039C18.2436 15.9411 18.3689 15.9076 18.4968 15.9069H20.5479V8.29236C20.5479 8.12407 20.6199 7.96267 20.7481 7.84367C20.8764 7.72467 21.0503 7.65782 21.2316 7.65782H25.3338C25.5151 7.65782 25.689 7.72467 25.8172 7.84367C25.9454 7.96267 26.0175 8.12407 26.0175 8.29236V15.9069H28.0686C28.1965 15.9076 28.3217 15.9411 28.4304 16.0039C28.539 16.0666 28.6267 16.156 28.6839 16.2623C28.7396 16.3688 28.762 16.4876 28.7487 16.6054C28.7354 16.7231 28.6869 16.8351 28.6087 16.9286L26.8106 19.0797C26.8106 19.0797 31.9041 19.067 32.1092 19.048C33.8107 18.9136 35.3952 18.1892 36.547 17.0191C37.6988 15.849 38.3332 14.3191 38.324 12.7342Z" />
-                    <path d="M30.8048 24.708L23.2227 29.3973L30.8048 34.7783V24.708Z" />
-                    <path d="M22.0176 30.1462L21.0741 30.7237C20.5152 31.0752 19.8555 31.2631 19.1803 31.2631C18.5051 31.2631 17.8454 31.0752 17.2864 30.7237L16.3429 30.1462L8.68555 35.578H29.675L22.0176 30.1462Z" />
-                    <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
+                    <g
+                      width="100%"
+                      height="100%"
+                      transform="matrix(1,0,0,1,0,0)"
+                    >
+                      <path
+                        d="m29 46c0 .551-.448 1-1 1h-1v2h1c1.654 0 3-1.346 3-3v-15h-2z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m36 49c-.552 0-1-.449-1-1v-17h-2v17c0 1.654 1.346 3 3 3h1.18c-.11-.652-.18-1.317-.18-2z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m13 29h38c2.099 0 4.068-.93 5.404-2.55s1.867-3.758 1.458-5.864c-.534-2.752-2.748-4.945-5.507-5.459-.472-.088-.943-.117-1.412-.113.036.324.057.652.057.986 0 4.962-4.037 9-9 9v-2c3.859 0 7-3.14 7-7s-3.141-7-7-7c-1.08 0-2.125.247-3.106.735l-.866.43-.459-.851c-2.101-3.895-6.15-6.314-10.569-6.314-5.972 0-11.017 4.443-11.865 10.262 1.304.317 2.53.919 3.587 1.79 2.083 1.718 3.278 4.25 3.278 6.948h-2c0-2.098-.93-4.068-2.551-5.404-1.62-1.336-3.756-1.866-5.863-1.458-2.729.53-4.918 2.72-5.448 5.448-.409 2.106.122 4.244 1.458 5.864s3.305 2.55 5.404 2.55zm29-10c1.654 0 3-1.346 3-3h2c0 2.757-2.243 5-5 5zm-15-14c3.824 0 7.257 2.128 8.96 5.554l-1.791.891c-1.362-2.742-4.109-4.445-7.169-4.445zm-6 20h2v2h-2zm-2 0v2h-2v-2zm-6-8c2.757 0 5 2.243 5 5h-2c0-1.654-1.346-3-3-3zm0 8h2v2h-2z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m51 53h-2c-3.086 0-5.735 1.991-6.65 4.888 1.982 1.922 4.678 3.112 7.65 3.112s5.668-1.19 7.65-3.112c-.913-2.897-3.562-4.888-6.65-4.888z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m50 39c-6.065 0-11 4.935-11 11 0 2.27.692 4.381 1.874 6.135 1.036-2.193 2.9-3.857 5.165-4.639-1.247-1.101-2.039-2.706-2.039-4.496 0-3.309 2.691-6 6-6s6 2.691 6 6c0 1.79-.792 3.395-2.039 4.495 2.265.782 4.13 2.446 5.165 4.639 1.182-1.753 1.874-3.864 1.874-6.134 0-6.065-4.935-11-11-11z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <circle
+                        cx="50"
+                        cy="47"
+                        r="4"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m7 47h14v2h-14z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m3 58c0 1.654 1.346 3 3 3h16c1.654 0 3-1.346 3-3v-3h-22zm18-1h2v2h-2zm-4 0h2v2h-2zm-4 0h2v2h-2z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m22 35h-16c-1.654 0-3 1.346-3 3v15h22v-15c0-1.654-1.346-3-3-3zm1 14c0 1.103-.897 2-2 2h-14c-1.103 0-2-.897-2-2v-2c0-1.103.897-2 2-2h14c1.103 0 2 .897 2 2zm0-8c0 1.103-.897 2-2 2h-14c-1.103 0-2-.897-2-2v-2c0-1.103.897-2 2-2h14c1.103 0 2 .897 2 2z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                      <path
+                        d="m7 39h14v2h-14z"
+                        fill-opacity="1"
+                        stroke="none"
+                        stroke-opacity="1"
+                      />
+                    </g>
                   </svg>
 
                   <div className="ml-6 space-y-5 mt-10">
                     <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                      CLOUD E-MAIL
-                      <br /> MIGRATION
+                      Hosting
+                      <br /> services
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Providing secure, reliable, and high-speed hosting
+                      solutions for websites and applications.
                     </p>
                   </div>
                 </div>
@@ -760,23 +823,30 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M13.7114 9.32654L10.3203 13.3686H12.3441V21.6177H15.0788V13.3686H17.1026L13.7114 9.32654Z" />
-                    <path d="M7.64062 23.236L18.0465 29.6703C18.3826 29.8782 18.7775 29.9892 19.1814 29.9892C19.5853 29.9892 19.9802 29.8782 20.3163 29.6703L30.7222 23.236C30.6659 23.1323 30.5801 23.0449 30.474 22.9834C30.3679 22.9218 30.2456 22.8885 30.1206 22.887H8.24228C8.11719 22.8885 7.99494 22.9218 7.88886 22.9834C7.78277 23.0449 7.69691 23.1323 7.64062 23.236Z" />
-                    <path d="M21.9163 8.92688V17.176H19.8926L23.2837 21.2181L26.6748 17.176H24.6511V8.92688H21.9163Z" />
-                    <path d="M38.324 12.7342C38.3211 11.0521 37.5999 9.43966 36.3183 8.25023C35.0368 7.06081 33.2994 6.3914 31.487 6.38872C30.7158 6.3865 29.95 6.50889 29.224 6.75041C29.1365 6.77989 29.0433 6.79229 28.9504 6.78683C28.8574 6.78137 28.7667 6.75817 28.6839 6.71868C28.6013 6.68007 28.5279 6.62648 28.468 6.56109C28.4081 6.49569 28.363 6.41982 28.3352 6.33796C27.6985 4.40504 26.3706 2.73142 24.5708 1.5934C22.771 0.455392 20.6069 -0.0789705 18.4358 0.0785388C16.2646 0.236048 14.2162 1.07601 12.6288 2.45975C11.0414 3.8435 10.0098 5.68828 9.70448 7.68954C9.6905 7.78782 9.65161 7.88163 9.59099 7.96325C9.53038 8.04488 9.44978 8.112 9.3558 8.15911C9.26167 8.20587 9.15722 8.23191 9.05053 8.23521C8.94383 8.23851 8.83774 8.21898 8.74047 8.17814C7.94307 7.82977 7.07159 7.65196 6.19028 7.65782C4.60528 7.64897 3.07773 8.20812 1.92596 9.21877C0.774193 10.2294 0.0870465 11.6136 0.007718 13.0828C-0.0716105 14.5521 0.462998 15.9931 1.50014 17.1055C2.53728 18.2179 3.99694 18.916 5.57496 19.0543C5.77323 19.067 10.9762 19.0797 10.9762 19.0797V14.6378H8.92507C8.79713 14.6372 8.67189 14.6037 8.56327 14.5409C8.45464 14.4782 8.36688 14.3887 8.30974 14.2825C8.25406 14.176 8.2316 14.0571 8.24489 13.9394C8.25818 13.8217 8.30669 13.7097 8.38495 13.6162L13.1708 7.90529C13.2371 7.83226 13.3198 7.77355 13.4131 7.73328C13.5064 7.69301 13.608 7.67214 13.7109 7.67214C13.8138 7.67214 13.9155 7.69301 14.0088 7.73328C14.1021 7.77355 14.1848 7.83226 14.2511 7.90529L19.0369 13.6162C19.1152 13.7097 19.1637 13.8217 19.177 13.9394C19.1903 14.0571 19.1678 14.176 19.1121 14.2825C19.055 14.3887 18.9672 14.4782 18.8586 14.5409C18.75 14.6037 18.6247 14.6372 18.4968 14.6378H16.4457V19.0797H19.7548L17.9567 16.9286C17.8784 16.8351 17.8299 16.7231 17.8166 16.6054C17.8033 16.4876 17.8258 16.3688 17.8815 16.2623C17.9386 16.156 18.0264 16.0666 18.135 16.0039C18.2436 15.9411 18.3689 15.9076 18.4968 15.9069H20.5479V8.29236C20.5479 8.12407 20.6199 7.96267 20.7481 7.84367C20.8764 7.72467 21.0503 7.65782 21.2316 7.65782H25.3338C25.5151 7.65782 25.689 7.72467 25.8172 7.84367C25.9454 7.96267 26.0175 8.12407 26.0175 8.29236V15.9069H28.0686C28.1965 15.9076 28.3217 15.9411 28.4304 16.0039C28.539 16.0666 28.6267 16.156 28.6839 16.2623C28.7396 16.3688 28.762 16.4876 28.7487 16.6054C28.7354 16.7231 28.6869 16.8351 28.6087 16.9286L26.8106 19.0797C26.8106 19.0797 31.9041 19.067 32.1092 19.048C33.8107 18.9136 35.3952 18.1892 36.547 17.0191C37.6988 15.849 38.3332 14.3191 38.324 12.7342Z" />
-                    <path d="M30.8048 24.708L23.2227 29.3973L30.8048 34.7783V24.708Z" />
-                    <path d="M22.0176 30.1462L21.0741 30.7237C20.5152 31.0752 19.8555 31.2631 19.1803 31.2631C18.5051 31.2631 17.8454 31.0752 17.2864 30.7237L16.3429 30.1462L8.68555 35.578H29.675L22.0176 30.1462Z" />
-                    <path d="M7.55859 24.708V34.7783L15.1408 29.3973L7.55859 24.708Z" />
+                    <g>
+                      <g>
+                        <path d="m6.737 13.15h5.819v10.688h-5.819z" />
+                      </g>
+                      <g>
+                        <path d="m14.456 13.15h10.807v3.443h-10.807z" />
+                      </g>
+                      <g>
+                        <path d="m14.456 18.494h10.807v5.344h-10.807z" />
+                      </g>
+                      <g>
+                        <path d="m26.213 3.294h-20.426c-2.095 0-3.8 1.705-3.8 3.8v17.813c0 2.096 1.705 3.8 3.8 3.8h20.426c2.095 0 3.8-1.704 3.8-3.8v-17.813c0-2.095-1.705-3.8-3.8-3.8zm-11.833 2.457c.676 0 1.224.548 1.224 1.224 0 .677-.548 1.225-1.224 1.225-.677 0-1.225-.548-1.225-1.225 0-.676.548-1.224 1.225-1.224zm-4.04 0c.676 0 1.224.548 1.224 1.224 0 .677-.548 1.225-1.224 1.225-.677 0-1.225-.548-1.225-1.225 0-.676.548-1.224 1.225-1.224zm-4.04 0c.676 0 1.225.548 1.225 1.224 0 .677-.549 1.225-1.225 1.225-.677 0-1.225-.548-1.225-1.225 0-.676.548-1.224 1.225-1.224zm21.812 19.155c0 1.048-.852 1.9-1.899 1.9h-20.426c-1.048 0-1.899-.853-1.899-1.9v-14.25h24.225v14.25z" />
+                      </g>
+                    </g>
                   </svg>
 
                   <div className="ml-6 space-y-5 mt-10">
                     <h2 className="dark:text-[#FFFFFF] text-[#171616]">
-                      CLOUD E-MAIL
-                      <br /> MIGRATION
+                      Template
+                      <br /> designing
                     </h2>
                     <p className="dark:text-[#B7B0B0] text-[#717070]">
-                      simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the.
+                      Crafting professional, customizable templates to
+                      accelerate development while maintaining high quality.
                     </p>
                   </div>
                 </div>
@@ -794,7 +864,7 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               data-aos-easing="linear"
               data-aos-duration="500"
             >
-              over 400+ projects completed
+              over 50+ client projects completed
             </h3>
             <p
               className=" mt-7 text-xl"
@@ -802,10 +872,14 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis
+              At Hit-N-Hammer, client satisfaction is at the heart of everything
+              we do. With over 50 successful projects delivered across various
+              industries, we've earned the trust of startups, small businesses,
+              and large enterprises alike. Each project is a testament to our
+              commitment to quality, innovation, and excellence. Our growing
+              list of happy clients reflects our ability to adapt, deliver, and
+              exceed expectations—no matter the challenge. Let us turn your next
+              big idea into a digital success story.
             </p>
           </div>
           <Image
@@ -968,8 +1042,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               <div className="space-y-4">
                 <h4 className="text-4xl font-semibold uppercase">discover</h4>
                 <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore m
+                  We analyze ideas, research trends, and identify innovative
+                  solutions to meet unique business needs.
                 </p>
               </div>
             </div>
@@ -987,8 +1061,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               <div className="space-y-4">
                 <h4 className="text-4xl font-semibold uppercase">design</h4>
                 <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore m
+                  Crafting intuitive, aesthetically pleasing, and user-centric
+                  experiences that blend creativity with functionality.
                 </p>
               </div>
             </div>
@@ -1006,8 +1080,8 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
               <div className="space-y-4">
                 <h4 className="text-4xl font-semibold uppercase">deliver</h4>
                 <p className="dark:text-[#B7B0B0] text-[#717070] max-w-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore m
+                  Turning concepts into reality with high-quality, efficient,
+                  and scalable solutions that exceed expectations.
                 </p>
               </div>
             </div>
@@ -1087,10 +1161,9 @@ At Hit-N-Hammer, we're not just a service provider; we're your technology partne
             className="mt-11 text-center dark:text-[#B7B0B0] text-[#717070] max-w-[1093px] text-xl font-normal mx-auto"
             data-aos="zoom-in-down"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis
+            Have a project in mind? Let’s build something amazing together!
+            Contact Hit-N-Hammer for expert solutions in web, app, and game
+            development. We’re ready to bring your ideas to life! 🚀
           </p>
           <button
             className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]"

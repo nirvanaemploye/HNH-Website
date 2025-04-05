@@ -2,7 +2,9 @@
 import { useTheme } from "@/app/components/context/themeContext";
 import ContactUsForm from "@/app/components/forms/contact-us";
 import Image from "next/image";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactPage = () => {
   const { theme } = useTheme();
@@ -20,6 +22,13 @@ const ContactPage = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Whether animation should happen only once
+      });
+    }, []);
 
   return (
     <div
@@ -54,9 +63,9 @@ const ContactPage = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Our company offers a comprehensive range of services tailored to
-              meet the diverse needs of our clients. From innovative digital
-              solutions to traditional marketing strategies, we provide a
+              Get in touch with Hit-N-Hammer for innovative digital solutions.
+              Whether you have questions, project ideas, or need support, our
+              team is here to help you every step of the way.
             </p>
           </div>
         </div>

@@ -7,26 +7,25 @@ const HeroSection = () => {
 
   const modalContent = {
     title: "About Hit-N-Hammer",
-    content: `Hit-N-Hammer is a leading technology solutions provider that empowers businesses through innovative digital solutions. Our comprehensive services include:
+    content: `Digitalize Your Idea, Build Your Business with [Hit-N-Hammer]
 
-• Custom Software Development
-• Mobile App Development
-• Web Development
-• Cloud Solutions
-• UI/UX Design
-• Business Solutions
-• Cloud Email Migration
+ is a leading technology solutions provider dedicated to helping businesses unlock their full potential through innovative digital solutions. We specialize in crafting custom solutions that cater to your unique needs, enabling your business to thrive in the digital age. Our extensive range of services includes:
 
-We combine cutting-edge technology with industry expertise to deliver solutions that drive business growth and digital transformation. Our team of skilled professionals is committed to excellence, innovation, and client satisfaction.
+Mobile App Development: Tailored mobile applications designed to engage your audience and streamline your operations on iOS and Android platforms.
 
-At Hit-N-Hammer, we believe in:
-- Building long-term partnerships with our clients
-- Delivering high-quality, scalable solutions
-- Staying ahead of technological trends
-- Providing exceptional customer support
-- Ensuring security and reliability in all our solutions
+Web App Development: Cutting-edge, scalable, and secure web applications designed to provide seamless user experiences and drive growth.
 
-Let us help you transform your business with our innovative technology solutions.`,
+Game Development: Building immersive and engaging games that captivate users and bring your ideas to life.
+
+Frontend Development: We create visually stunning and responsive user interfaces using the latest technologies like React to ensure your digital products stand out.
+
+UI/UX Design: Designing user interfaces that are both intuitive and aesthetically pleasing to provide exceptional user experiences.
+
+Business Solutions: Offering innovative solutions to optimize your business processes and improve efficiency.
+
+Cloud Solutions: Empowering your business with cloud technologies to scale and manage your operations with ease.
+
+Cloud Email Migration: Seamless migration of your email services to the cloud for enhanced security, accessibility, and collaboration.`,
   };
 
   // const bgImg = {
@@ -46,14 +45,14 @@ Let us help you transform your business with our innovative technology solutions
             data-aos="fade-up"
             data-aos-duration="500"
           >
-            Empower your business with hit-n-hammer
+            Digitalize your Idea with hit-n-hammer
           </h1>
           <p
             className="mt-2 dark:text-[#b7b0b0] text-[#717070] font-normal text-xl"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Driving Innovation, Delivering Results
+            Digitalize your Idea, Build your Bussiness
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
