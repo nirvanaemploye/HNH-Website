@@ -253,23 +253,19 @@ const developers = [
     project: "10",
     rate: "$22",
     skills: [
+      
       {
         id: 1,
-        name: "unity",
-        src: "unity.svg",
-      },
-      {
-        id: 2,
         name: "photoshop",
         src: "ps-icon.svg",
       },
       {
-        id: 3,
+        id: 2,
         name: "vs-code",
         src: "vs-code.svg",
       },
       {
-        id: 4,
+        id: 3,
         name: "blender",
         src: "blender.svg",
       },
