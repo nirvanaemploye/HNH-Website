@@ -874,12 +874,13 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
             >
               At Hit-N-Hammer, client satisfaction is at the heart of everything
               we do. With over 50 successful projects delivered across various
-              industries, we've earned the trust of startups, small businesses,
-              and large enterprises alike. Each project is a testament to our
-              commitment to quality, innovation, and excellence. Our growing
-              list of happy clients reflects our ability to adapt, deliver, and
-              exceed expectations—no matter the challenge. Let us turn your next
-              big idea into a digital success story.
+              industries, we&apos;ve earned the trust of startups, small
+              businesses, and large enterprises alike. Each project is a
+              testament to our commitment to quality, innovation, and
+              excellence. Our growing list of happy clients reflects our ability
+              to adapt, deliver, and exceed expectations—no matter the
+              challenge. Let us turn your next big idea into a digital success
+              story.
             </p>
           </div>
           <Image
