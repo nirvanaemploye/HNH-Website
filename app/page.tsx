@@ -413,7 +413,7 @@ Server Management – Ensuring your backend infrastructure is secure, reliable, 
 
 Hosting Solutions – Offering trusted and high-performance server hosting services for your applications.
 
-Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is your trusted partner in the digital world. Whether you're a startup or an enterprise, we have the tools and talent to bring your vision to life.`,
+Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is your trusted partner in the digital world. Whether you&apos;re a startup or an enterprise, we have the tools and talent to bring your vision to life.`,
   };
 
   useEffect(() => {
@@ -951,7 +951,7 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
           >
             Do you want to hire an on-demand mobile app developer for a specific
             site? We provide on-demand developers a variety of technologies such
-            as iPhone, Android, PHP, Blockchain, On-Demand.
+            as iPhone, Android, PHP On-Demand.
           </p>
           <div className="mt-20 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
             {developers.map((develoer, idx) => {
