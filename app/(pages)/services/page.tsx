@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { image } from "motion/react-client";
 
 const services = [
   {
@@ -36,7 +37,7 @@ const services = [
     name: "Web Development",
     image: "/webdevelopment-service.png",
     description:
-      "We offer PHP, WordPress, and custom CMS web development tailored to your business needs.",
+      "We offer PHP, Node.js, React.js, and custom CMS web development tailored to your business needs.",
     services: [
       "PHP Web Development",
       "Wordpress Development",
@@ -47,8 +48,9 @@ const services = [
       { name: "html", image: "/html-icon.svg" },
       { name: "react", image: "/react-icon.svg" },
       { name: "css", image: "/css-icon.svg" },
-      { name: "java", image: "/java-icon.svg" },
       { name: "node", image: "/node-icon.svg" },
+      { name: "php", image: "/php.svg" },
+      {name: "mongo", image:"/Mongo_DB.svg"}
     ],
   },
   {
@@ -67,10 +69,10 @@ const services = [
     ],
     toolImages: [
       { name: "c++", image: "/c++-icon.svg" },
-      { name: "html", image: "/html-icon.svg" },
       { name: "react", image: "/react-icon.svg" },
       { name: "python", image: "/python-icon.svg" },
-      { name: "java", image: "/java-icon.svg" },
+      {name:"android", image:"/android.svg"},
+      {name:"ios", image:"/IOS.svg"},
     ],
   },
   {
@@ -113,13 +115,12 @@ const ServicesPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // Animation duration
-        once: true, // Whether animation should happen only once
-      });
-    }, []);
-  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   return (
     <div

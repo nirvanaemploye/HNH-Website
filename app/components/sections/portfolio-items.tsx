@@ -27,6 +27,11 @@ const portfolioTyps = [
     key: "web",
     name: "Website/Webapps",
   },
+  {
+    id: 5,
+    key: "Games",
+    name: "Games",
+  },
 ];
 
 const portfolioItems = [

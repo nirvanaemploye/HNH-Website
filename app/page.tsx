@@ -88,7 +88,7 @@ const developers = [
     image: "android-icon.svg",
     image1: "Android-dark.svg",
     name: "android developer",
-    experiance: "10 year",
+    experiance: "5 year",
     rating: "5",
     project: "10",
     rate: "$22",
@@ -120,7 +120,7 @@ const developers = [
     image: "react-icon.svg",
     image1: "react-dark.svg",
     name: "REACT.JS DEVELOPERS",
-    experiance: "10 year",
+    experiance: "5 year",
     rating: "5",
     project: "10",
     rate: "$12",
@@ -155,7 +155,7 @@ const developers = [
     experiance: "4 year",
     rating: "4.3",
     project: "5",
-    rate: "$8",
+    rate: "$25",
     skills: [
       {
         id: 1,
@@ -187,7 +187,7 @@ const developers = [
     experiance: "8 year",
     rating: "4",
     project: "8",
-    rate: "$15",
+    rate: "$25",
     skills: [
       {
         id: 1,
@@ -248,10 +248,10 @@ const developers = [
     image: "unity-dark.svg",
     image1: "unity-light.svg",
     name: "UNITY GAME DEVELOPERS",
-    experiance: "10 year",
+    experiance: "8 year",
     rating: "5",
     project: "10",
-    rate: "$22",
+    rate: "$25",
     skills: [
       
       {
@@ -391,25 +391,7 @@ export default function Home() {
 
   const modalContent = {
     title: "About Hit-N-Hammer Company",
-    content: `Our expertise spans across:
-
-Web Development – Crafting responsive, scalable, and robust web solutions tailored to your business needs.
-
-App Development – Building intuitive and high-performance mobile applications for Android and iOS.
-
-Game Development – Designing engaging, interactive games that push boundaries and elevate user experience.
-
-Frontend Development – Creating sleek, modern interfaces with technologies like React and other modern frameworks.
-
-UI/UX Design – Designing user-centered digital experiences that are both beautiful and functional.
-
-Template Designing – Providing custom, ready-to-use templates that save time and maintain quality.
-
-Server Management – Ensuring your backend infrastructure is secure, reliable, and scalable.
-
-Hosting Solutions – Offering trusted and high-performance server hosting services for your applications.
-
-Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is your trusted partner in the digital world. Whether you&apos;re a startup or an enterprise, we have the tools and talent to bring your vision to life.`,
+    content: `At Hit-N-Hammer, we excel in delivering cutting-edge digital solutions. Our expertise includes web and app development, interactive game creation, sleek frontend development with React, intuitive UI/UX design, and custom template designing. We also offer reliable server management and high-performance hosting solutions. Driven by innovation and a passion for technology, we empower startups and enterprises alike to bring their digital visions to life with tailored, scalable solutions.`,
   };
 
   useEffect(() => {
@@ -459,9 +441,10 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
               At Hit-N-Hammer, we&apos;re not just an IT company—we&apos;re a
               team of passionate innovators and digital craftsmen committed to
               transforming ideas into powerful digital solutions. From dynamic
-              websites and mobile apps to immersive games and cutting-edge UI/UX
-              designs, we bring creativity and technology together to deliver
-              exceptional results.
+              websites <span>🌐</span> and mobile apps <span>📱</span> to
+              immersive games and cutting-edge UI/UX designs <span>🎨</span>,
+              we bring creativity and technology together to deliver exceptional
+              results.
             </p>
             <button
               onClick={() => setIsModalOpen(true)}
@@ -636,17 +619,39 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
-                    style={{ top: "-60px", left: "104px" }}
+                    style={{ top: "-48px", left: "113px" }}
                     width="47"
                     height="47"
                     viewBox="0 0 47 47"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="_x32_5">
-                      <path d="m49.2335014 34.9259682-3.8099976-9.7799664c-1.3599854-3.5100098-5.3099976-5.2400513-8.8200073-3.8800049-.0099487.0100098-.0099487.0100098-.0099487.0100098h-.1700439c-1.8800049 3.5299683-5.8599854 6.4599609-10.7600098 6.4599609h-.1799927c-3.2299805-.0499878-6.2399902-1.3599854-8.4799805-3.6799927-.8599854-.8900146-1.5599985-1.8800049-2.0999765-2.9500122-.6500244-.2099609-1.3200073-.2999878-1.9700317-.2999878-2.7299805 0-5.3099971 1.6400146-6.3599849 4.3400269l-.0999756.25c-.4700317.7999878-.8200073 1.6699829-1.0100098 2.5999756l-2.6900024 6.9299908c-1.6900026 4.3200073.4599609 9.2000122 4.7799683 10.8800049 1.0100093.3900146 2.0400386.5800171 3.0599971.5800171 3.3600464 0 6.54004-2.0400391 7.830018-5.3599854l.1099854-.2900391c.6199951-1.5899658 2.1600342-2.6400146 3.8699951-2.6400146h7.1600342c1.7099609 0 3.2399902 1.0500488 3.8599854 2.6400146l.1099854.2900391c1.6900024 4.3299561 6.5599976 6.4699707 10.8900146 4.7799683 3.3300171-1.289978 5.3599854-4.4699707 5.3599854-7.8399658-.0000001-1.0100098-.1799928-2.0400391-.5700075-3.0400391zm-35.6567392-1.3319702c-2.2219849 0-4.0232544-1.8012676-4.0232544-4.0232525s1.8012695-4.0232544 4.0232544-4.0232544 4.0232553 1.8012695 4.0232553 4.0232544-1.8012704 4.0232525-4.0232553 4.0232525zm26.3712778-2.7110577h-1.2537231v1.2537823c0 .7016602-.5377197 1.2704468-1.2010498 1.2704468s-1.2010498-.5687866-1.2010498-1.2704468v-1.2537823h-1.2537842c-.7016602 0-1.2704468-.5377197-1.2704468-1.2009888 0-.6633301.5687866-1.2010498 1.2704468-1.2010498h1.2537842v-1.2537842c0-.7016602.5377197-1.2704468 1.2010498-1.2704468s1.2010498.5687866 1.2010498 1.2704468v1.2537842h1.2537231c.7016602 0 1.2704468.5377197 1.2704468 1.2010498 0 .6632691-.5687866 1.2009888-1.2704468 1.2009888z" />
-                      <path d="m25.8541069 5.6155448c-5.5557251-.0961304-10.1374521 4.3297734-10.2335215 9.885498s4.3298349 10.1373901 9.885499 10.2334595c5.5557251.0961304 10.1373901-4.3297729 10.2335205-9.885498.0960694-5.5557247-4.3298339-10.1373902-9.885498-10.2334595zm-3.677063 12.9672856c-.2522392.2517509-.6609745.2524185-.9129028 0l-2.8422241-2.8419189c-.2523994-.2513857-.2523403-.6616392 0-.9129639l2.8422241-2.8421631c.2514038-.2519531.6609497-.2519531.9123535 0 .2525024.2519531.2525024.6609497 0 .9129028l-2.385437 2.3857422 2.385437 2.385498c.2525024.2519532.2525024.6606446.0005493.9129029zm5.5718994-7.9171142-3.0182495 9.623291c-.0864868.276123-.3411255.4527588-.6159058.4527588-.4331818 0-.7465286-.4221935-.6158447-.8389282l3.0183105-9.623291c.1060791-.340271.4667969-.5301514.80896-.4227295.3400269.1066284.5293579.4689331.4227295.8088989zm2.3446656 7.9171142c-.2512188.2517071-.6598892.2524643-.9129639 0-.2519531-.2522583-.2519531-.6609497.0005493-.9129028l2.385498-2.385498-2.385498-2.3857422c-.2525024-.2519531-.2525024-.6609497 0-.9129028.2514648-.2519531.6609497-.2519531.9124146 0l2.8421631 2.8421631c.2515602.2505493.2533836.6605978 0 .9129639z" />
+                    <g id="Guides" />
+                    <g id="_x32_0" />
+                    <g id="_x31_9" />
+                    <g id="_x31_8" />
+                    <g id="_x31_7" />
+                    <g id="_x31_6" />
+                    <g id="_x31_5" />
+                    <g id="_x31_4" />
+                    <g id="_x31_3" />
+                    <g id="_x31_2" />
+                    <g id="_x31_1" />
+                    <g id="_x31_0" />
+                    <g id="_x30_9" />
+                    <g id="_x30_8" />
+                    <g id="_x30_7" />
+                    <g id="_x30_6" />
+                    <g id="_x30_5" />
+                    <g id="_x30_4" />
+                    <g id="_x30_3">
+                      <circle cx="25" cy="5" r="3" />
+                      <path d="m26 8h-1-1c-2.2091389 0-4 1.7908611-4 4v1c0 .5522852.4477158 1 1 1h8c.5522842 0 1-.4477148 1-1v-1c0-2.2091389-1.7908611-4-4-4z" />
+                      <path d="m16 2h-11c-1.6542969 0-3 1.3457031-3 3v5c0 1.6542969 1.3457031 3 3 3h5.5859375l2.7070313 2.7070313c.1914062.1914062.4467773.2929687.7070312.2929687.1289063 0 .2587891-.0249023.3828125-.0761719.3735352-.1547851.6171875-.5195312.6171875-.9238281v-2h1c1.6542969 0 3-1.3457031 3-3v-5c0-1.6542969-1.3457031-3-3-3zm-8.1464844 8.1464844c.1953125.1953125.1953125.5117188 0 .7070313-.0976562.0976562-.2255859.1464843-.3535156.1464843s-.2558594-.0488281-.3535156-.1464844l-3-3c-.1953125-.1953125-.1953125-.5117188 0-.7070313l3-3c.1953125-.1953125.5117188-.1953125.7070313 0s.1953125.5117188 0 .7070313l-2.6464844 2.6464844zm4.1205445-5.4879761-2 6c-.0698242.2094727-.2646484.3417969-.4741211.3417969-.0522461 0-.1054688-.0083008-.1582031-.0258789-.2617188-.0869141-.4033203-.3701172-.315918-.6323242l2-6c.0874023-.2617188.3691406-.4042969.6323242-.315918.2617187.086914.4033203.3701172.315918.6323242zm4.8794555 3.1950073-3 3c-.0976562.0976563-.2255859.1464844-.3535156.1464844s-.2558594-.0488281-.3535156-.1464844c-.1953125-.1953125-.1953125-.5117188 0-.7070313l2.6464844-2.6464843-2.6464844-2.6464844c-.1953125-.1953125-.1953125-.5117188 0-.7070313s.5117188-.1953125.7070313 0l3 3c.1953124.1953126.1953124.5117188-.0000001.7070313z" />
+                      <path d="m25 15h-3.3642578c-.6772461 0-1.3134766.2636719-1.7924805.7426758l-1.1005859 1.1005859c-.1010742.1010742-.2353516.1567383-.378418.1567383h-4.7285156c-.1430664 0-.2773438-.0556641-.378418-.1567383l-1.1005859-1.1005859c-.4790039-.4790039-1.1152344-.7426758-1.7924805-.7426758h-3.3642578c-2.9467773 0-5 4.2163086-5 8 0 3.925293 2.1962891 7 5 7 2.0458984 0 3.8212891-2.0166016 4.3168945-4 .2412109-.9599609 1.1005859-2 2.0898438-2h5.1865234c.9892578 0 1.8486328 1.0410156 2.0893555 2 .4960937 1.984375 2.2714844 4 4.3173828 4 2.8037109 0 5-3.074707 5-7 0-3.7836914-2.0532227-8-5-8zm-15.5 6h-1.5v1.5c0 .2763672-.2236328.5-.5.5s-.5-.2236328-.5-.5v-1.5h-1.5c-.2763672 0-.5-.2236328-.5-.5s.2236328-.5.5-.5h1.5v-1.5c0-.2763672.2236328-.5.5-.5s.5.2236328.5.5v1.5h1.5c.2763672 0 .5.2236328.5.5s-.2236328.5-.5.5zm14.5-4c.5514526 0 1 .4485474 1 1s-.4485474 1-1 1-1-.4485474-1-1 .4485474-1 1-1zm-2 4c-.5513916 0-1-.4485474-1-1s.4486084-1 1-1c.5514526 0 1 .4485474 1 1s-.4485474 1-1 1zm2 2c-.5514526 0-1-.4485474-1-1s.4485474-1 1-1 1 .4485474 1 1-.4485474 1-1 1zm2-2c-.5514526 0-1-.4485474-1-1s.4485474-1 1-1 1 .4485474 1 1-.4485474 1-1 1z" />
                     </g>
+                    <g id="_x30_2" />
+                    <g id="_x30_1" />
                   </svg>
 
                   <div className="ml-6 space-y-5 mt-10">
@@ -712,10 +717,10 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
                 <div className="honeycomb-cell_title gap-y-3">
                   <svg
                     className="icon"
-                    style={{ top: "-52px", left: "100px" }}
-                    width="39"
-                    height="36"
-                    viewBox="0 0 39 36"
+                    style={{ top: "-52px", left: "114px" }}
+                    width="36"
+                    height="39"
+                    viewBox="0 0 36 39"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -724,68 +729,26 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
                       height="100%"
                       transform="matrix(1,0,0,1,0,0)"
                     >
-                      <path
-                        d="m29 46c0 .551-.448 1-1 1h-1v2h1c1.654 0 3-1.346 3-3v-15h-2z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m36 49c-.552 0-1-.449-1-1v-17h-2v17c0 1.654 1.346 3 3 3h1.18c-.11-.652-.18-1.317-.18-2z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m13 29h38c2.099 0 4.068-.93 5.404-2.55s1.867-3.758 1.458-5.864c-.534-2.752-2.748-4.945-5.507-5.459-.472-.088-.943-.117-1.412-.113.036.324.057.652.057.986 0 4.962-4.037 9-9 9v-2c3.859 0 7-3.14 7-7s-3.141-7-7-7c-1.08 0-2.125.247-3.106.735l-.866.43-.459-.851c-2.101-3.895-6.15-6.314-10.569-6.314-5.972 0-11.017 4.443-11.865 10.262 1.304.317 2.53.919 3.587 1.79 2.083 1.718 3.278 4.25 3.278 6.948h-2c0-2.098-.93-4.068-2.551-5.404-1.62-1.336-3.756-1.866-5.863-1.458-2.729.53-4.918 2.72-5.448 5.448-.409 2.106.122 4.244 1.458 5.864s3.305 2.55 5.404 2.55zm29-10c1.654 0 3-1.346 3-3h2c0 2.757-2.243 5-5 5zm-15-14c3.824 0 7.257 2.128 8.96 5.554l-1.791.891c-1.362-2.742-4.109-4.445-7.169-4.445zm-6 20h2v2h-2zm-2 0v2h-2v-2zm-6-8c2.757 0 5 2.243 5 5h-2c0-1.654-1.346-3-3-3zm0 8h2v2h-2z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m51 53h-2c-3.086 0-5.735 1.991-6.65 4.888 1.982 1.922 4.678 3.112 7.65 3.112s5.668-1.19 7.65-3.112c-.913-2.897-3.562-4.888-6.65-4.888z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m50 39c-6.065 0-11 4.935-11 11 0 2.27.692 4.381 1.874 6.135 1.036-2.193 2.9-3.857 5.165-4.639-1.247-1.101-2.039-2.706-2.039-4.496 0-3.309 2.691-6 6-6s6 2.691 6 6c0 1.79-.792 3.395-2.039 4.495 2.265.782 4.13 2.446 5.165 4.639 1.182-1.753 1.874-3.864 1.874-6.134 0-6.065-4.935-11-11-11z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <circle
-                        cx="50"
-                        cy="47"
-                        r="4"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m7 47h14v2h-14z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m3 58c0 1.654 1.346 3 3 3h16c1.654 0 3-1.346 3-3v-3h-22zm18-1h2v2h-2zm-4 0h2v2h-2zm-4 0h2v2h-2z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m22 35h-16c-1.654 0-3 1.346-3 3v15h22v-15c0-1.654-1.346-3-3-3zm1 14c0 1.103-.897 2-2 2h-14c-1.103 0-2-.897-2-2v-2c0-1.103.897-2 2-2h14c1.103 0 2 .897 2 2zm0-8c0 1.103-.897 2-2 2h-14c-1.103 0-2-.897-2-2v-2c0-1.103.897-2 2-2h14c1.103 0 2 .897 2 2z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
-                      <path
-                        d="m7 39h14v2h-14z"
-                        fill-opacity="1"
-                        stroke="none"
-                        stroke-opacity="1"
-                      />
+                      <g id="_x31_2">
+                        <path
+                          d="m23 24h-14c-1.1045532 0-2 .8953857-2 2v2c0 1.1045532.8954468 2 2 2h14c1.1045532 0 2-.8954468 2-2v-2c0-1.1046143-.8954468-2-2-2zm-8.5 3.5h-5c-.2763672 0-.5-.2236328-.5-.5s.2236328-.5.5-.5h5c.2763672 0 .5.2236328.5.5s-.2236328.5-.5.5zm4.5.5c-.5523071 0-1-.4476929-1-1s.4476929-1 1-1 1 .4476929 1 1-.4476929 1-1 1zm3 0c-.5523071 0-1-.4476929-1-1s.4476929-1 1-1 1 .4476929 1 1-.4476929 1-1 1z"
+                          fill-opacity="1"
+                          stroke="none"
+                          stroke-opacity="1"
+                        />
+                        <path
+                          d="m23 17h-14c-1.1045532 0-2 .8953857-2 2v2c0 1.1045532.8954468 2 2 2h14c1.1045532 0 2-.8954468 2-2v-2c0-1.1046143-.8954468-2-2-2zm-8.5 3.5h-5c-.2763672 0-.5-.2236328-.5-.5s.2236328-.5.5-.5h5c.2763672 0 .5.2236328.5.5s-.2236328.5-.5.5zm4.5.5c-.5523071 0-1-.4476929-1-1s.4476929-1 1-1 1 .4476929 1 1-.4476929 1-1 1zm3 0c-.5523071 0-1-.4476929-1-1s.4476929-1 1-1 1 .4476929 1 1-.4476929 1-1 1z"
+                          fill-opacity="1"
+                          stroke="none"
+                          stroke-opacity="1"
+                        />
+                        <path
+                          d="m24 7c-.4321899 0-.8528442.0479126-1.2590942.1347046-.8173829-2.9590454-3.5219117-5.1347046-6.7409058-5.1347046s-5.9235229 2.1756592-6.7409058 5.1347046c-.40625-.086792-.8269043-.1347046-1.2590942-.1347046-3.3137207 0-6 2.6862793-6 6 0 2.6240845 1.6873169 4.848877 4.0339966 5.6636963.1696167-1.4945068 1.4268799-2.6636963 2.9660034-2.6636963h4v-4h-2.050415c-.2316895 1.1410522-1.2401123 2-2.449585 2-1.3807373 0-2.5-1.1193237-2.5-2.5 0-1.3807373 1.1192627-2.5 2.5-2.5 1.2094727 0 2.2178955.8588867 2.449585 2h2.050415c.5523071 0 1 .4476929 1 1v4h4v-4c0-.5523071.4476929-1 1-1h2.050415c.2316895-1.1411133 1.2401123-2 2.449585-2 1.3807373 0 2.5 1.1192627 2.5 2.5 0 1.3806763-1.1192627 2.5-2.5 2.5-1.2094727 0-2.2178955-.8589478-2.449585-2h-2.050415v4h4c1.5391235 0 2.7963867 1.1691895 2.9660034 2.6636963 2.3466797-.8148193 4.0339966-3.0396118 4.0339966-5.6636963 0-3.3137207-2.6862793-6-6-6z"
+                          fill-opacity="1"
+                          stroke="none"
+                          stroke-opacity="1"
+                        />
+                      </g>
                     </g>
                   </svg>
 
@@ -978,7 +941,7 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
                     <li>Rate : {develoer.rate}</li>
                   </ul>
                   <div className="mt-4 flex items-center justify-between">
-                    <button className="bg-primary rounded-xl lg:px-4 lg:py-2 font-semibold">
+                    <button className="bg-primary text-white rounded-xl lg:px-4 lg:py-2 font-semibold">
                       <a
                         href={`/contact?developer=${encodeURIComponent(
                           develoer.name
@@ -1163,7 +1126,7 @@ Driven by innovation and fueled by a passion for technology, Hit-N-Hammer is you
             development. We’re ready to bring your ideas to life! 🚀
           </p>
           <button
-            className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8]"
+            className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8] hover:text-white"
             data-aos="zoom-out-up"
           >
             <a href="/contact">contact us</a>
