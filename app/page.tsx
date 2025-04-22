@@ -309,24 +309,24 @@ export default function Home() {
   const members = [
     {
       id: 1,
-      name: "John Smith",
-      company: "Awesome IT, Company",
+      name: "Sandeep",
+      company: "GameZone",
       testimonial:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
       img: client1,
     },
     {
       id: 2,
-      name: "Alex ",
-      company: "Awesome IT, Company",
+      name: "Sudeep",
+      company: "Quizpay",
       testimonial:
         "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
       img: client2,
     },
     {
       id: 3,
-      name: "Vipin",
-      company: "Tech Mahindra IT, Company",
+      name: "Manish Patel",
+      company: "Core Tech",
       testimonial:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
       img: client3,

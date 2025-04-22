@@ -4,14 +4,15 @@ import "./page.css";
 import Image from "next/image";
 
 // import teamMember1 from "../../../public/18155.jpg";
-import teamMember1 from "../../../public/team-member-6.png";
-import teamMember2 from "../../../public/team-member-3.png";
-import teamMember3 from "../../../public/team-member-5.png";
-import teamMember4 from "../../../public/team-member-2.png";
-import teamMember5 from "../../../public/team-member-8.png";
+import teamMember1 from "../../../public/karishma.png";
+import teamMember2 from "../../../public/nirav.png";
+// import teamMember3 from "../../../public/team-member-5.png";
+import teamMember3 from "../../../public/anjani.png";
+import teamMember4 from "../../../public/roshan.png";
+import teamMember5 from "../../../public/dhruv.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
-import teamMember8 from "../../../public/executive-business-woman-office.jpg";
+import teamMember8 from "../../../public/ayushi.png";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -69,42 +70,42 @@ export default function AboutUs() {
   const members = [
     {
       id: 1,
-      name: "John Smith",
+      name: "Karishma Mistry",
       designation: "CEO",
       details:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "Mrs. Karishma Mistry, CEO of HnH Company, leads with passion and innovation. With a vision for excellence in tech solutions, she drives growth, fosters creativity, and inspires a dedicated team to achieve success.",
       img: teamMember1,
     },
     {
       id: 2,
-      name: "Alexa ",
-      designation: "Founder",
+      name: "Nirav Mistry",
+      designation: "Founder & CEO",
       details:
-        "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "Founder and CEO of HNH Company, leads with innovation and passion. With a vision to revolutionize tech, he drives excellence in web, app, and game development, delivering cutting-edge solutions to global clients.",
       img: teamMember2,
     },
     {
       id: 3,
-      name: "Vipin",
-      designation: "Software Engineer",
+      name: "Anjani Lad",
+      designation: "Game Developer",
       details:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+        "Anjani Lad is a passionate game developer known for crafting immersive and engaging gaming experiences. With a strong creative vision and technical expertise, she brings unique ideas to life, pushing boundaries in the gaming industry.",
       img: teamMember3,
     },
     {
       id: 4,
-      name: "Ellyse Perry ",
+      name: "Roshan Tailor",
       designation: "UI/UX Designer",
       details:
-        "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "Roshan Tailor is a skilled UI/UX Developer at HnH Company, passionate about creating intuitive, user-friendly designs. He blends creativity with functionality, delivering seamless digital experiences that enhance user engagement and elevate brand identity.",
       img: teamMember4,
     },
     {
       id: 5,
-      name: "Peter",
-      designation: "Quality Assurance Analyst",
+      name: "Dhruv Mistry",
+      designation: "Front-End Developer",
       details:
-        "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters normal distribution of letters..",
+        "As a passionate Front-End Developer, I craft responsive, user-friendly interfaces with clean code and modern design. I bring ideas to life through HTML, CSS, JavaScript, and React, ensuring seamless user experiences across all devices.",
       img: teamMember5,
     },
     {
@@ -125,10 +126,10 @@ export default function AboutUs() {
     },
     {
       id: 8,
-      name: "Sundar",
-      designation: "Network Engineer",
+      name: "Ayushi Thakur",
+      designation: "Back-End Developer",
       details:
-        "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "As a skilled Back-end Developer at HnH Company, I specialize in building robust server-side applications, ensuring seamless data flow, high performance, and security, while collaborating closely with front-end teams to deliver powerful digital solutions.",
       img: teamMember8,
     },
     // Add other members here...

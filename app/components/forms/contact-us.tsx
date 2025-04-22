@@ -170,6 +170,10 @@ const ContactUsForm = () => {
             <p>
               <a href="tel:+91 7861973807">+91 7861973807</a>
             </p>
+            
+            <p>
+              <a href="tel:+91 9722278859">+91 9722278859</a>
+            </p>
           </div>
           <div className="flex items-center justify-start gap-4">
             <span className="h-10 w-10 border border-primary text-primary rounded-full flex items-center justify-center">
