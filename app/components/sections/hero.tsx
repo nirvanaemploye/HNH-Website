@@ -21,7 +21,7 @@ Hit-N-Hammer is a premier tech solutions provider dedicated to transforming your
 
   return (
     <div className="md:pt-28">
-      <div className="max-w-[1320px] container flex md:flex-row flex-col-reverse items-center">
+      <div className="max-w-[1440px] container flex xl:flex-row flex-col-reverse items-center">
         <div>
           <h1
             className="sm:text-[60px] text-[45px] sm:leading-[65px] leading-normal font-bold font-serif"

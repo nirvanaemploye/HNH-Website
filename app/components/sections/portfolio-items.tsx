@@ -108,7 +108,7 @@ const PortfolioItems = () => {
           );
         })}
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-12 gap-y-32 mt-16">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-12 gap-y-32 mt-16">
         {selectedPortfolioType === "all"
           ? portfolioItems.map((item, idx) => {
               return (

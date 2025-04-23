@@ -403,10 +403,10 @@ export default function Home() {
 
   return (
     <div
-      className="dark:text-white dark:bg-[#170C3F]  md:pb-32"
+      className="dark:text-white dark:bg-[#170C3F] md:pb-32 overflow-hidden"
       style={theme === "dark" ? bgDark : bgLight}
     >
-      <div className="container max-w-[1320px] space-y-32">
+      <div className="container w-full mx-auto space-y-32">
         <HeroSection />
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <Image
@@ -458,7 +458,7 @@ export default function Home() {
         </div>
 
         <section id="servicesSection" className="container">
-          <div className="servicesContainer">
+          <div className="servicesContainer ">
             <div className="servicesHeading gap-2">
               <span
                 className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF]
@@ -485,7 +485,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="honeycomb grid gap-y-24  xl:gap-y-6 md:gap-x-6">
+            <ul className="honeycomb grid gap-y-24 xl:gap-y-6 md:gap-x-6">
               <li
                 className={`honeycomb-cell ${
                   theme === "light" ? "honeycomb-cell-light" : ""
@@ -861,7 +861,7 @@ export default function Home() {
           >
             methodology
           </h3>
-          <div className="mt-[150px] grid md:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-4 gap-x-4 md:gap-y-0 gap-y-28">
+          <div className="mt-[150px] grid lg:grid-cols-4 md:grid-rows-1 sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-4 gap-x-4 lg:gap-y-0 gap-y-28">
             {methodologies.map((meth, idx) => {
               return (
                 <div
@@ -913,7 +913,7 @@ export default function Home() {
             site? We provide on-demand developers a variety of technologies such
             as iPhone, Android, PHP On-Demand.
           </p>
-          <div className="mt-20 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
+          <div className="mt-20 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mx-auto">
             {developers.map((develoer, idx) => {
               return (
                 <div
@@ -1083,6 +1083,7 @@ export default function Home() {
                         alt={member.name}
                       />
                     </li>
+
                   ))}
                 </ul>
               </div>

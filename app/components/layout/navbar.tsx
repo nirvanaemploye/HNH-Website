@@ -51,6 +51,7 @@ const Navbar = () => {
       <nav className="fixed w-full top-0 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100 z-20 dark:text-white dark:bg-[##7348FF]">
         <Topbar />
         <div className="flex items-center justify-between sm:px-9 px-4 py-5">
+          {/* Logo  */}
           <Link href="/">
             <Image
               src={theme === "dark" ? DarkHit : LightHit}
@@ -60,7 +61,8 @@ const Navbar = () => {
               height={24}
             />
           </Link>
-          <ul className="lg:flex hidden items-center justify-center gap-2 lg:gap-5">
+          {/* Navbar Links  */}
+          <ul className="lg:flex hidden items-center justify-center gap-2 md:gap-5">
             {navitems.map((item, idx) => {
               const isactive = pathname === item.href;
               return (
@@ -76,27 +78,27 @@ const Navbar = () => {
               );
             })}
           </ul>
-
-          <div className="flex xl:-ml-56 justify-between">
+          {/* hire us button  */}
+          <div className="flex xl:-ml-50 2xl:-ml-56 justify-between">
             <button
               onClick={() => router.push("/hire-us")}
               style={{
                 boxShadow:
                   "inset 0 -3px 3px #0D0C0C40, inset 0 3px 4px #896BEC",
               }}
-              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full md:block hidden text-white items-center justify-center text-center"
+              className="bg-[#5533C8] h-10 px-6 text-xl font-semibold rounded-full lg:block hidden text-white items-center justify-center text-center "
             >
               Hire us
             </button>
-
+            {/* theme mode button */}
             <button
               onClick={() => setMenuVisible(true)}
-              className="text-sm md:hidden block"
+              className="text-sm lg:hidden block order-2"
             >
               <LuMenu className="text-3xl" />
             </button>
           </div>
-          <div className="md:block hidden">
+          <div className="lg:block hidden">
             <DarkMode />
           </div>
         </div>

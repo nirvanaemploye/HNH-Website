@@ -23,10 +23,10 @@ const Footer = () => {
   };
 
   return (
-    <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F]">
+    <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F] overflow-hidden">
       <div className="" style={theme === "dark" ? footerDark : footerLight}>
-        <div className=" relative py-16">
-          <div className="container max-w-[1320px] mx-auto h-full grid lg1:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
+        <div className=" relative py-16 mt-[-1.1rem]">
+          <div className="container max-w-[1320px] mx-auto h-full grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
             <div className="flex flex-col items-start justify-between h-full">
               <div className="">
                 <h5 className="uppercase font-bold text-lg md:text-left text-center">

@@ -7,12 +7,14 @@ import Image from "next/image";
 import teamMember1 from "../../../public/karishma.png";
 import teamMember2 from "../../../public/nirav.png";
 // import teamMember3 from "../../../public/team-member-5.png";
-import teamMember3 from "../../../public/anjani.png";
+// import teamMember3 from "../../../public/anjani.png";
+import teamMember3 from "../../../public/anjani-bg.png";
 import teamMember4 from "../../../public/roshan.png";
 import teamMember5 from "../../../public/dhruv.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
-import teamMember8 from "../../../public/ayushi.png";
+// import teamMember8 from "../../../public/ayushi.png";
+import teamMember8 from "../../../public/ayushi-removebg-preview (2) (1)-modified.png";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -152,11 +154,11 @@ export default function AboutUs() {
 
   return (
     <div
-      className="dark:text-white dark:bg-[#170C3F] md:pb-32"
+      className="dark:text-white dark:bg-[#170C3F] md:pb-32 overflow-hidden"
       style={theme === "dark" ? bgDark : bgLight}
     >
       <div className="pt-[250px] container max-w-[1320px] space-y-32">
-        <div className="flex md:flex-row flex-col gap-16 items-center">
+        <div className="flex xl:flex-row flex-col gap-16 items-center">
           <Image
             data-aos="fade-up"
             data-aos-duration="500"
@@ -203,11 +205,11 @@ export default function AboutUs() {
           >
             OUR PRINCIPLES
           </h3>
-          <div className="grid md:grid-cols-3 sm:grid-cols-1 items-center justify-items-center gap-10 mt-20">
+          <div className="grid lg:grid-cols-3 md:grid-cols-1 items-center justify-items-center gap-4 md:gap-10 mt-20">
             {principles.map((principle, idx) => {
               return (
                 <div
-                  className="border border-[#8B68FF40] p-10 h-full flex flex-col justify-start items-center rounded-tr-3xl rounded-bl-3xl shadow-[0px_0px_6px_#8B68FF80]"
+                  className="border border-[#8B68FF40] md:p-10 h-full flex flex-col justify-start items-center rounded-tr-3xl rounded-bl-3xl shadow-[0px_0px_6px_#8B68FF80]"
                   key={idx}
                   data-aos="fade-up-left"
                 >
@@ -229,7 +231,7 @@ export default function AboutUs() {
             })}
           </div>
         </div>
-        <div className="flex md:flex-row flex-col-reverse items-start justify-between gap-24 max-w-[968px] mx-auto">
+        <div className="flex lg:flex-row flex-col-reverse items-start justify-between gap-24 max-w-[968px] mx-auto">
           <div className="">
             <h3
               className="font-serif text-primary font-bold text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit"
@@ -252,7 +254,7 @@ export default function AboutUs() {
                 data-aos="fade-up-right"
                 data-aos-duration="500"
               >
-                <p className="font-semibold uppercase">innovation</p>
+                <p className="font-semibold uppercase break-all">innovation</p>
               </div>
               <div
                 className="py-4 border border-primary text-center rounded-xl shadow-[0px_0px_6.9px_0.5px_#AD94FE70]"
@@ -284,17 +286,17 @@ export default function AboutUs() {
             width={450}
             height={390}
             alt="our mission"
-            className="md:w-[450px] w-full"
+            className="md:w-[450px] w-full mx-auto"
             data-aos="flip-up"
           />
         </div>
-        <div className="flex md:flex-row flex-col items-start justify-between gap-24 max-w-[968px] mx-auto">
+        <div className="flex lg:flex-row flex-col items-start justify-between gap-24 max-w-[968px] mx-auto">
           <Image
             src="/our-vision.png"
             width={450}
             height={390}
             alt="our mission"
-            className="md:w-[450px] w-full"
+            className="md:w-[450px] w-full mx-auto"
             data-aos="flip-down"
           />
           <div className="">
@@ -348,7 +350,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="md:block hidden" data-aos="fade-up">
+        <div className="lg:block hidden" data-aos="fade-up">
           <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             Meet the best team ever
           </h3>
@@ -364,7 +366,10 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(1)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 1 ? "imgTransform" : ""}
+                  // className={hoveredMember === 1 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 1 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
               <div>
@@ -375,7 +380,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(2)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 2 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 2 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
               <div>
@@ -386,7 +393,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(3)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 3 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 3 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
             </div>
@@ -399,7 +408,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(8)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 8 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 8 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
 
@@ -439,7 +450,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(4)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 4 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 4 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
             </div>
@@ -452,7 +465,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(7)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 7 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 7 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
               <div>
@@ -463,7 +478,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(6)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 6 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 6 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
               <div>
@@ -474,7 +491,9 @@ export default function AboutUs() {
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(5)}
                   onMouseLeave={handleMouseLeave}
-                  className={hoveredMember === 5 ? "imgTransform" : ""}
+                  className={`object-cover ${
+                    hoveredMember === 5 ? "imgTransform" : ""
+                  }`}
                 />
               </div>
             </div>

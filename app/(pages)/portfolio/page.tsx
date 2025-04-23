@@ -33,12 +33,12 @@ const PortfolioPage = () => {
 
   return (
     <div
-      className="dark:text-white dark:bg-[#170C3F] md:pb-32"
+      className="dark:text-white dark:bg-[#170C3F] md:pb-32 overflow-hidden"
       style={theme === "dark" ? bgDark : bgLight}
       data-aos="fade-in"
     >
       <div className="pt-[250px] container max-w-[1320px] space-y-32">
-        <div className="flex md:flex-row flex-col gap-16 items-center">
+        <div className="flex xl:flex-row flex-col gap-16 items-center">
           <Image
             data-aos="fade-up"
             data-aos-duration="500"
