@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "@/app/components/context/themeContext";
 
-const page = () => {
+const Page = () => {
 
   const { theme } = useTheme();
 
@@ -64,4 +64,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
