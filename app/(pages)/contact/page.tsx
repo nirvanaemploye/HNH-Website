@@ -1,5 +1,6 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
+import "./page.css";
 import ContactUsForm from "@/app/components/forms/contact-us";
 import Image from "next/image";
 import React, { Suspense, useEffect } from "react";

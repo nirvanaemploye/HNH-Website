@@ -1,5 +1,6 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
+import "./page.css";
 import PortfolioItems from "@/app/components/sections/portfolio-items";
 import Image from "next/image";
 import React, { useEffect } from "react";

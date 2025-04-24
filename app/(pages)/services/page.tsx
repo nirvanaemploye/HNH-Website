@@ -1,5 +1,6 @@
 "use client";
 import ServiceCard from "@/app/components/cards/service-card";
+import "./page.css";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
 import React, { useEffect } from "react";

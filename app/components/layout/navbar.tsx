@@ -38,6 +38,11 @@ const navitems = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    id:5,
+    name: "Stories",
+    href:"/stories",
+  },
 ];
 
 const Navbar = () => {
