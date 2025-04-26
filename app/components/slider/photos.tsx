@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 import "swiper/css";
@@ -56,8 +56,11 @@ const images = [
 ];
 
 const Photos = () => {
+
+  
+
   return (
-    <div className="w-full flex justify-center items-center py-5">
+    <div className="w-full flex justify-center items-center py-5 relative">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -83,7 +86,8 @@ const Photos = () => {
         {images.map((img) => (
           <SwiperSlide
             key={img.id}
-            className="w-64 h-64 flex items-center justify-center"
+            className="w-64 h-64 flex items-center justify-center cursor-pointer"
+            
           >
             <Image
               src={img.image}
@@ -95,6 +99,8 @@ const Photos = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      
     </div>
   );
 }
