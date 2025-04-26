@@ -27,6 +27,7 @@ const config: Config = {
       fontFamily: {
         sans: "var(--font-sans)",
         serif: "var(--font-serif)",
+        koho: ["var(--font-koho)", "sans-serif"],
       },
       colors: {
         background: "var(--background)",
