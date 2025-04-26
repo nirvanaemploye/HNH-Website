@@ -60,7 +60,7 @@ const StoriesPage = () => {
           <h1 className="font-normal text-xl  text-center dark:text-[#E1E0E0] text-[#717070]">
             Our company offers a comprehensive range of services tailored to
             meet the diverse needs of our clients. From innovative digital
-            solutions to traditional marketing strategies, we provide a{" "}
+            solutions to traditional marketing strategies
           </h1>
           <SimpleSlider />
         </div>
@@ -74,9 +74,9 @@ const StoriesPage = () => {
             </div>
             <p className="text-xl font-normal  text-center my-5 dark:text-[#E1E0E0] text-[#717070]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and{" "}
+              industry. Lorem Ipsum has been the industry standard dummy text
+              ever since the 1500s when an unknown printer took a galley of
+              type 
             </p>
           </div>
           <Photos />
