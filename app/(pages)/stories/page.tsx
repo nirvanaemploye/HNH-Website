@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaPlay, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -26,8 +26,6 @@ const StoriesPage = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
-  const modalRef = useRef<HTMLDivElement>(null);
 
   const bgDark = {
     backgroundImage: "url(/Home-page-dark.svg)",
@@ -70,7 +68,7 @@ const StoriesPage = () => {
       category: "activity",
       title: "Work activity",
       description: "Our vibrant work environment",
-      size: "medium",
+      size: "small",
     },
     {
       id: 4,
@@ -79,7 +77,7 @@ const StoriesPage = () => {
       category: "celebration",
       title: "Team Celebration",
       description: "Annual team celebration event",
-      size: "small",
+      size: "medium",
     },
     {
       id: 5,
@@ -88,6 +86,15 @@ const StoriesPage = () => {
       category: "activity",
       title: "Work activity",
       description: "Our vibrant work environment",
+      size: "small",
+    },
+    {
+      id: 6,
+      type: "image",
+      src: "/18155.jpg",
+      category: "celebration",
+      title: "Team Celebration",
+      description: "Annual team celebration event",
       size: "small",
     },
   ];
@@ -109,11 +116,6 @@ const StoriesPage = () => {
     index: number,
     event: React.MouseEvent
   ) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    setClickPosition({
-      x: rect.left + rect.width / 2,
-      y: rect.top + rect.height / 2,
-    });
     setSelectedItem(item);
     setCurrentIndex(index);
     setIsModalOpen(true);
@@ -142,12 +144,12 @@ const StoriesPage = () => {
     }
   }, [currentIndex, isModalOpen, filteredItems]);
 
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // Animation duration
-        once: true, // Whether animation should happen only once
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   return (
     <div
