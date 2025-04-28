@@ -88,7 +88,7 @@ const StoriesPage = () => {
       category: "activity",
       title: "Work activity",
       description: "Our vibrant work environment",
-      size: "medium",
+      size: "small",
     },
   ];
 
@@ -141,6 +141,13 @@ const StoriesPage = () => {
       setSelectedItem(filteredItems[currentIndex]);
     }
   }, [currentIndex, isModalOpen, filteredItems]);
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Whether animation should happen only once
+      });
+    }, []);
 
   return (
     <div
