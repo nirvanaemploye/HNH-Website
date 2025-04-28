@@ -35,13 +35,13 @@ const navitems = [
   },
   {
     id: 5,
-    name: "Contact",
-    href: "/contact",
+    name: "Stories",
+    href: "/stories",
   },
   {
-    id:5,
-    name: "Stories",
-    href:"/stories",
+    id: 6,
+    name: "Contact",
+    href: "/contact",
   },
 ];
 
