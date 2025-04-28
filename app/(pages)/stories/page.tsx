@@ -114,7 +114,7 @@ const StoriesPage = () => {
   const handleItemClick = (
     item: GalleryItem,
     index: number,
-    event: React.MouseEvent
+    // event: React.MouseEvent
   ) => {
     setSelectedItem(item);
     setCurrentIndex(index);
