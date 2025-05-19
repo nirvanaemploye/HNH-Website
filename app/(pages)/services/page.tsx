@@ -115,12 +115,12 @@ const ServicesPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
-/*   useEffect(() => {
+  useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration
       once: true, // Whether animation should happen only once
     });
-  }, []); */
+  }, []);
 
   return (
     <div
