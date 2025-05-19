@@ -197,7 +197,7 @@ const StoriesPage = () => {
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              onClick={(e) => handleItemClick(item, index, e)}
+              onClick={() => handleItemClick(item, index)}
               className={`group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-gray-700 cursor-pointer gallery-item transition-all duration-300
                 ${item.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
                 ${item.size === "medium" ? "md:col-span-2" : ""}
