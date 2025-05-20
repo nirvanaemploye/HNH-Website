@@ -3,7 +3,6 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { useTheme } from "../context/themeContext";
-import portfolioTyps from "../sections/portfolio-items";
 import Link from "next/link";
 
 const Footer = () => {

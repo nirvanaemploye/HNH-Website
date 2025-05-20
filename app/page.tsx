@@ -17,7 +17,7 @@ import Modal from "./components/ui/modal";
 import { useTheme } from "./components/context/themeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { image } from "motion/react-client";
+// import { image } from "motion/react-client";
 
 const developers = [
   {
