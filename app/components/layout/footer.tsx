@@ -3,6 +3,8 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { useTheme } from "../context/themeContext";
+import portfolioTyps from "../sections/portfolio-items";
+import Link from "next/link";
 
 const Footer = () => {
 
@@ -60,7 +62,7 @@ const Footer = () => {
                   </li>
                 </ul>
                 <p className="font-light dark:text-[#B8B6B6] text-[#717070] text-xs mt-3 md:text-left text-center">
-                  Copyright @ 2014 Hit-N Hammer Tech Services. All Rights
+                  Copyright @ 2025 Hit-N Hammer Tech Services. All Rights
                   Reserved
                 </p>
               </div>
@@ -79,7 +81,7 @@ const Footer = () => {
                     Business solutions
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    block chain technology
+                    Game Development
                   </li>
                 </ul>
               </div>
@@ -89,7 +91,8 @@ const Footer = () => {
                 </h5>
                 <ul className="space-y-1 sm:list-disc">
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    Web development
+                    {/* <a href="/portfolio">UI/UX Design</a> */}
+                    <Link href="/portfolio">UI/UX Design</Link>
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
                     App development

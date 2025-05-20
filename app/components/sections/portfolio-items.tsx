@@ -103,7 +103,9 @@ const PortfolioItems = () => {
               )}
               key={idx}
             >
+              
               {type.name}
+              
             </button>
           );
         })}

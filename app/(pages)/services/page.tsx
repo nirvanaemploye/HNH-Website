@@ -42,15 +42,15 @@ const services = [
       "PHP Web Development",
       "Wordpress Development",
       "Web Development",
-      "Custom CMC Development",
+      "Custom CMS Development",
     ],
     toolImages: [
       { name: "html", image: "/html-icon.svg" },
       { name: "react", image: "/react-icon.svg" },
       { name: "css", image: "/css-icon.svg" },
       { name: "node", image: "/node-icon.svg" },
-      { name: "php", image: "/php.svg" },
-      {name: "mongo", image:"/Mongo_DB.svg"}
+      { name: "php", image: "/php2_svgrepo.com.svg" },
+      { name: "mongo", image: "/Mongo_DB.svg" },
     ],
   },
   {
@@ -61,7 +61,7 @@ const services = [
       "We develop mobile, iPhone, Android, iPad, software, and web apps with performance, precision, and innovation.",
     services: [
       "Mobile App Development",
-      "Iphone App Development",
+      "iOS App Development",
       "Android App Development",
       "Ipad App Development",
       "Software Development",
@@ -71,8 +71,8 @@ const services = [
       { name: "c++", image: "/c++-icon.svg" },
       { name: "react", image: "/react-icon.svg" },
       { name: "python", image: "/python-icon.svg" },
-      {name:"android", image:"/android.svg"},
-      {name:"ios", image:"/IOS.svg"},
+      { name: "android", image: "/android.svg" },
+      { name: "ios", image: "/ios_icon1.svg" },
     ],
   },
   {
@@ -83,14 +83,14 @@ const services = [
       "We create engaging Android, iOS, HTML5, Flash, Unity 3D, and custom games with excellence.",
     services: [
       "Android Game Development",
-      "IOS Game Development",
+      "iOS Game Development",
       "HTML5 Development",
       "Flash Game Development",
       "Unity 3D Game Development",
       "Custom Game Development",
     ],
     toolImages: [
-      { name: "unity", image: "/unity-icon.svg" },
+      { name: "unity", image: "/unity_svgrepo.com.svg" },
       { name: "photoshop", image: "/ps-icon.svg" },
       { name: "visual studio", image: "/visual-studio-icon.svg" },
       { name: "blender", image: "/blender-icon.svg" },
@@ -166,7 +166,7 @@ const ServicesPage = () => {
         </div>
         <div data-aos="zoom-in" data-aos-duration="1000">
           <h3 className="font-serif text-primary font-bold md:text-5xl text-3xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
-            WE TRY TO SERV BEST SERVICES
+            WE TRY TO SERVE BEST SERVICES
           </h3>
           <div className="mt-20 space-y-12">
             {services.map((service, idx) => (

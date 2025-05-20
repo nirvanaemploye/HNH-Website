@@ -17,6 +17,7 @@ import Modal from "./components/ui/modal";
 import { useTheme } from "./components/context/themeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { image } from "motion/react-client";
 
 const developers = [
   {
@@ -118,6 +119,9 @@ const developers = [
   {
     id: 4,
     image: "react-icon.svg",
+    // image:"React.js.svg",
+    /* image: "React.js_dark _100.svg",
+    image1: "React.js_dark_160.svg", */
     image1: "react-dark.svg",
     name: "REACT.JS DEVELOPERS",
     experiance: "5 year",
@@ -253,7 +257,6 @@ const developers = [
     project: "10",
     rate: "$25",
     skills: [
-      
       {
         id: 1,
         name: "photoshop",
@@ -442,8 +445,8 @@ export default function Home() {
               team of passionate innovators and digital craftsmen committed to
               transforming ideas into powerful digital solutions. From dynamic
               websites <span>🌐</span> and mobile apps <span>📱</span> to
-              immersive games and cutting-edge UI/UX designs <span>🎨</span>,
-              we bring creativity and technology together to deliver exceptional
+              immersive games and cutting-edge UI/UX designs <span>🎨</span>, we
+              bring creativity and technology together to deliver exceptional
               results.
             </p>
             <button
@@ -1030,7 +1033,10 @@ export default function Home() {
               <div className="mx-auto flex items-center justify-center mb-3">
                 <Image
                   src={
-                    theme === "dark" ? "Deliver-dark.svg" : "Deliver_lighte.svg"
+                    /* theme === "dark" ? "Deliver-dark.svg" : "Deliver_lighte.svg" */
+                    theme === "dark"
+                      ? "rocket_icon_dark.svg"
+                      : "rocket_icon_light.svg"
                   }
                   width={154}
                   height={154}
@@ -1083,7 +1089,6 @@ export default function Home() {
                         alt={member.name}
                       />
                     </li>
-
                   ))}
                 </ul>
               </div>
