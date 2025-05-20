@@ -14,7 +14,8 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
+    <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#ececec] dark:bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl">
+      {/* <div className="sm:py-10 sm:px-12 px-6 py-5 relative border border-primary bg-[#8B68FF10] text-[white] grid md:grid-cols-2 grid-cols-1 gap-9 items-center justify-items-center rounded-3xl"> */}
       <div>
         <Image
           src={service.image}
