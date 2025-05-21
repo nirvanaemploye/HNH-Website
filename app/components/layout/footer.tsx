@@ -4,8 +4,6 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { useTheme } from "../context/themeContext";
-import Link from "next/link";
-import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/navigation";
 
 const Footer = () => {
