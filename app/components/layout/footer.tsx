@@ -1,13 +1,17 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { useTheme } from "../context/themeContext";
 import Link from "next/link";
+import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
-
   const { theme } = useTheme();
+  // const navigate = useNavigate();
+  const router = useRouter();
 
   const footerDark = {
     backgroundImage: "url(/footer-dark.svg)",
@@ -21,6 +25,12 @@ const Footer = () => {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+  };
+
+  const redirectToPortfolio = (e: any) => {
+    console.log("firest ", e);
+    // navigate("/portfolio");
+    router.push("/portfolio?quickLink='web'");
   };
 
   return (
@@ -89,18 +99,23 @@ const Footer = () => {
                   quick links
                 </h5>
                 <ul className="space-y-1 sm:list-disc">
-                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    {/* <a href="/portfolio">UI/UX Design</a> */}
-                    <Link href="/portfolio">UI/UX Design</Link>
+                  <li
+                    className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize"
+                    onClick={redirectToPortfolio}
+                  >
+                    {/* onClick={(e) => redirectToPortfolio(e)} */}
+                    {/* <a href="/portfolio" >UI/UX Design</a> */}
+                    {/* <Link href="/portfolio">UI/UX Design</Link> */}
+                    <span>UI/UX Design</span>
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    App development
+                    Android/IOS
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    Business solutions
+                    Website/Webapps
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    block chain technology
+                    Games
                   </li>
                 </ul>
               </div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 import { TbWorld } from "react-icons/tb";
@@ -85,8 +85,19 @@ const portfolioItems = [
   },
 ];
 
-const PortfolioItems = () => {
+type PortfolioItemsProps = {
+  flag: string; // or whatever type it actually is
+};
+
+const PortfolioItems = ({ flag }: PortfolioItemsProps) => {
   const [selectedPortfolioType, setSelectedPortfolioType] = useState("all");
+
+  useEffect(() => {
+    if (flag) {
+      console.log("useEffect portfolio", flag);
+      setSelectedPortfolioType(flag);
+    }
+  }, [flag]);
 
   return (
     <div>
@@ -103,9 +114,7 @@ const PortfolioItems = () => {
               )}
               key={idx}
             >
-              
               {type.name}
-              
             </button>
           );
         })}
@@ -143,7 +152,6 @@ const PortfolioItems = () => {
                     />
                     <div className="absolute -bottom-[40px] left-0 right-0 bg-white rounded-xl flex flex-col items-center justify-center w-[225px] h-[80px] mx-auto">
                       <h3 className="text-black font-bold">{item.name}</h3>
-                      
                     </div>
                   </div>
                 );

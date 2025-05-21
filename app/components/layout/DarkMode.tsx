@@ -12,14 +12,23 @@ const DarkMode = () => {
     >
       {theme === "dark" ? (
         <Image
-          src="/light_btn.svg"
+          // src="/light_btn.svg"
+
+          src="/Dark_mode_button.svg"
           alt="moon"
           width={65}
           height={65}
           priority
         />
       ) : (
-        <Image src="/dark_btn.svg" alt="sun" width={65} height={65} priority />
+        // <Image src="/dark_btn.svg" alt="sun" width={65} height={65} priority />
+        <Image
+          src="/Light_mode_button.svg"
+          alt="sun"
+          width={65}
+          height={65}
+          priority
+        />
       )}
     </button>
   );

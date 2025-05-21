@@ -183,7 +183,7 @@ const StoriesPage = () => {
               onClick={() => setActiveFilter(filter.id)}
               className={`px-6 py-2 rounded-full transition-all filter-button ${
                 activeFilter === filter.id
-                  ? "bg-primary text-white"
+                  ? "bg-primary text-gray-1000 font-medium"
                   : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >

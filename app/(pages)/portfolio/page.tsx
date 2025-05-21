@@ -6,8 +6,13 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useSearchParams } from "next/navigation";
 
 const PortfolioPage = () => {
+  const searchParams = useSearchParams();
+  const flag = searchParams.get("quickLink");
+  console.log("quickLink", flag);
+
   const { theme } = useTheme();
 
   const bgDark = {
@@ -24,13 +29,15 @@ const PortfolioPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // Animation duration
-        once: true, // Whether animation should happen only once
-      });
-    }, []);
-  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+    // const searchParams = useSearchParams();
+    // console.log("testing", searchParams.get("fromHome"));
+    // const fromHome = searchParams.get("fromHome") === "true";
+  }, []);
 
   return (
     <div
@@ -78,7 +85,7 @@ const PortfolioPage = () => {
           <h3 className="font-serif text-primary font-bold sm:text-5xl text-4xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             OUR PORTFOLIO
           </h3>
-          <PortfolioItems />
+          <PortfolioItems flag={flag} />
         </div>
       </div>
     </div>

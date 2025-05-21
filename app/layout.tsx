@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
 import { ThemeProvider } from "./components/context/themeContext";
+import { BrowserRouter } from "react-router-dom";
 
 const koho = KoHo({
   subsets: ["latin"],
@@ -16,14 +17,11 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
   return (
     <html lang="en">
       <body

@@ -63,7 +63,7 @@ const services = [
       "Mobile App Development",
       "iOS App Development",
       "Android App Development",
-      "Ipad App Development",
+      "iPad App Development",
       "Software Development",
       "Web App Development",
     ],
