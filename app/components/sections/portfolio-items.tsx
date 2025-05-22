@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 import { TbWorld } from "react-icons/tb";
@@ -85,32 +85,32 @@ const portfolioItems = [
   },
 ];
 
-type PortfolioItemsProps = {
-  flag: string; // or whatever type it actually is
-};
-
-const PortfolioItems = ({ flag }: PortfolioItemsProps) => {
+const PortfolioItems = () => {
   const [selectedPortfolioType, setSelectedPortfolioType] = useState("all");
 
-  useEffect(() => {
-    if (flag) {
-      console.log("useEffect portfolio", flag);
-      setSelectedPortfolioType(flag);
-    }
-  }, [flag]);
+  const handlePortfolioTypeChange = (type: string) => {
+    setSelectedPortfolioType(type);
+    // Scroll to the portfolio section with a small delay to ensure content is rendered
+    setTimeout(() => {
+      const portfolioSection = document.querySelector(".portfolio-section");
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
 
   return (
-    <div>
+    <div className="portfolio-section" id="portfolio-section">
       <div className="flex flex-wrap items-center justify-center gap-4">
         {portfolioTyps.map((type, idx) => {
           return (
             <button
-              onClick={() => setSelectedPortfolioType(type.key)}
+              onClick={() => handlePortfolioTypeChange(type.key)}
               className={twMerge(
-                "px-6 py-3 rounded-xl",
+                "px-6 py-3 rounded-xl transition-all duration-300",
                 type.key === selectedPortfolioType
                   ? "bg-primary dark:text-white"
-                  : "bg-[#1A142C] text-white border border-primary "
+                  : "bg-[#1A142C] text-white border border-primary hover:bg-primary/10"
               )}
               key={idx}
             >

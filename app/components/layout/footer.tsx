@@ -4,12 +4,11 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { useTheme } from "../context/themeContext";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   const { theme } = useTheme();
   // const navigate = useNavigate();
-  const router = useRouter();
 
   const footerDark = {
     backgroundImage: "url(/footer-dark.svg)",
@@ -27,11 +26,11 @@ const Footer = () => {
     backgroundRepeat: "no-repeat",
   };
 
-  const redirectToPortfolio = (e: any) => {
+  /* const redirectToPortfolio = (e: any) => {
     console.log("firest ", e);
     // navigate("/portfolio");
     router.push("/portfolio?quickLink='web'");
-  };
+  }; */
 
   return (
     <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F] overflow-hidden">
@@ -102,23 +101,19 @@ const Footer = () => {
                   quick links
                 </h5>
                 <ul className="space-y-1 sm:list-disc">
-                  <li
-                    className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize"
-                    onClick={redirectToPortfolio}
-                  >
-                    {/* onClick={(e) => redirectToPortfolio(e)} */}
-                    {/* <a href="/portfolio" >UI/UX Design</a> */}
-                    {/* <Link href="/portfolio">UI/UX Design</Link> */}
-                    <span>UI/UX Design</span>
+                  <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
+                    <Link href="/portfolio?section=ui-ux">UI/UX Design</Link>
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    Android/IOS
+                    <Link href="/portfolio?section=android-ios">
+                      Android/IOS
+                    </Link>
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    Website/Webapps
+                    <Link href="/portfolio?section=web">Website/Webapps</Link>
                   </li>
                   <li className="text-[15px] dark:text-[#B8B6B6] text-[#717070] capitalize">
-                    Games
+                    <Link href="/portfolio?section=games">Games</Link>
                   </li>
                 </ul>
               </div>
@@ -136,7 +131,9 @@ const Footer = () => {
                   />
                 </a>
 
-                <p className="text-[15px] text-right">what’s the next . . .</p>
+                <p className="text-[15px] text-right">
+                  what&apos;s the next . . .
+                </p>
               </div>
               <ul className="mt-11 space-y-4 md:text-start text-center">
                 <div className="flex space-x-1 justify-center md:justify-start">

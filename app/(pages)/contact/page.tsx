@@ -6,9 +6,11 @@ import Image from "next/image";
 import React, { Suspense, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useSearchParams } from "next/navigation";
 
 const ContactPage = () => {
   const { theme } = useTheme();
+  const searchParams = useSearchParams();
 
   const bgDark = {
     backgroundImage: "url(/Home-page-dark.svg)",
@@ -25,11 +27,23 @@ const ContactPage = () => {
   };
 
   useEffect(() => {
-      AOS.init({
-        duration: 1000, // Animation duration
-        once: true, // Whether animation should happen only once
-      });
-    }, []);
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Check if we have any query parameters (indicating navigation from another page)
+    const hasQueryParams = searchParams.toString().length > 0;
+    if (hasQueryParams) {
+      // Add a small delay to ensure the form is rendered
+      setTimeout(() => {
+        const formSection = document.querySelector(".contact-form-section");
+        if (formSection) {
+          formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [searchParams]);
 
   return (
     <div
@@ -70,7 +84,11 @@ const ContactPage = () => {
             </p>
           </div>
         </div>
-        <div data-aos="zoom-in" data-aos-duration="1000">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="contact-form-section"
+        >
           <Suspense>
             <ContactUsForm />
           </Suspense>

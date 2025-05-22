@@ -10,9 +10,7 @@ import { useSearchParams } from "next/navigation";
 
 const PortfolioPage = () => {
   const searchParams = useSearchParams();
-  const flag = searchParams.get("quickLink");
-  console.log("quickLink", flag);
-
+  const section = searchParams.get("section");
   const { theme } = useTheme();
 
   const bgDark = {
@@ -31,13 +29,38 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
     });
-    // const searchParams = useSearchParams();
-    // console.log("testing", searchParams.get("fromHome"));
-    // const fromHome = searchParams.get("fromHome") === "true";
-  }, []);
+
+    // Handle section scrolling
+    if (section) {
+      const sectionMap: { [key: string]: string } = {
+        "ui-ux": "uiux",
+        "android-ios": "android",
+        web: "web",
+        games: "Games",
+      };
+
+      const targetSection = sectionMap[section];
+      if (targetSection) {
+        // Add a small delay to ensure buttons are rendered
+        setTimeout(() => {
+          // Find and click the button for the target section
+          const buttons = document.querySelectorAll("button");
+          buttons.forEach((button) => {
+            if (
+              button.textContent
+                ?.toLowerCase()
+                .includes(targetSection.toLowerCase())
+            ) {
+              button.click();
+            }
+          });
+        }, 100); // 100ms delay
+      }
+    }
+  }, [section]);
 
   return (
     <div
@@ -85,7 +108,7 @@ const PortfolioPage = () => {
           <h3 className="font-serif text-primary font-bold sm:text-5xl text-4xl border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto mb-16">
             OUR PORTFOLIO
           </h3>
-          <PortfolioItems flag={flag} />
+          <PortfolioItems />
         </div>
       </div>
     </div>
