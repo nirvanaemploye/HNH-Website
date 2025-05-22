@@ -55,7 +55,7 @@ const StoriesPage = () => {
     {
       id: 2,
       type: "image",
-      src: "/27767.jpg",
+      src: "/team.jpeg",
       category: "team",
       title: "Team Building",
       description: "Team building activities",
@@ -64,7 +64,7 @@ const StoriesPage = () => {
     {
       id: 3,
       type: "image",
-      src: "/6837.jpg",
+      src: "/activities1.jpeg",
       category: "activity",
       title: "Work activity",
       description: "Our vibrant work environment",
@@ -82,7 +82,7 @@ const StoriesPage = () => {
     {
       id: 5,
       type: "image",
-      src: "/6837.jpg",
+      src: "/activities2.jpeg",
       category: "activity",
       title: "Work activity",
       description: "Our vibrant work environment",
@@ -95,6 +95,24 @@ const StoriesPage = () => {
       category: "celebration",
       title: "Team Celebration",
       description: "Annual team celebration event",
+      size: "small",
+    },
+    {
+      id: 7,
+      type: "image",
+      src: "/activities3.jpeg",
+      category: "activity",
+      title: "Work activity",
+      description: "Our vibrant work environment",
+      size: "small",
+    },
+    {
+      id: 8,
+      type: "image",
+      src: "/activities4.jpeg",
+      category: "activity",
+      title: "Work activity",
+      description: "Our vibrant work environment",
       size: "small",
     },
   ];
@@ -113,7 +131,7 @@ const StoriesPage = () => {
 
   const handleItemClick = (
     item: GalleryItem,
-    index: number,
+    index: number
     // event: React.MouseEvent
   ) => {
     setSelectedItem(item);

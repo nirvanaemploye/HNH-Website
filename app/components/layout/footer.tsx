@@ -13,6 +13,7 @@ const Footer = () => {
 
   const footerDark = {
     backgroundImage: "url(/footer-dark.svg)",
+    // backgroundImage: "url(/foot_dark.svg)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -20,6 +21,7 @@ const Footer = () => {
 
   const footerLight = {
     backgroundImage: "url(/footer-light.svg)",
+    // backgroundImage: "url(/Footer_BG_dark_16.svg)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -33,7 +35,10 @@ const Footer = () => {
 
   return (
     <div className="dark:text-[#FFFFFF] dark:bg-[#170C3F] overflow-hidden">
-      <div className="" style={theme === "dark" ? footerDark : footerLight}>
+      <div
+        className="w-full"
+        style={theme === "dark" ? footerDark : footerLight}
+      >
         <div className=" relative py-16 mt-[-1.1rem]">
           <div className="container max-w-[1320px] mx-auto h-full grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-20 sm:justify-items-center">
             <div className="flex flex-col items-start justify-between h-full">
