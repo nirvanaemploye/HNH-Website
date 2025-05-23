@@ -9,7 +9,7 @@ import teamMember2 from "../../../public/nirav1.png";
 // import teamMember3 from "../../../public/team-member-5.png";
 // import teamMember3 from "../../../public/anjani.png";
 import teamMember3 from "../../../public/anjani1.png";
-import teamMember4 from "../../../public/roshan.png";
+import teamMember4 from "../../../public/roshan1.png";
 import teamMember5 from "../../../public/dhruv.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
@@ -536,11 +536,20 @@ export default function AboutUs() {
                 </div>
               ))}
 
-              <div>
+              <div
+                style={{
+                  width: 230,
+                  height: 170,
+                  overflow: "hidden",
+                  borderRadius: 8,
+                  position: "relative",
+                }}
+              >
                 <Image
                   src={teamMember4}
-                  width={232}
-                  height={170}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(4)}
                   onMouseLeave={handleMouseLeave}
