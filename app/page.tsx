@@ -69,18 +69,19 @@ const developers = [
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
-      },
-      {
-        id: 3,
         name: "js",
         src: "js-icon.svg",
       },
       {
-        id: 4,
+        id: 3,
         name: "php",
         src: "php-icon.svg",
+        // src: "php2_svgrepo.com.svg",
+      },
+      {
+        id: 4,
+        name: "sql",
+        src: "Sql_icon.svg",
       },
     ],
   },
@@ -96,23 +97,18 @@ const developers = [
     skills: [
       {
         id: 1,
-        name: "html",
-        src: "html-icon.svg",
+        name: "java",
+        src: "java_icon.svg",
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
+        name: "kotlin",
+        src: "kotlin_svgrepo.com.svg",
       },
       {
         id: 3,
-        name: "js",
-        src: "js-icon.svg",
-      },
-      {
-        id: 4,
-        name: "php",
-        src: "php-icon.svg",
+        name: "dart",
+        src: "dart_svgrepo.com.svg",
       },
     ],
   },
@@ -136,8 +132,8 @@ const developers = [
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
+        name: "tailwind",
+        src: "Tailwind_icon.svg",
       },
       {
         id: 3,
@@ -146,8 +142,8 @@ const developers = [
       },
       {
         id: 4,
-        name: "php",
-        src: "php-icon.svg",
+        name: "react",
+        src: "React.js.svg",
       },
     ],
   },
@@ -168,18 +164,18 @@ const developers = [
       },
       {
         id: 2,
-        name: "JS",
-        src: "JS.svg",
+        name: "html",
+        src: "html-icon.svg",
       },
       {
         id: 3,
-        name: "dash",
-        src: "dash.svg",
+        name: "css",
+        src: "css-icon.svg",
       },
       {
         id: 4,
-        name: "react",
-        src: "REACT.svg",
+        name: "js",
+        src: "js-icon.svg",
       },
     ],
   },
@@ -195,8 +191,8 @@ const developers = [
     skills: [
       {
         id: 1,
-        name: "JS",
-        src: "JS.svg",
+        name: "mongo",
+        src: "android-logo.svg",
       },
       {
         id: 2,
@@ -210,8 +206,8 @@ const developers = [
       },
       {
         id: 4,
-        name: "android",
-        src: "android-logo.svg",
+        name: "JS",
+        src: "JS.svg",
       },
     ],
   },
@@ -227,23 +223,24 @@ const developers = [
     skills: [
       {
         id: 1,
-        name: "html",
-        src: "html-icon.svg",
+        name: "node",
+        src: "js.svg",
       },
       {
         id: 2,
-        name: "css",
-        src: "css-icon.svg",
-      },
-      {
-        id: 3,
         name: "js",
         src: "js-icon.svg",
       },
       {
+        id: 3,
+        name: "express",
+        src: "express.svg",
+      },
+
+      {
         id: 4,
-        name: "php",
-        src: "php-icon.svg",
+        name: "mongo",
+        src: "android-logo.svg",
       },
     ],
   },
@@ -265,12 +262,12 @@ const developers = [
       {
         id: 2,
         name: "vs-code",
-        src: "vs-code.svg",
+        src: "unity_svgrepo.com.svg",
       },
       {
         id: 3,
-        name: "blender",
-        src: "blender.svg",
+        name: "csharp",
+        src: "csharp_svgrepo.com.svg",
       },
     ],
   },
@@ -315,7 +312,7 @@ export default function Home() {
       name: "Sandeep",
       company: "GameZone",
       testimonial:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "Their team was exceptional, offering innovative solutions that exceeded our expectations. We were impressed with their professionalism and commitment to delivering high-quality work on time and within budget. Highly recommended!",
       img: client1,
     },
     {
@@ -323,7 +320,7 @@ export default function Home() {
       name: "Sudeep",
       company: "Quizpay",
       testimonial:
-        "It looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "From start to finish, they provided incredible service. Their attention to detail, communication, and expertise made the entire process seamless. The final result was outstanding, and we couldn’t be happier.",
       img: client2,
     },
     {
@@ -331,39 +328,39 @@ export default function Home() {
       name: "Manish Patel",
       company: "Core Tech",
       testimonial:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+        "We were blown away by their efficiency and creativity. They not only met our needs but went above and beyond to ensure our project was a success. Truly a pleasure to work with.",
       img: client3,
     },
     {
       id: 4,
       name: "Ellyse Perry ",
-      company: "Sonata Software IT, Company",
+      company: "hitech software",
       testimonial:
-        "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "The team was amazing! Their expertise, attention to detail, and consistent communication made our project run smoothly. They delivered exceptional results that completely transformed our business. Highly professional and trustworthy.",
       img: client4,
     },
     {
       id: 5,
       name: "Peter",
-      company: "Wipro Limited IT, Company",
+      company: "IT Path Tech",
       testimonial:
-        "It is a long established fact that a reader will be distract The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "A reliable and dedicated team that delivered results beyond our expectations. Their proactive approach and willingness to go the extra mile made a significant difference in the success of our project.",
       img: client5,
     },
     {
       id: 6,
       name: "Allena Smith",
-      company: "HCL Technologies IT, Company",
+      company: "Royal Infotech",
       testimonial:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
+        "Working with them was a fantastic experience. They understood our needs, provided timely feedback, and delivered an outstanding result. Their professionalism and commitment to excellence are truly commendable.",
       img: client6,
     },
     {
       id: 7,
       name: "Sundar",
-      company: "Infosys IT, Company",
+      company: "Vinayak Infosoft",
       testimonial:
-        "that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "They exceeded all our expectations with their exceptional service and technical expertise. Every step of the project was handled efficiently, and the outcome was flawless. We're so grateful for their hard work.",
       img: client7,
     },
   ];
@@ -914,7 +911,7 @@ export default function Home() {
           >
             Do you want to hire an on-demand mobile app developer for a specific
             site? We provide on-demand developers a variety of technologies such
-            as iPhone, Android, PHP On-Demand.
+            as iOS, Android, Unity, PHP On-Demand.
           </p>
           <div className="mt-20 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mx-auto">
             {developers.map((develoer, idx) => {

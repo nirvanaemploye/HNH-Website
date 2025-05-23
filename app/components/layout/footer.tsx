@@ -185,17 +185,25 @@ const Footer = () => {
                   />
                 </li>
                 <li>
-                  <a
+                  {/* <a
                     href="https://in.linkedin.com/company/nirvana-tech-labs?_l=en_US"
                     target="_blank"
                   >
                     <Image
+                      
                       src={"/linkedin.svg"}
                       width={32.8}
                       height={32.8}
                       alt="linkedin"
                     />
-                  </a>
+                  </a> */}
+                  <Image
+                  
+                    src={"/linkedin.svg"}
+                    width={32.8}
+                    height={32.8}
+                    alt="linkedin"
+                  />
                 </li>
               </ul>
             </div>

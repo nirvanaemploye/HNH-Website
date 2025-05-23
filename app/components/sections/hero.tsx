@@ -48,6 +48,7 @@ Hit-N-Hammer is a premier tech solutions provider dedicated to transforming your
         </div>
         <Image
           src="/hero-image.png"
+          // src="/Image_10.png"
           width={745}
           height={808}
           alt="hero"

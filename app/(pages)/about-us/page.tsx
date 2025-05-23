@@ -4,17 +4,17 @@ import "./page.css";
 import Image from "next/image";
 
 // import teamMember1 from "../../../public/18155.jpg";
-import teamMember1 from "../../../public/karishma.png";
-import teamMember2 from "../../../public/nirav.png";
+import teamMember1 from "../../../public/karishma2.png";
+import teamMember2 from "../../../public/nirav1.png";
 // import teamMember3 from "../../../public/team-member-5.png";
 // import teamMember3 from "../../../public/anjani.png";
-import teamMember3 from "../../../public/anjani-bg.png";
+import teamMember3 from "../../../public/anjani1.png";
 import teamMember4 from "../../../public/roshan.png";
 import teamMember5 from "../../../public/dhruv.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
 // import teamMember8 from "../../../public/ayushi.png";
-import teamMember8 from "../../../public/ayushi-removebg-preview (2) (1)-modified.png";
+import teamMember8 from "../../../public/ayushi2.png";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -350,21 +350,20 @@ export default function AboutUs() {
           </div>
         </div>
 
-        
-
         <div className="lg:block hidden" data-aos="fade-up">
           <h3 className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto">
             Meet the best team ever
           </h3>
           <div className="mt-14 space-y-12">
             <div className="flex items-end justify-center gap-12">
-              <div className="">
+              {/* <div className="">
                 <Image
                   src={teamMember1}
                   // width={165}
                   // height={120}
                   width={163}
                   height={119}
+                  
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(1)}
                   onMouseLeave={handleMouseLeave}
@@ -373,8 +372,32 @@ export default function AboutUs() {
                     hoveredMember === 1 ? "imgTransform" : ""
                   }`}
                 />
+              </div> */}
+
+              <div
+                style={{
+                  width: 165,
+                  height: 121,
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "12px", // optional for rounded corners
+                }}
+              >
+                <Image
+                  src={teamMember1}
+                  alt="team member"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  onMouseEnter={() => handleMouseEnter(1)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`object-cover ${
+                    hoveredMember === 1 ? "imgTransform" : ""
+                  }`}
+                />
               </div>
-              <div>
+
+              {/* <div>
                 <Image
                   src={teamMember2}
                   width={232}
@@ -386,8 +409,32 @@ export default function AboutUs() {
                     hoveredMember === 2 ? "imgTransform" : ""
                   }`}
                 />
+              </div> */}
+
+              <div
+                style={{
+                  width: 232,
+                  height: 170,
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "12px",
+                }}
+              >
+                <Image
+                  src={teamMember2}
+                  alt="team member"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
+                  onMouseEnter={() => handleMouseEnter(2)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`object-cover ${
+                    hoveredMember === 2 ? "imgTransform" : ""
+                  }`}
+                />
               </div>
-              <div>
+
+              {/* <div>
                 <Image
                   src={teamMember3}
                   width={163}
@@ -399,14 +446,59 @@ export default function AboutUs() {
                     hoveredMember === 3 ? "imgTransform" : ""
                   }`}
                 />
+              </div> */}
+              <div
+                style={{
+                  width: 163,
+                  height: 119,
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "12px", // optional
+                }}
+              >
+                <Image
+                  src={teamMember3}
+                  alt="team member"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
+                  onMouseEnter={() => handleMouseEnter(3)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`object-cover ${
+                    hoveredMember === 3 ? "imgTransform" : ""
+                  }`}
+                />
               </div>
             </div>
             <div className="flex items-center justify-center gap-12">
-              <div>
+              {/* <div>
                 <Image
                   src={teamMember8}
                   width={232}
                   height={170}
+                  alt="team member"
+                  onMouseEnter={() => handleMouseEnter(8)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`object-cover ${
+                    hoveredMember === 8 ? "imgTransform" : ""
+                  }`}
+                />
+              </div> */}
+
+              <div
+                style={{
+                  width: 230,
+                  height: 170,
+                  overflow: "hidden",
+                  borderRadius: 8,
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={teamMember8}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
                   alt="team member"
                   onMouseEnter={() => handleMouseEnter(8)}
                   onMouseLeave={handleMouseLeave}
