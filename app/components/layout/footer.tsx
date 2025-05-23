@@ -199,7 +199,7 @@ const Footer = () => {
                   </a> */}
                   <Image
                   
-                    src={"/linkedin.svg"}
+                    src={"/linkedIn.svg"}
                     width={32.8}
                     height={32.8}
                     alt="linkedin"
