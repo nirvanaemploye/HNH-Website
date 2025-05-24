@@ -224,7 +224,7 @@ const developers = [
       {
         id: 1,
         name: "node",
-        src: "js.svg",
+        src: "JS.svg",
       },
       {
         id: 2,
@@ -448,9 +448,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="capitalize bg-primary hover:outline w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white"
-              data-aos="fade-up"
-              data-aos-duration="1700"
+              className="capitalize bg-primary w-fit px-8 py-3 rounded-xl mt-8 font-semibold text-white hover:scale-105 duration-300"
             >
               Read more
             </button>
@@ -918,7 +916,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="border-2 dark:bg-[#241653] border-primary rounded-tl-3xl rounded-br-3xl px-4 py-4"
+                  className="border-2 dark:bg-[#241653] border-primary rounded-tl-3xl rounded-br-3xl px-4 py-4 bg-[#ececec]"
                   data-aos="fade-right"
                   data-aos-offset="300"
                   data-aos-easing="ease-in-sine"
@@ -1128,11 +1126,14 @@ export default function Home() {
             Contact Hit-N-Hammer for expert solutions in web, app, and game
             development. We’re ready to bring your ideas to life! 🚀
           </p>
-          <button
-            className="mt-12 uppercase px-8 py-2 border border-[#927DFA] rounded-xl hover:bg-[#5533C8] hover:text-white"
+          {/* <button
+            className="mt-12 uppercase px-8 py-2 border bg-primary border-[#927DFA] rounded-xl text-white transform transition-transform duration-300 hover:scale-105"
             data-aos="zoom-out-up"
           >
-            <a href="/contact">contact us</a>
+            Contact Us
+          </button> */}
+          <button className="bg-primary hover:scale-105 mt-12 uppercase px-8 py-2 rounded-xl text-white duration-300 font-semibold text-base">
+            Contact Us
           </button>
         </div>
       </div>

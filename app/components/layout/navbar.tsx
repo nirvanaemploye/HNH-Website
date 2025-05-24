@@ -75,10 +75,16 @@ const Navbar = () => {
                   key={idx}
                   className={twMerge(
                     "uppercase font-medium",
-                    isactive && "text-primary border-b-2 border-primary"
+                    isactive ? "text-primary border-b-2 border-primary" : "",
+                    "hover:text-primary"
                   )}
                 >
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link
+                    href={item.href}
+                    className="transition-all duration-300"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               );
             })}

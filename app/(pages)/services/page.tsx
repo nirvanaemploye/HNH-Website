@@ -40,8 +40,7 @@ const services = [
       "We offer PHP, Node.js, React.js, and custom CMS web development tailored to your business needs.",
     services: [
       "PHP Web Development",
-      "Wordpress Development",
-      "Web Development",
+      "WordPress Development",
       "Custom CMS Development",
     ],
     toolImages: [
@@ -92,7 +91,7 @@ const services = [
     toolImages: [
       { name: "unity", image: "/unity_svgrepo.com.svg" },
       { name: "photoshop", image: "/ps-icon.svg" },
-      { name: "visual studio", image: "/visual-studio-icon.svg" },
+      { name: "cSharp", image: "/csharp_svgrepo.com.svg" },
       { name: "blender", image: "/blender-icon.svg" },
     ],
   },

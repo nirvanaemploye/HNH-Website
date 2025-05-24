@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "@/app/components/context/themeContext";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaPlay, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -41,7 +41,7 @@ const StoriesPage = () => {
     backgroundRepeat: "no-repeat",
   };
 
-  // Sample gallery items - replace with your actual content
+  // Gallery items data
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
@@ -66,7 +66,7 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities1.jpeg",
       category: "activity",
-      title: "Work activity",
+      title: "Work Activity",
       description: "Our vibrant work environment",
       size: "small",
     },
@@ -84,7 +84,7 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities2.jpeg",
       category: "activity",
-      title: "Work activity",
+      title: "Work Activity",
       description: "Our vibrant work environment",
       size: "small",
     },
@@ -102,7 +102,7 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities3.jpeg",
       category: "activity",
-      title: "Work activity",
+      title: "Work Activity",
       description: "Our vibrant work environment",
       size: "small",
     },
@@ -111,7 +111,7 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities4.jpeg",
       category: "activity",
-      title: "Work activity",
+      title: "Work Activity",
       description: "Our vibrant work environment",
       size: "small",
     },
@@ -169,221 +169,295 @@ const StoriesPage = () => {
     { id: "activity", label: "Activities" },
   ];
 
-  const filteredItems =
-    activeFilter === "all"
+  // Memoize filtered items to prevent unnecessary recalculations
+  const filteredItems = React.useMemo(() => {
+    return activeFilter === "all"
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeFilter);
+  }, [activeFilter]);
 
-  const handleItemClick = (
-    item: GalleryItem,
-    index: number
-    // event: React.MouseEvent
-  ) => {
+  const handleItemClick = useCallback((item: GalleryItem, index: number) => {
     setSelectedItem(item);
     setCurrentIndex(index);
     setIsModalOpen(true);
-  };
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = "hidden";
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedItem(null);
-  };
+    // Restore body scroll
+    document.body.style.overflow = "unset";
+  }, []);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? filteredItems.length - 1 : prevIndex - 1
-    );
-  };
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex =
+        prevIndex === 0 ? filteredItems.length - 1 : prevIndex - 1;
+      setSelectedItem(filteredItems[newIndex]);
+      return newIndex;
+    });
+  }, [filteredItems]);
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === filteredItems.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => {
+      const newIndex =
+        prevIndex === filteredItems.length - 1 ? 0 : prevIndex + 1;
+      setSelectedItem(filteredItems[newIndex]);
+      return newIndex;
+    });
+  }, [filteredItems]);
 
+  // Handle keyboard navigation
   useEffect(() => {
-    if (isModalOpen && filteredItems[currentIndex]) {
-      setSelectedItem(filteredItems[currentIndex]);
-    }
-  }, [currentIndex, isModalOpen, filteredItems]);
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (!isModalOpen) return;
 
+      switch (e.key) {
+        case "Escape":
+          closeModal();
+          break;
+        case "ArrowLeft":
+          goToPrevious();
+          break;
+        case "ArrowRight":
+          goToNext();
+          break;
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, [isModalOpen, closeModal, goToPrevious, goToNext]);
+
+  // Initialize AOS
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
+      easing: "ease-out-cubic",
     });
   }, []);
 
+  // Cleanup body overflow on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   return (
-    <div
-      className="dark:text-white dark:bg-[#170C3F] md:pb-32 overflow-hidden"
-      style={theme === "dark" ? bgDark : bgLight}
-      data-aos="fade-in"
-    >
-      <div className="pt-[250px] container max-w-[1320px] mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="font-serif text-4xl md:text-6xl mb-4">
-            <span
-              className={theme === "dark" ? "text-gradient" : "text-gradient1"}
-            >
-              Our
-            </span>
-            <span> Stories</span>
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Experience the vibrant culture and exciting moments at Hit-N-Hammer
-            through our gallery of memories.
-          </p>
-        </div>
+    <>
+      <div
+        className="dark:text-white dark:bg-[#170C3F] md:pb-32 overflow-hidden min-h-screen"
+        style={theme === "dark" ? bgDark : bgLight}
+        data-aos="fade-in"
+      >
+        <div className="pt-[250px] container max-w-[1320px] mx-auto px-4">
+          {/* Header Section */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h1 className="font-serif text-4xl md:text-6xl mb-4">
+              <span
+                className={
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                }
+              >
+                Our
+              </span>
+              <span> Stories</span>
+            </h1>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Experience the vibrant culture and exciting moments at
+              Hit-N-Hammer through our gallery of memories.
+            </p>
+          </div>
 
-        <SimpleSlider />
+          {/* Video Slider */}
+          <div data-aos="fade-up" data-aos-delay="200">
+            <SimpleSlider />
+          </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full transition-all filter-button ${
-                activeFilter === filter.id
-                  ? "bg-primary text-gray-1000 font-medium"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Masonry Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-auto">
-          {filteredItems.map((item, index) => (
-            <div
-              key={item.id}
-              onClick={() => handleItemClick(item, index)}
-              className={`group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-gray-700 cursor-pointer gallery-item transition-all duration-300
-                ${item.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
-                ${item.size === "medium" ? "md:col-span-2" : ""}
-                hover:shadow-xl`}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div
-                className={`relative flex items-center justify-center ${
-                  item.size === "large"
-                    ? "aspect-[16/9]"
-                    : item.size === "medium"
-                    ? "aspect-[16/7]"
-                    : "aspect-[1/1] min-h-[200px]"
+          {/* Filter Buttons */}
+          <div
+            className="flex flex-wrap justify-center gap-4 mb-12"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            {filters.map((filter) => (
+              <button
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`px-6 py-3 rounded-full transition-all duration-300 font-medium ${
+                  activeFilter === filter.id
+                    ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg transform scale-105"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-md"
                 }`}
               >
-                {item.type === "video" ? (
-                  <>
-                    <Image
-                      src={item.thumbnail || item.src}
-                      alt={item.title}
-                      fill
-                      className="object-contain transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                      <FaPlay className="text-white text-4xl transform transition-transform duration-300 group-hover:scale-110" />
-                    </div>
-                  </>
-                ) : (
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    fill
-                    className={`transition-transform duration-300 group-hover:scale-105 ${
-                      item.size === "small" ? "object-contain" : "object-cover"
-                    }`}
-                  />
-                )}
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                <p className="text-sm opacity-90">{item.description}</p>
-              </div>
-              <div className="absolute top-2 right-2 bg-white/80 dark:bg-black/80 rounded-full p-2">
-                {item.type === "video" ? (
-                  <FaPlay className="text-primary" />
-                ) : (
-                  <LuImage className="text-primary" />
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+                {filter.label}
+              </button>
+            ))}
+          </div>
 
-        {/* Modal */}
-        {isModalOpen && selectedItem && (
-          <div className="fixed inset-0 z-50">
-            {/* Backdrop */}
-            <div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
-              onClick={closeModal}
-            />
-
-            {/* Modal container */}
-            {/* <div className="fixed bottom-0 left-0 right-0 w-full max-w-7xl mx-auto px-4"> */}
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl px-4">
-              <div className="relative">
-                {/* Close Button */}
-                <button
-                  onClick={closeModal}
-                  className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-auto">
+            {filteredItems.map((item, index) => (
+              <div
+                key={item.id}
+                onClick={() => handleItemClick(item, index)}
+                className={`gallery-item group relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/30 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2
+                  ${item.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
+                  ${item.size === "medium" ? "md:col-span-2" : ""}
+                `}
+                data-aos="zoom-in"
+                data-aos-delay={index * 50}
+              >
+                <div
+                  className={`relative overflow-hidden ${
+                    item.size === "large"
+                      ? "aspect-[16/9]"
+                      : item.size === "medium"
+                      ? "aspect-[16/8]"
+                      : "aspect-square min-h-[315px]"
+                  }`}
                 >
-                  <FaTimes className="text-3xl" />
-                </button>
-
-                {/* Navigation Arrows */}
-                <button
-                  onClick={goToPrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/70 rounded-full p-3 z-10"
-                >
-                  <FaChevronLeft className="text-xl" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/70 rounded-full p-3 z-10"
-                >
-                  <FaChevronRight className="text-xl" />
-                </button>
-
-                {/* Modal content */}
-                <div className="relative rounded-t-xl overflow-hidden bg-white/5 backdrop-blur-md w-full">
-                  {selectedItem.type === "video" ? (
-                    <video
-                      src={selectedItem.src}
-                      controls
-                      autoPlay
-                      className="w-full h-auto max-h-[80vh] object-contain"
-                    />
+                  {item.type === "video" ? (
+                    <>
+                      <Image
+                        src={item.thumbnail || item.src}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 flex items-center justify-center">
+                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 transform transition-all duration-300 group-hover:scale-125 group-hover:bg-white/30">
+                          <FaPlay className="text-white text-2xl ml-1" />
+                        </div>
+                      </div>
+                    </>
                   ) : (
                     <Image
-                      src={selectedItem.src}
-                      alt={selectedItem.title}
-                      width={1920}
-                      height={1080}
-                      className="w-full h-auto max-h-[80vh] object-contain"
+                      src={item.src}
+                      alt={item.title}
+                      fill
+                      
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
                   )}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
-                    <h3 className="text-2xl font-semibold mb-2">
-                      {selectedItem.title}
-                    </h3>
-                    <p className="text-gray-200">{selectedItem.description}</p>
-                    <div className="mt-2 text-sm text-gray-300">
-                      {currentIndex + 1} of {filteredItems.length}
-                    </div>
+
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-bold mb-2 text-shadow-lg">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm opacity-90 text-shadow">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Type indicator */}
+                <div className="absolute top-3 right-3 bg-white/90 dark:bg-black/80 rounded-full p-2 shadow-lg">
+                  {item.type === "video" ? (
+                    <FaPlay className="text-purple-600 text-sm" />
+                  ) : (
+                    <LuImage className="text-purple-600 text-sm" />
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced Modal */}
+      {isModalOpen && selectedItem && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm overflow-auto">
+          {/* Close Button */}
+          <button
+            onClick={closeModal}
+            className="fixed top-6 right-6 z-30 text-white hover:text-purple-400 transition-colors duration-200 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Close modal"
+          >
+            <FaTimes className="text-2xl" />
+          </button>
+
+          {/* Navigation Buttons */}
+          {filteredItems.length > 1 && (
+            <>
+              <button
+                onClick={goToPrevious}
+                className="fixed left-6 top-1/2 -translate-y-1/2 z-30 text-white bg-black/50 hover:bg-black/70 rounded-full p-4 transition-all duration-200 hover:scale-110"
+                aria-label="Previous image"
+              >
+                <FaChevronLeft className="text-xl" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="fixed right-6 top-1/2 -translate-y-1/2 z-30 text-white bg-black/50 hover:bg-black/70 rounded-full p-4 transition-all duration-200 hover:scale-110"
+                aria-label="Next image"
+              >
+                <FaChevronRight className="text-xl" />
+              </button>
+            </>
+          )}
+
+          {/* Modal Content */}
+          <div className="relative w-full max-w-6xl flex flex-col items-center">
+            {/* Image Container */}
+            <div className="relative w-full flex justify-center items-center">
+              {selectedItem.type === "video" ? (
+                <video
+                  src={selectedItem.src}
+                  controls
+                  autoPlay
+                  className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                />
+              ) : (
+                <div className="flex justify-center items-center max-h-[90vh]">
+                  <Image
+                    src={selectedItem.src}
+                    alt={selectedItem.title}
+                    width={1920}
+                    height={1080}
+                    className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
+                    style={{ maxHeight: "90vh" }}
+                    priority
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="mt-6 w-full p-6 bg-black/60 backdrop-blur-md rounded-xl text-white">
+              <div className="flex justify-between items-start">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 text-purple-400">
+                    {selectedItem.title}
+                  </h3>
+                  <p className="text-gray-200 text-lg mb-2">
+                    {selectedItem.description}
+                  </p>
+                  <div className="text-sm text-gray-400 capitalize">
+                    Category: {selectedItem.category}
+                  </div>
+                </div>
+                <div className="text-right text-sm text-gray-400">
+                  <div className="bg-white/10 rounded-lg px-3 py-2">
+                    {currentIndex + 1} of {filteredItems.length}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 

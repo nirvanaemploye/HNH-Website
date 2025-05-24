@@ -190,14 +190,12 @@ const Footer = () => {
                     target="_blank"
                   >
                     <Image
-                      
                       src={"/linkedIn.svg"}
                       width={32.8}
                       height={32.8}
                       alt="linkedin"
                     />
                   </a>
-                  
                 </li>
               </ul>
             </div>

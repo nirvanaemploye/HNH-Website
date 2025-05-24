@@ -6,87 +6,27 @@ import { ImAndroid } from "react-icons/im";
 import { TbWorld } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 
-const portfolioTyps = [
-  {
-    id: 1,
-    key: "all",
-    name: "All",
-  },
-  {
-    id: 2,
-    key: "uiux",
-    name: "UI/UX Design",
-  },
-  {
-    id: 3,
-    key: "android",
-    name: "Android/IOS",
-  },
-  {
-    id: 4,
-    key: "web",
-    name: "Website/Webapps",
-  },
-  {
-    id: 5,
-    key: "Games",
-    name: "Games",
-  },
-];
+interface PortfolioItem {
+  id: number;
+  name: string;
+  image: string;
+  key: string;
+  icon: any;
+}
 
-const portfolioItems = [
-  {
-    id: 1,
-    name: "Petro Website",
-    // icon: "website-icon.png",
-    icon: <TbWorld />,
-    image: "/petro-website.png",
-    key: "web",
-  },
-  {
-    id: 2,
-    name: "Artix",
-    // icon: "android-icon.png",
-    icon: <ImAndroid />,
-    image: "/artix.png",
-    key: "android",
-  },
-  {
-    id: 3,
-    name: "QuizzPe",
-    // icon: "web-icon.png",
-    icon: <FaApple />,
-    image: "/quizzpe.png",
-    key: "web",
-  },
-  {
-    id: 4,
-    name: "PlayFit",
-    // icon: "ios-icon.png",
-    icon: <FaApple />,
-    image: "/playfit.png",
-    key: "ios",
-  },
-  {
-    id: 5,
-    name: "Banking App",
-    // icon: "androidweb-icon.png",
-    icon: <TbWorld />,
-    image: "/bankingapp.png",
-    key: "web",
-  },
-  {
-    id: 6,
-    name: "Hexa Club",
-    // icon: "ios-icon.png",
-    icon: <FaApple />,
-    image: "/hexaclub.png",
-    key: "ios",
-  },
-];
-
-const PortfolioItems = () => {
-  const [selectedPortfolioType, setSelectedPortfolioType] = useState("all");
+const PortfolioItems = ({
+  portfolioTyps,
+  portfolioItems,
+  selectedType = "all",
+  setSelectedPortfolioType,
+}: {
+  selectedType: string;
+  portfolioTyps: any;
+  portfolioItems: PortfolioItem[];
+  setSelectedPortfolioType:any;
+}) => {
+  console.log(selectedType, "<-- type");
+  //const [selectedPortfolioType, setSelectedPortfolioType] = useState("all");
 
   const handlePortfolioTypeChange = (type: string) => {
     setSelectedPortfolioType(type);
@@ -102,13 +42,13 @@ const PortfolioItems = () => {
   return (
     <div className="portfolio-section" id="portfolio-section">
       <div className="flex flex-wrap items-center justify-center gap-4">
-        {portfolioTyps.map((type, idx) => {
+        {portfolioTyps.map((type: any, idx: number) => {
           return (
             <button
               onClick={() => handlePortfolioTypeChange(type.key)}
               className={twMerge(
                 "px-6 py-3 rounded-xl transition-all duration-300",
-                type.key === selectedPortfolioType
+                type.key === selectedType
                   ? "bg-primary dark:text-white"
                   : "bg-[#1A142C] text-white border border-primary hover:bg-primary/10"
               )}
@@ -120,8 +60,8 @@ const PortfolioItems = () => {
         })}
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-12 gap-y-32 mt-16">
-        {selectedPortfolioType === "all"
-          ? portfolioItems.map((item, idx) => {
+        {selectedType === "all"
+          ? portfolioItems.map((item: any, idx: number) => {
               return (
                 <div key={idx} className="relative">
                   <Image
@@ -139,8 +79,8 @@ const PortfolioItems = () => {
               );
             })
           : portfolioItems
-              .filter((item) => item.key === selectedPortfolioType)
-              .map((item, idx) => {
+              .filter((item: any) => item.key === selectedType)
+              .map((item: any, idx: number) => {
                 return (
                   <div key={idx} className="relative">
                     <Image

@@ -10,7 +10,7 @@ import teamMember2 from "../../../public/nirav1.png";
 // import teamMember3 from "../../../public/anjani.png";
 import teamMember3 from "../../../public/anjani1.png";
 import teamMember4 from "../../../public/roshan1.png";
-import teamMember5 from "../../../public/dhruv.png";
+import teamMember5 from "../../../public/Dhruv_Mistry1.png";
 import teamMember6 from "../../../public/team-member-4.png";
 import teamMember7 from "../../../public/team-member-7.png";
 // import teamMember8 from "../../../public/ayushi.png";
@@ -382,6 +382,9 @@ export default function AboutUs() {
                   overflow: "hidden",
                   borderRadius: "12px", // optional for rounded corners
                 }}
+                className={`object-cover ${
+                  hoveredMember === 1 ? "imgTransform" : ""
+                }`}
               >
                 <Image
                   src={teamMember1}
@@ -419,6 +422,9 @@ export default function AboutUs() {
                   overflow: "hidden",
                   borderRadius: "12px",
                 }}
+                className={`object-cover ${
+                  hoveredMember === 2 ? "imgTransform" : ""
+                }`}
               >
                 <Image
                   src={teamMember2}
@@ -455,6 +461,9 @@ export default function AboutUs() {
                   overflow: "hidden",
                   borderRadius: "12px", // optional
                 }}
+                className={`object-cover ${
+                  hoveredMember === 3 ? "imgTransform" : ""
+                }`}
               >
                 <Image
                   src={teamMember3}
@@ -493,6 +502,9 @@ export default function AboutUs() {
                   borderRadius: 8,
                   position: "relative",
                 }}
+                className={`object-cover ${
+                  hoveredMember === 8 ? "imgTransform" : ""
+                }`}
               >
                 <Image
                   src={teamMember8}
@@ -544,6 +556,9 @@ export default function AboutUs() {
                   borderRadius: 8,
                   position: "relative",
                 }}
+                className={`object-cover ${
+                  hoveredMember === 4 ? "imgTransform" : ""
+                }`}
               >
                 <Image
                   src={teamMember4}
@@ -560,7 +575,11 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="flex items-start justify-center gap-12">
-              <div>
+              <div
+                className={`object-cover ${
+                  hoveredMember === 7 ? "imgTransform" : ""
+                }`}
+              >
                 <Image
                   src={teamMember7}
                   width={163}
@@ -573,7 +592,11 @@ export default function AboutUs() {
                   }`}
                 />
               </div>
-              <div>
+              <div
+                className={`object-cover ${
+                  hoveredMember === 6 ? "imgTransform" : ""
+                }`}
+              >
                 <Image
                   src={teamMember6}
                   width={232}
@@ -586,7 +609,18 @@ export default function AboutUs() {
                   }`}
                 />
               </div>
-              <div>
+              <div
+                style={{
+                  width: 163,
+                  height: 119,
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "12px", // optional
+                }}
+                className={`object-cover ${
+                  hoveredMember === 5 ? "imgTransform" : ""
+                }`}
+              >
                 <Image
                   src={teamMember5}
                   width={163}

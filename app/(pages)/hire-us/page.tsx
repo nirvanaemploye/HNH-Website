@@ -14,7 +14,7 @@ const hireUsData = [
       "Expert designers who create beautiful and intuitive user interfaces",
     image: "ui-ux-icon.svg",
     image1: "ui-ux-dark-icon.svg",
-    skills: ["Figma", "Adobe XD", "Sketch", "InVision"],
+    skills: ["Figma", "PhotoShop", "Illustartor", "AfterEffect", "CapCut"],
     rate: "$25/hour",
     experience: "3+ years",
   },

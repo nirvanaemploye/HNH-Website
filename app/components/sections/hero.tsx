@@ -39,9 +39,9 @@ Hit-N-Hammer is a premier tech solutions provider dedicated to transforming your
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-primary px-8 py-3 hover:outline rounded-lg mt-8 font-semibold text-base text-white"
-            data-aos="fade-up"
-            data-aos-duration="1200"
+            /* className="bg-primary px-8 py-3 hover:scale-150 rounded-lg mt-8 font-semibold text-base text-white" */
+            className="bg-primary hover:scale-105 px-8 py-3 mt-8 rounded-lg font-semibold text-base text-white duration-300"
+            
           >
             Learn More
           </button>
