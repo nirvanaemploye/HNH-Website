@@ -1,17 +1,19 @@
-"use client";
+/* "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import { FaApple } from "react-icons/fa";
-import { ImAndroid } from "react-icons/im";
-import { TbWorld } from "react-icons/tb";
+import React from "react";
 import { twMerge } from "tailwind-merge";
+
+interface PortfolioType {
+  key: string;
+  name: string;
+}
 
 interface PortfolioItem {
   id: number;
   name: string;
   image: string;
   key: string;
-  icon: any;
+  icon: React.ReactNode;
 }
 
 const PortfolioItems = ({
@@ -23,7 +25,7 @@ const PortfolioItems = ({
   selectedType: string;
   portfolioTyps: any;
   portfolioItems: PortfolioItem[];
-  setSelectedPortfolioType:any;
+  setSelectedPortfolioType: any;
 }) => {
   console.log(selectedType, "<-- type");
   //const [selectedPortfolioType, setSelectedPortfolioType] = useState("all");
@@ -96,6 +98,94 @@ const PortfolioItems = ({
                   </div>
                 );
               })}
+      </div>
+    </div>
+  );
+};
+
+export default PortfolioItems;
+ */
+
+
+"use client";
+import Image from "next/image";
+import React from "react";
+import { twMerge } from "tailwind-merge";
+
+interface PortfolioType {
+  key: string;
+  name: string;
+}
+
+interface PortfolioItem {
+  id: number;
+  name: string;
+  image: string;
+  key: string;
+  icon: React.ReactNode;
+}
+
+interface Props {
+  selectedType: string;
+  portfolioTyps: PortfolioType[];
+  portfolioItems: PortfolioItem[];
+  setSelectedPortfolioType: (type: string) => void;
+}
+
+const PortfolioItems: React.FC<Props> = ({
+  portfolioTyps,
+  portfolioItems,
+  selectedType = "all",
+  setSelectedPortfolioType,
+}) => {
+  const handlePortfolioTypeChange = (type: string) => {
+    setSelectedPortfolioType(type);
+    setTimeout(() => {
+      const portfolioSection = document.querySelector(".portfolio-section");
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
+
+  return (
+    <div className="portfolio-section" id="portfolio-section">
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {portfolioTyps.map((type, idx) => (
+          <button
+            onClick={() => handlePortfolioTypeChange(type.key)}
+            className={twMerge(
+              "px-6 py-3 rounded-xl transition-all duration-300",
+              type.key === selectedType
+                ? "bg-primary dark:text-white"
+                : "bg-[#1A142C] text-white border border-primary hover:bg-primary/10"
+            )}
+            key={idx}
+          >
+            {type.name}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-12 gap-y-32 mt-16">
+        {(selectedType === "all"
+          ? portfolioItems
+          : portfolioItems.filter((item) => item.key === selectedType)
+        ).map((item, idx) => (
+          <div key={idx} className="relative">
+            <Image
+              src={item.image}
+              width={370}
+              height={260}
+              alt={item.name}
+              className="w-full h-[300px] object-cover rounded-xl"
+            />
+            <div className="absolute -bottom-[40px] left-0 right-0 bg-white rounded-xl flex flex-col items-center justify-center w-[225px] h-[80px] mx-auto hover:border-[#8B68FF] hover:text-[#8B68FF] text-black font-bold hover:border-2">
+              <h3 className="text-black">{item.name}</h3>
+              <h1 className="text-2xl">{item.icon}</h1>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
