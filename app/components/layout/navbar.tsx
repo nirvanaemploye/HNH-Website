@@ -81,9 +81,10 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="transition-all duration-300"
+                    className="relative group inline-block transition-all duration-300 text-inherit"
                   >
                     {item.name}
+                    <span className="absolute left-0 bottom-0 h-0.5 w-full origin-center scale-x-0 transform bg-primary transition-transform duration-500 group-hover:scale-x-100" />
                   </Link>
                 </li>
               );

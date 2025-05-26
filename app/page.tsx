@@ -269,6 +269,11 @@ const developers = [
         name: "csharp",
         src: "csharp_svgrepo.com.svg",
       },
+      {
+        id: 4,
+        name: "blender",
+        src: "blender-icon.svg",
+      },
     ],
   },
 ];

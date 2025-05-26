@@ -83,7 +83,7 @@ const PortfolioPage = () => {
       id: 3,
       name: "Coffee shop",
       // icon: "web-icon.png",
-      icon: <FaApple />,
+      icon: <TbWorld />,
       image: "/Coffee_web.png",
       key: "web",
     },
