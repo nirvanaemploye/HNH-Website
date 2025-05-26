@@ -151,9 +151,27 @@ const StoriesPage = () => {
       description: "",
       size: "small",
     },
-
     {
       id: 13,
+      type: "image",
+      src: "/sandwich.jpg",
+      category: "activity",
+      title: "Party",
+      description: "Office Treat Time",
+      size: "small",
+    },
+    {
+      id: 14,
+      type: "image",
+      src: "/sandwich2.jpg",
+      category: "activity",
+      title: "Party",
+      description: "Tasty Break Moments",
+      size: "small",
+    },
+
+    {
+      id: 15,
       type: "image",
       src: "/company1.jpeg",
       category: "team",
@@ -162,7 +180,7 @@ const StoriesPage = () => {
       size: "medium",
     },
     {
-      id: 14,
+      id: 16,
       type: "image",
       src: "/company2.jpeg",
       category: "team",

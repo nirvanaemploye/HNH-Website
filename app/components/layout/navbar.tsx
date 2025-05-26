@@ -76,7 +76,7 @@ const Navbar = () => {
                   className={twMerge(
                     "uppercase font-medium",
                     isactive ? "text-primary border-b-2 border-primary" : "",
-                    "hover:text-primary"
+                    
                   )}
                 >
                   <Link
