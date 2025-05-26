@@ -266,14 +266,17 @@ const StoriesPage = () => {
       >
         <div className="pt-[250px] container max-w-[1320px] mx-auto px-4">
           {/* Header Section */}
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h1 className="font-serif sm:text-8xl text-4xl mb-4 borderFont">
+          <div
+            className="text-center mb-16 overflow-visible"
+            data-aos="fade-up"
+          >
+            <h1 className="font-serif sm:text-8xl text-4xl mb-4 borderFont leading-[1.5]">
               <span
-                className={
-                  theme === "dark" ? "text-gradient" : "text-gradient1" 
-                }
+                className={`${
+                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                } pr-[0.2rem]`}
               >
-                Our 
+                Our
               </span>
               <span> Stories</span>
             </h1>
