@@ -420,7 +420,7 @@ export default function Home() {
           />
           <div className="flex flex-col gap-2">
             <span
-              className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center"
+              className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center "
               data-aos="fade-up"
               data-aos-duration="500"
             >
@@ -466,13 +466,13 @@ export default function Home() {
               >
                 OUR SERVICES
               </span>
-              <h1
+              <h3
                 className="uppercase font-serif dark:text-[#ffffff] text-[#171616] font-bold text-[40px]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
                 HIT-N-HAMMER SERVICES
-              </h1>
+              </h3>
               <p
                 className="leading-9 dark:text-[#B7B0B0] text-[#717070] text-lg"
                 data-aos="fade-up"

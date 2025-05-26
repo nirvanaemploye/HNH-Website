@@ -49,7 +49,7 @@ const StoriesPage = () => {
       src: "/cele1.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -57,8 +57,8 @@ const StoriesPage = () => {
       type: "image",
       src: "/team.jpeg",
       category: "team",
-      title: "Team Building",
-      description: "Team building activities",
+      title: "Team",
+      description: "Festival Vibes in Air",
       size: "medium",
     },
     {
@@ -66,8 +66,8 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities1.jpeg",
       category: "activity",
-      title: "Work Activity",
-      description: "Our vibrant work environment",
+      title: "WaterPark",
+      description: "Outdoor fun with Team",
       size: "small",
     },
     {
@@ -76,7 +76,7 @@ const StoriesPage = () => {
       src: "/cele2.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -84,8 +84,8 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities2.jpeg",
       category: "activity",
-      title: "Work Activity",
-      description: "Our vibrant work environment",
+      title: "WaterPark",
+      description: "Picnic Days to Remember",
       size: "small",
     },
     {
@@ -94,7 +94,7 @@ const StoriesPage = () => {
       src: "/cele3.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -102,11 +102,11 @@ const StoriesPage = () => {
       type: "image",
       src: "/activities3.jpeg",
       category: "activity",
-      title: "Work Activity",
-      description: "Our vibrant work environment",
+      title: "Chill Vibes",
+      description: "Moving With Joyful Vibes",
       size: "small",
     },
-    {
+    /* {
       id: 8,
       type: "image",
       src: "/activities4.jpeg",
@@ -114,14 +114,14 @@ const StoriesPage = () => {
       title: "Work Activity",
       description: "Our vibrant work environment",
       size: "small",
-    },
+    }, */
     {
       id: 9,
       type: "image",
       src: "/cele4.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -130,7 +130,7 @@ const StoriesPage = () => {
       src: "/cele5.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -139,7 +139,7 @@ const StoriesPage = () => {
       src: "/cele6.jpeg",
       category: "celebration",
       title: "Team Celebration",
-      description: "Annual team celebration event",
+      description: "Diwali Celebration",
       size: "small",
     },
     {
@@ -147,8 +147,8 @@ const StoriesPage = () => {
       type: "image",
       src: "/company1.jpeg",
       category: "team",
-      title: "Team Building",
-      description: "Team building activities",
+      title: "Work Culture",
+      description: "Teamwork in Motion",
       size: "medium",
     },
     {
@@ -156,8 +156,8 @@ const StoriesPage = () => {
       type: "image",
       src: "/company2.jpeg",
       category: "team",
-      title: "Team Building",
-      description: "Team building activities",
+      title: "Team",
+      description: "Growing Together Daily",
       size: "medium",
     },
   ];
