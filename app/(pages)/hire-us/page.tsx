@@ -14,7 +14,7 @@ const hireUsData = [
       "Expert designers who create beautiful and intuitive user interfaces",
     image: "ui-ux-icon.svg",
     image1: "ui-ux-dark-icon.svg",
-    skills: ["Figma", "PhotoShop", "Illustartor", "AfterEffect", "CapCut"],
+    skills: ["Figma", "PhotoShop", "Illustrator", "AfterEffect", "CapCut"],
     rate: "$25/hour",
     experience: "3+ years",
   },
@@ -31,7 +31,9 @@ const hireUsData = [
   {
     id: 3,
     title: "Mobile Developers",
-    description: "Native and cross-platform mobile app developers",
+    /* description: "Native and cross-platform mobile app developers", */
+    description:
+      "From native to cross-platform, we create mobile apps that engage users and deliver results.",
     image: "/Mobile_Development.svg",
     image1: "/Mobile_Development_Dark.svg",
     skills: ["React Native", "Flutter", "iOS", "Android"],
@@ -41,7 +43,9 @@ const hireUsData = [
   {
     id: 4,
     title: "Game Developers",
-    description: "Creative developers who bring games to life",
+    /* description: "Creative developers who bring games to life", */
+    description:
+      "Innovative minds transforming visions into engaging, real-time gaming adventures.",
     image: "/game _Development.svg",
     image1: "/game_DeveopmentDark.svg",
     skills: ["Unity", "Unreal Engine", "C#", "Game Design"],

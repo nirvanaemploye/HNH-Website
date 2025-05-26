@@ -113,10 +113,33 @@ const PortfolioPage = () => {
     },
     {
       id: 7,
-      name: "Figma",
+      name: "Multiwin",
       icon: <FaApple />,
-      image: "/Multiwin (1).png",
+      image: "/Multiwin(2).png",
       key: "games",
+    },
+    {
+      id: 8,
+      name: "Chapa kata",
+      icon: <FaApple />,
+      image: "/Chapa_kata(1).png",
+      key: "games",
+    },
+    {
+      id: 9,
+      name: "Luvr",
+      // icon: "ios-icon.png",
+      icon: <FaApple />,
+      image: "/Luvr(1).png",
+      key: "android",
+    },
+    {
+      id: 10,
+      name: "Dailysync",
+      // icon: "ios-icon.png",
+      icon: <ImAndroid />,
+      image: "/Dailysync(1).png",
+      key: "android",
     },
   ];
 
