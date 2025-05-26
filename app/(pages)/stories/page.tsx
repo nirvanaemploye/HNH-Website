@@ -270,10 +270,10 @@ const StoriesPage = () => {
             <h1 className="font-serif sm:text-8xl text-4xl mb-4 borderFont">
               <span
                 className={
-                  theme === "dark" ? "text-gradient" : "text-gradient1"
+                  theme === "dark" ? "text-gradient" : "text-gradient1" 
                 }
               >
-                Our
+                Our 
               </span>
               <span> Stories</span>
             </h1>

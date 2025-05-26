@@ -10,6 +10,7 @@ function SimpleSlider() {
     speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
+    
   };
 
   const videos = [

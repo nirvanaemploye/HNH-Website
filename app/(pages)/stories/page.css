@@ -228,3 +228,46 @@
 .top-\[550px\] {
   top: 550px;
 }
+
+
+
+
+/* Default (light mode) dots style */
+.slick-dots li button:before {
+  color: #333; /* Light mode dot color */
+}
+
+/* Dark mode dots style */
+html.dark .slick-dots li button:before {
+  color: #fff; /* Dark mode dot color */
+}
+
+/* Optional: change dot color when active (selected dot) */
+.slick-dots li.slick-active button:before {
+  color: #6034f0; /* Active dot color */
+}
+
+
+/* Custom arrow styling for react-slick */
+.slick-prev,
+.slick-next {
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+/* Align arrows vertically center */
+.slick-prev::before,
+.slick-next::before {
+  font-size: 30px; /* Increase arrow size */
+  color: rgb(142, 140, 140); /* Optional: change arrow color */
+}
+
+/* Adjust spacing so arrows don't hug the video */
+.slick-prev {
+  left: -70px !important; /* Move it more to the left */
+}
+
+.slick-next {
+  right: -70px !important; /* Move it more to the right */
+}
