@@ -143,7 +143,7 @@ const developers = [
       {
         id: 4,
         name: "react",
-        src: "React.js.svg",
+        src: "REACT.svg",
       },
     ],
   },
@@ -420,7 +420,7 @@ export default function Home() {
           />
           <div className="flex flex-col gap-2">
             <span
-              className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center "
+              className="uppercase text-primary text-2xl font-medium border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF] pb-1 w-fit md:text-start text-center "
               data-aos="fade-up"
               data-aos-duration="500"
             >
@@ -459,7 +459,7 @@ export default function Home() {
           <div className="servicesContainer ">
             <div className="servicesHeading gap-2">
               <span
-                className="uppercase text-primary text-xl border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF]
+                className="uppercase text-primary text-2xl font-medium  border-b-2 border-dashed dark:border-[#FFFFFF] border-[#9D80FF]
               pb-1 w-fit"
                 data-aos="fade-up"
                 data-aos-duration="500"
@@ -1054,7 +1054,7 @@ export default function Home() {
             <div className="testimonialContainer1">
               <div className="testimonialTitle1">
                 <p
-                  className="font-serif text-[#6c42f8] border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed"
+                  className="font-serif text-primary border-b-2 dark:border-[#FFFFFF] border-[#9D80FF] border-dashed"
                   data-aos="zoom-out-down"
                 >
                   CLIENTS TESTIMONIAL

@@ -100,7 +100,7 @@ const StoriesPage = () => {
     {
       id: 7,
       type: "image",
-      src: "/activities3.jpeg",
+      src: "/Company_trip2_2025.jpg",
       category: "activity",
       title: "Chill Vibes",
       description: "Moving With Joyful Vibes",
@@ -145,6 +145,16 @@ const StoriesPage = () => {
     {
       id: 12,
       type: "image",
+      src: "/Company_trip1_2025.jpg",
+      category: "activity",
+      title: "WaterPark",
+      description: "",
+      size: "small",
+    },
+
+    {
+      id: 13,
+      type: "image",
       src: "/company1.jpeg",
       category: "team",
       title: "Work Culture",
@@ -152,7 +162,7 @@ const StoriesPage = () => {
       size: "medium",
     },
     {
-      id: 13,
+      id: 14,
       type: "image",
       src: "/company2.jpeg",
       category: "team",
@@ -257,7 +267,7 @@ const StoriesPage = () => {
         <div className="pt-[250px] container max-w-[1320px] mx-auto px-4">
           {/* Header Section */}
           <div className="text-center mb-16" data-aos="fade-up">
-            <h1 className="font-serif text-4xl md:text-6xl mb-4 borderFont">
+            <h1 className="font-serif sm:text-8xl text-4xl mb-4 borderFont">
               <span
                 className={
                   theme === "dark" ? "text-gradient" : "text-gradient1"
@@ -319,7 +329,6 @@ const StoriesPage = () => {
                       : item.size === "medium"
                       ? "aspect-[16/8]"
                       : "aspect-square min-h-[315px]"
-                      
                   }`}
                 >
                   {item.type === "video" ? (

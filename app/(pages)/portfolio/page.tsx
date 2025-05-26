@@ -65,10 +65,10 @@ const PortfolioPage = () => {
   const portfolioItems = [
     {
       id: 1,
-      name: "Petro Website",
+      name: "Fresh Fruit",
       // icon: "website-icon.png",
       icon: <TbWorld />,
-      image: "/petro-website.png",
+      image: "/Freshfruite_web2.png",
       key: "web",
     },
     {
@@ -81,10 +81,10 @@ const PortfolioPage = () => {
     },
     {
       id: 3,
-      name: "QuizzPe",
+      name: "Coffee shop",
       // icon: "web-icon.png",
       icon: <FaApple />,
-      image: "/quizzpe.png",
+      image: "/Coffee_web.png",
       key: "web",
     },
     {
@@ -97,10 +97,10 @@ const PortfolioPage = () => {
     },
     {
       id: 5,
-      name: "Banking App",
+      name: "Headphone web",
       // icon: "androidweb-icon.png",
       icon: <TbWorld />,
-      image: "/bankingapp.png",
+      image: "/Headphone_web.png",
       key: "web",
     },
     {
@@ -140,6 +140,14 @@ const PortfolioPage = () => {
       icon: <ImAndroid />,
       image: "/Dailysync(1).png",
       key: "android",
+    },
+    {
+      id: 11,
+      name: "Healthyfood",
+      // icon: "androidweb-icon.png",
+      icon: <TbWorld />,
+      image: "/Healthyfood_web.png",
+      key: "web",
     },
   ];
 
@@ -197,7 +205,7 @@ const PortfolioPage = () => {
             alt="about us"
           />
           <div data-aos="fade-left" data-aos-duration="1000">
-            <h3 className="font-serif sm:text-8xl text-5xl borderFont">
+            <h3 className="font-serif sm:text-8xl text-4xl borderFont">
               <span>Port</span>
               <span
                 className={
