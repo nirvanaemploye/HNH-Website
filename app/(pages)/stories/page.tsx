@@ -318,8 +318,8 @@ const StoriesPage = () => {
                       ? "aspect-[16/9]"
                       : item.size === "medium"
                       ? "aspect-[16/8]"
-                      : /* : "aspect-square min-h-[315px]" */
-                        "aspect-square min-h-[250px]"
+                      : "aspect-square min-h-[315px]"
+                      
                   }`}
                 >
                   {item.type === "video" ? (
