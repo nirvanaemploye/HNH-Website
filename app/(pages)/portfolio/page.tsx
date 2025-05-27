@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation";
 import { FaApple } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 import { TbWorld } from "react-icons/tb";
+import { CgFigma } from "react-icons/cg";
 
 
 const PortfolioPage = () => {
@@ -148,6 +149,68 @@ const PortfolioPage = () => {
       icon: <TbWorld />,
       image: "/Healthyfood_web.png",
       key: "web",
+    },
+    {
+      id: 12,
+      name: "Rolling wheels",
+      icon: <FaApple />,
+      image: "Rolling_wills.png",
+      key: "games",
+    },
+    {
+      id: 13,
+      name: "DODO King",
+      icon: <FaApple />,
+      image: "DODO_King.png",
+      key: "games",
+    },
+    {
+      id: 14,
+      name: "Photo frame",
+      // icon: "androidweb-icon.png",
+      icon: <ImAndroid />,
+      image: "/Photo_frame.png",
+      key: "android",
+    },
+    {
+      id: 15,
+      name: "Car Booking",
+      // icon: "androidweb-icon.png",
+      icon: <ImAndroid />,
+      image: "/Car_Booking.png",
+      key: "android",
+    },
+    {
+      id: 16,
+      name: "Templates",
+      // icon: "androidweb-icon.png",
+      icon: <CgFigma />,
+      image: "/Templates(2).png",
+      key: "ui-ux",
+    },
+    {
+      id: 17,
+      name: "Logo",
+      // icon: "androidweb-icon.png",
+      icon: <CgFigma />,
+      image: "/Icon_Design.png",
+      key: "ui-ux",
+    },
+    {
+      id: 18,
+      name: "Festival Post",
+      // icon: "androidweb-icon.png",
+      icon: <CgFigma />,
+      image: "/Festival_post.png",
+      key: "ui-ux",
+    },
+    {
+      id: 19,
+      name: "visiting card",
+      // icon: "androidweb-icon.png",
+      icon: <CgFigma />,
+      image: "/Visiting_card1.png",
+      key: "ui-ux",
     },
   ];
 
