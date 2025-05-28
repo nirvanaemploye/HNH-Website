@@ -72,10 +72,10 @@ const PortfolioPage = () => {
     },
     {
       id: 2,
-      name: "Artix",
-      icon: <ImAndroid />,
-      image: "/artix.png",
-      key: "android",
+      name: "Top 10",
+      icon: <TbWorld />,
+      image: "/Top10_web.png",
+      key: "web",
     },
     {
       id: 3,
@@ -86,10 +86,10 @@ const PortfolioPage = () => {
     },
     {
       id: 4,
-      name: "PlayFit",
-      icon: <FaApple />,
-      image: "/playfit.png",
-      key: "android",
+      name: "Sliding Puzzle",
+      icon: <FaUnity />,
+      image: "Sliding_puzzle.png",
+      key: "games",
     },
     {
       id: 5,
@@ -100,9 +100,9 @@ const PortfolioPage = () => {
     },
     {
       id: 6,
-      name: "Hexa Club",
+      name: "Dating App",
       icon: <FaApple />,
-      image: "/hexaclub.png",
+      image: "/Dating_app.png",
       key: "android",
     },
     {
@@ -195,27 +195,6 @@ const PortfolioPage = () => {
       icon: <CgFigma />,
       image: "/Visiting_card1.png",
       key: "ui-ux",
-    },
-    {
-      id: 20,
-      name: "Dating App",
-      icon: <FaApple />,
-      image: "/Dating_app.png",
-      key: "android",
-    },
-    {
-      id: 21,
-      name: "Sliding Puzzle",
-      icon: <FaUnity />,
-      image: "Sliding_puzzle.png",
-      key: "games",
-    },
-    {
-      id: 22,
-      name: "Top 10",
-      icon: <TbWorld />,
-      image: "/Top10_web.png",
-      key: "web",
     },
   ];
 
