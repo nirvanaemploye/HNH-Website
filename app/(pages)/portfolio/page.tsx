@@ -7,11 +7,10 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useSearchParams } from "next/navigation";
-import { FaApple } from "react-icons/fa";
+import { FaApple, FaUnity } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 import { TbWorld } from "react-icons/tb";
 import { CgFigma } from "react-icons/cg";
-
 
 const PortfolioPage = () => {
   const searchParams = useSearchParams();
@@ -44,7 +43,7 @@ const PortfolioPage = () => {
     {
       id: 2,
       key: "ui-ux",
-      name: "uiux",
+      name: "UIUX",
     },
     {
       id: 3,
@@ -67,7 +66,6 @@ const PortfolioPage = () => {
     {
       id: 1,
       name: "Fresh Fruit",
-      // icon: "website-icon.png",
       icon: <TbWorld />,
       image: "/Freshfruite_web2.png",
       key: "web",
@@ -75,15 +73,13 @@ const PortfolioPage = () => {
     {
       id: 2,
       name: "Artix",
-      // icon: "android-icon.png",
       icon: <ImAndroid />,
       image: "/artix.png",
       key: "android",
     },
     {
       id: 3,
-      name: "Coffee shop",
-      // icon: "web-icon.png",
+      name: "Coffee Shop",
       icon: <TbWorld />,
       image: "/Coffee_web.png",
       key: "web",
@@ -91,15 +87,13 @@ const PortfolioPage = () => {
     {
       id: 4,
       name: "PlayFit",
-      // icon: "ios-icon.png",
       icon: <FaApple />,
       image: "/playfit.png",
       key: "android",
     },
     {
       id: 5,
-      name: "Headphone web",
-      // icon: "androidweb-icon.png",
+      name: "Headphone Web",
       icon: <TbWorld />,
       image: "/Headphone_web.png",
       key: "web",
@@ -107,29 +101,27 @@ const PortfolioPage = () => {
     {
       id: 6,
       name: "Hexa Club",
-      // icon: "ios-icon.png",
       icon: <FaApple />,
       image: "/hexaclub.png",
       key: "android",
     },
     {
       id: 7,
-      name: "Multiwin",
-      icon: <FaApple />,
+      name: "MultiWin",
+      icon: <FaUnity />,
       image: "/Multiwin(2).png",
       key: "games",
     },
     {
       id: 8,
-      name: "Chapa kata",
-      icon: <FaApple />,
+      name: "Chapa Kata",
+      icon: <FaUnity />,
       image: "/Chapa_kata(1).png",
       key: "games",
     },
     {
       id: 9,
       name: "Luvr",
-      // icon: "ios-icon.png",
       icon: <FaApple />,
       image: "/Luvr(1).png",
       key: "android",
@@ -137,7 +129,6 @@ const PortfolioPage = () => {
     {
       id: 10,
       name: "Dailysync",
-      // icon: "ios-icon.png",
       icon: <ImAndroid />,
       image: "/Dailysync(1).png",
       key: "android",
@@ -145,29 +136,27 @@ const PortfolioPage = () => {
     {
       id: 11,
       name: "Healthyfood",
-      // icon: "androidweb-icon.png",
       icon: <TbWorld />,
       image: "/Healthyfood_web.png",
       key: "web",
     },
     {
       id: 12,
-      name: "Rolling wheels",
-      icon: <FaApple />,
+      name: "Rolling Wheels",
+      icon: <FaUnity />,
       image: "Rolling_wills.png",
       key: "games",
     },
     {
       id: 13,
       name: "DODO King",
-      icon: <FaApple />,
+      icon: <FaUnity />,
       image: "DODO_King.png",
       key: "games",
     },
     {
       id: 14,
-      name: "Photo frame",
-      // icon: "androidweb-icon.png",
+      name: "Photo Frame",
       icon: <ImAndroid />,
       image: "/Photo_frame.png",
       key: "android",
@@ -175,7 +164,6 @@ const PortfolioPage = () => {
     {
       id: 15,
       name: "Car Booking",
-      // icon: "androidweb-icon.png",
       icon: <ImAndroid />,
       image: "/Car_Booking.png",
       key: "android",
@@ -183,7 +171,6 @@ const PortfolioPage = () => {
     {
       id: 16,
       name: "Templates",
-      // icon: "androidweb-icon.png",
       icon: <CgFigma />,
       image: "/Templates(2).png",
       key: "ui-ux",
@@ -191,7 +178,6 @@ const PortfolioPage = () => {
     {
       id: 17,
       name: "Logo",
-      // icon: "androidweb-icon.png",
       icon: <CgFigma />,
       image: "/Icon_Design.png",
       key: "ui-ux",
@@ -199,18 +185,37 @@ const PortfolioPage = () => {
     {
       id: 18,
       name: "Festival Post",
-      // icon: "androidweb-icon.png",
       icon: <CgFigma />,
       image: "/Festival_post.png",
       key: "ui-ux",
     },
     {
       id: 19,
-      name: "visiting card",
-      // icon: "androidweb-icon.png",
+      name: "Visiting Card",
       icon: <CgFigma />,
       image: "/Visiting_card1.png",
       key: "ui-ux",
+    },
+    {
+      id: 20,
+      name: "Dating App",
+      icon: <FaApple />,
+      image: "/Dating_app.png",
+      key: "android",
+    },
+    {
+      id: 21,
+      name: "Sliding Puzzle",
+      icon: <FaUnity />,
+      image: "Sliding_puzzle.png",
+      key: "games",
+    },
+    {
+      id: 22,
+      name: "Top 10",
+      icon: <TbWorld />,
+      image: "/Top10_web.png",
+      key: "web",
     },
   ];
 

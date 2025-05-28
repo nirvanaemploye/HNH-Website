@@ -16,7 +16,7 @@ function SimpleSlider() {
   const videos = [
     {
       id: 1,
-      src: "/videos/nature.mp4",
+      src: "/videos/Company_Vd_1.mp4",
     },
     {
       id: 2,
