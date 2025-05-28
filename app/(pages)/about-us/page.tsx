@@ -11,8 +11,8 @@ import teamMember2 from "../../../public/nirav1.png";
 import teamMember3 from "../../../public/anjani1.png";
 import teamMember4 from "../../../public/roshan1.png";
 import teamMember5 from "../../../public/Dhruv_Mistry1.png";
-import teamMember6 from "../../../public/team-member-4.png";
-import teamMember7 from "../../../public/team-member-7.png";
+import teamMember6 from "../../../public/team-member-6.png";
+import teamMember7 from "../../../public/indian-man-smiling-portrait.jpg";
 // import teamMember8 from "../../../public/ayushi.png";
 import teamMember8 from "../../../public/ayushi2.png";
 import React, { useEffect, useState } from "react";
@@ -112,7 +112,7 @@ export default function AboutUs() {
     },
     {
       id: 6,
-      name: "Allena Smith",
+      name: "Vaibhav Tandel",
       designation: "Web Developer",
       details:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout distracted by the readable content of a page when looking at its layout. ",
@@ -356,23 +356,7 @@ export default function AboutUs() {
           </h3>
           <div className="mt-14 space-y-12">
             <div className="flex items-end justify-center gap-12">
-              {/* <div className="">
-                <Image
-                  src={teamMember1}
-                  // width={165}
-                  // height={120}
-                  width={163}
-                  height={119}
-                  
-                  alt="team member"
-                  onMouseEnter={() => handleMouseEnter(1)}
-                  onMouseLeave={handleMouseLeave}
-                  // className={hoveredMember === 1 ? "imgTransform" : ""}
-                  className={`object-cover ${
-                    hoveredMember === 1 ? "imgTransform" : ""
-                  }`}
-                />
-              </div> */}
+              
 
               <div
                 style={{
@@ -400,19 +384,6 @@ export default function AboutUs() {
                 />
               </div>
 
-              {/* <div>
-                <Image
-                  src={teamMember2}
-                  width={232}
-                  height={170}
-                  alt="team member"
-                  onMouseEnter={() => handleMouseEnter(2)}
-                  onMouseLeave={handleMouseLeave}
-                  className={`object-cover ${
-                    hoveredMember === 2 ? "imgTransform" : ""
-                  }`}
-                />
-              </div> */}
 
               <div
                 style={{
@@ -440,19 +411,7 @@ export default function AboutUs() {
                 />
               </div>
 
-              {/* <div>
-                <Image
-                  src={teamMember3}
-                  width={163}
-                  height={119}
-                  alt="team member"
-                  onMouseEnter={() => handleMouseEnter(3)}
-                  onMouseLeave={handleMouseLeave}
-                  className={`object-cover ${
-                    hoveredMember === 3 ? "imgTransform" : ""
-                  }`}
-                />
-              </div> */}
+              
               <div
                 style={{
                   width: 163,
@@ -480,19 +439,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="flex items-center justify-center gap-12">
-              {/* <div>
-                <Image
-                  src={teamMember8}
-                  width={232}
-                  height={170}
-                  alt="team member"
-                  onMouseEnter={() => handleMouseEnter(8)}
-                  onMouseLeave={handleMouseLeave}
-                  className={`object-cover ${
-                    hoveredMember === 8 ? "imgTransform" : ""
-                  }`}
-                />
-              </div> */}
+              
 
               <div
                 style={{
@@ -576,6 +523,11 @@ export default function AboutUs() {
             </div>
             <div className="flex items-start justify-center gap-12">
               <div
+                style={{
+                  overflow: "hidden",
+                  borderRadius: 8,
+                  position: "relative",
+                }}
                 className={`object-cover ${
                   hoveredMember === 7 ? "imgTransform" : ""
                 }`}
@@ -592,7 +544,14 @@ export default function AboutUs() {
                   }`}
                 />
               </div>
-              <div
+              <div 
+                style={{
+                  width: 232,
+                  height: 170,
+                  position: "relative",
+                  overflow: "hidden",
+                  borderRadius: "12px",
+                }}
                 className={`object-cover ${
                   hoveredMember === 6 ? "imgTransform" : ""
                 }`}
@@ -637,107 +596,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* <div className="md:block hidden">
-          <h3
-            className="font-serif text-primary font-bold text-5xl text-center border-b-2 border-dashed dark:border-white border-[#9D80FF] uppercase w-fit mx-auto"
-            data-aos="fade-down"
-          >
-            Meet the best team ever
-          </h3>
-          <div className="mt-14 space-y-12">
-            <div
-              className="flex items-end justify-center gap-12"
-              data-aos="zoom-in"
-            >
-              {[teamMember1, teamMember2, teamMember3].map((member, index) => (
-                <div key={index}>
-                  <Image
-                    src={member}
-                    width={index === 1 ? 232 : 163}
-                    height={index === 1 ? 170 : 119}
-                    alt="team member"
-                    onMouseEnter={() => handleMouseEnter(index + 1)}
-                    onMouseLeave={handleMouseLeave}
-                    className={
-                      hoveredMember === index + 1 ? "imgTransform" : ""
-                    }
-                    data-aos="flip-left"
-                  />
-                </div>
-              ))}
-            </div>
 
-            <div
-              className="flex items-center justify-center gap-12"
-              data-aos="fade-up"
-            >
-              <Image
-                src={teamMember8}
-                width={232}
-                height={170}
-                alt="team member"
-                onMouseEnter={() => handleMouseEnter(8)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 8 ? "imgTransform" : ""}
-                data-aos="flip-right"
-              />
-              {members.map((member) => (
-                <div
-                  key={member.id}
-                  className={`aboutMember ${
-                    theme === "dark" ? "changeShadow" : ""
-                  }`}
-                  style={{
-                    display: hoveredMember === member.id ? "block" : "none",
-                  }}
-                  data-aos="fade-in"
-                >
-                  <div className="memberName">
-                    <h2 className="mb-0 text-[#8B68FF]">{member.name}</h2>
-                  </div>
-                  <h6 className={theme === "dark" ? "text-white" : ""}>
-                    {member.designation}
-                  </h6>
-                  <p className={theme === "dark" ? "teamInfoDarkClr" : ""}>
-                    {member.details}
-                  </p>
-                </div>
-              ))}
-              <Image
-                src={teamMember4}
-                width={232}
-                height={170}
-                alt="team member"
-                onMouseEnter={() => handleMouseEnter(4)}
-                onMouseLeave={handleMouseLeave}
-                className={hoveredMember === 4 ? "imgTransform" : ""}
-                data-aos="flip-left"
-              />
-            </div>
-
-            <div
-              className="flex items-start justify-center gap-12"
-              data-aos="zoom-in-up"
-            >
-              {[teamMember7, teamMember6, teamMember5].map((member, index) => (
-                <div key={index}>
-                  <Image
-                    src={member}
-                    width={index === 1 ? 232 : 163}
-                    height={index === 1 ? 170 : 119}
-                    alt="team member"
-                    onMouseEnter={() => handleMouseEnter(index + 7)}
-                    onMouseLeave={handleMouseLeave}
-                    className={
-                      hoveredMember === index + 7 ? "imgTransform" : ""
-                    }
-                    data-aos="flip-up"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

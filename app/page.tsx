@@ -347,7 +347,7 @@ export default function Home() {
     {
       id: 5,
       name: "Peter",
-      company: "IT Path Tech",
+      company: "IT Tech",
       testimonial:
         "A reliable and dedicated team that delivered results beyond our expectations. Their proactive approach and willingness to go the extra mile made a significant difference in the success of our project.",
       img: client5,
@@ -355,7 +355,7 @@ export default function Home() {
     {
       id: 6,
       name: "Allena Smith",
-      company: "Royal Infotech",
+      company: "Royal Path",
       testimonial:
         "Working with them was a fantastic experience. They understood our needs, provided timely feedback, and delivered an outstanding result. Their professionalism and commitment to excellence are truly commendable.",
       img: client6,
@@ -363,7 +363,7 @@ export default function Home() {
     {
       id: 7,
       name: "Sundar",
-      company: "Vinayak Infosoft",
+      company: "Vinayak Info",
       testimonial:
         "They exceeded all our expectations with their exceptional service and technical expertise. Every step of the project was handled efficiently, and the outcome was flawless. We're so grateful for their hard work.",
       img: client7,
